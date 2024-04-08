@@ -1,0 +1,35 @@
+---
+pagetitle: "Get Stan"
+page-layout: full
+toc-location: left
+---
+
+## Download and Install Stan
+
+This section explains how to install Stan for different platforms and interfaces.
+
+It would be great to have a grid for platform / preferred programming interface.
+
+Command-line shell:  good for analysis pipelines, running jobs on clusters.
+
+Actively supported interfaces:
+
+- Python:  CmdStanPy,
+- R: CmdStanR,
+- Julia:  Stan.jl
+
+Coming soon?  RustStan
+
+Legacy interfaces:
+
+- RStan (latest supported Stan release:  2.32)
+- PyStan (supports HMC but not variational inference, not supported for Windows)
+
+
+MatplotlibStan, StataStan, StrataStan
+
+
+## Troubleshooting the Install
+
+List the errors, suggest fixes
+

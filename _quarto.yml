@@ -1,0 +1,101 @@
+project:
+  title: "Stan"
+  type: website
+  output-dir: _website
+  render:
+    - index.qmd
+    - quickstart.qmd
+    - 404.qmd
+    - installation/*.qmd
+    - learn-stan/*.qmd
+    - mc-stan-org/*.qmd
+  resources:
+    - learn-stan/case-studies/*.html
+
+website:
+  favicon: img/logo_tm.png
+  image: img/logo_tm.png
+  page-navigation: true
+  back-to-top-navigation: true
+  
+  navbar:
+    logo: "img/logo_tm.png"
+    logo-alt: "Stan logo"
+    title: false
+    left:
+      - text: "Stan"
+        href: index.qmd
+      - text: "Getting Started"
+        href: installation/install.qmd
+      - text: "Documentation"
+        menu:
+          - text: "Stan Users Guide"
+            url: https://mc-stan.org/docs/stan-users-guide/index.html
+          - text: "Reference Manual"
+            url: https://mc-stan.org/docs/reference-manual/index.html
+          - text: "Functions Reference"
+            url: https://mc-stan.org/docs/functions-reference/overview.html
+      - text: "Guides and Tutorials"
+        menu:
+          - text: "Case Studies"
+            href: learn-stan/case-studies.qmd
+          - text: "Field Guides"
+            href: learn-stan/field-guides.qmd
+          - text: "Tutorials"
+            href: learn-stan/tutorials.qmd
+          - text: "Journal Articles"
+            href: learn-stan/articles.qmd
+      - text: "Interfaces"
+        menu:
+          - text: "CmdStan"
+            url: https://mc-stan.org/docs/cmdstan-guide/overview.html
+          - text: "CmdStanPy"
+            url: https://mc-stan.org/cmdstanpy
+          - text: "CmdStanR"
+            url: https://mc-stan.org/cmdstanr
+          - text: "PyStan"
+            url: https://mc-stan.org/pystan
+          - text: "RStan"
+            url: https://mc-stan.org/rstan
+          - text: "Stan.jl"
+            url: http://stanjulia.github.io/Stan.jl/stable/INTRO/
+      - text: "Related Tools"
+        menu:
+          - text: "Bayesplot"
+            href: https://mc-stan.org/bayesplot/
+          - text: "BridgeStan"
+            href: https://roualdes.github.io/bridgestan/latest/
+          - text: "BRMS"
+            url: https://paul-buerkner.github.io/brms/
+          - text: "loo"
+            href: https://mc-stan.org/loo/
+          - text: "RStanArm"
+            url: https://mc-stan.org/rstanarm
+          - text: "Stan Math Library"
+            url: https://mc-stan.org/math
+      - text: "About"
+        href: mc-stan-org/about.qmd
+    tools:
+      - icon: github
+        url: https://github.com/stan-dev
+      - icon: chat-text-fill
+        href: "https://discourse.mc-stan.org"
+
+format:
+  html:
+    theme:
+      light: [cosmo, theming/theme.scss]
+      dark: [cosmo, theming/theme-dark.scss]
+    syntax-definitions:
+      - theming/stan.xml
+    highlight-style:
+      light: theming/tango.theme
+      dark: theming/nord.theme
+    code-copy: true
+    code-overflow: wrap
+    css: theming/quarto_styles.css
+    toc: true
+    grid:
+      sidebar-width: 250px
+      body-width: 900px
+      margin-width: 300px
