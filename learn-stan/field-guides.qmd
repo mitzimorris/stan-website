@@ -4,7 +4,6 @@ page-layout: full
 toc-location: left
 ---
 
-
 # Specialized Field Guides
 
 Tutorials, case studies, software packages, and publications related to
@@ -12,24 +11,12 @@ specific fields. These pages are maintained by volunteers from the Stan
 community. If you would like to contribute one for your field please reach
 out on the Stan forums.
 
-* <p>
-  <a href="https://education-stan.github.io">Stan for Education Research </a>
-  &nbsp; <span class="note">(GitHub)</span>
-  </p>
+* [Stan for Education Research](https://education-stan.github.io)
 
-* <p>
-  <a href="https://stanecology.github.io/">Stan for Ecology</a>
-  &nbsp; <span class="note">(GitHub)</span>
-  </p>
+* [Stan for Ecology](https://stanecology.github.io/)
 
-* <p>
-  <a href="https://epidemiology-stan.github.io/">Stan for Epidemiology</a>
-  &nbsp; <span class="note">(GitHub)</span>
-  </p>
+* [Satan for Epidemiolog](https://epidemiology-stan.github.io/)
   
-* <p>
-  <a href="https://cognitive-science-stan.github.io/">Stan for Cognitive Science</a>
-  &nbsp; <span class="note">(GitHub)</span>
-  </p>  
+* [Stan for Cognitive Science](https://cognitive-science-stan.github.io/)
 
 

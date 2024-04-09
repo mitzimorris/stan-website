@@ -27,10 +27,10 @@ Stan enables sophisticated statistical modeling using Bayesian inference, allowi
 
 Stan's probabilistic programming language is suitable for a wide range of applications, from simple linear regression to multi-level models and time-series analysis.
 
-### Runs on Linux, MacOS, and Windows, Interfaces to Python, R, and Julia
+### Interfaces for Python, R, and Julia - Runs on Linux, Mac, and Windows
 
 Interfaces for Python, Julia, R, and the Unix shell make it easy to use Stan in any programming environment,
-from laptops, clusters, or the cloud.
+on  laptops, clusters, or the cloud.
 
 ::: {.hero-buttons style="position: relative; display: flex; justify-content: center;"}
 [Get Started](installation/install.qmd){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
@@ -66,8 +66,11 @@ provides guidance on appropriate priors for use with Stan.
 
 * The [Stan Developer Wiki](https://github.com/stan-dev/stan/wiki)
 
+* The [Stan Forums Developers category](https://discourse.mc-stan.org/c/stan-dev/10)
+
 * The Stan slack channel [mc-stan.slack.com](https://join.slack.com/t/mc-stan/shared_invite/zt-1le4ebi4m-UMtiOkJb4gcS16qz2wIYCw)
-is a secondary forum informal developer discussions.
+is for informal developer discussions.
+
 :::
 
 ::: {.g-col-3}

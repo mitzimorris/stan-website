@@ -3,12 +3,11 @@ project:
   type: website
   output-dir: _website
   render:
-    - index.qmd
-    - quickstart.qmd
-    - 404.qmd
-    - installation/*.qmd
-    - learn-stan/*.qmd
-    - mc-stan-org/*.qmd
+    - "index.qmd"
+    - "404.qmd"
+    - "installation/*.qmd"
+    - "learn-stan/*.qmd"
+    - "mc-stan-org/*.qmd"
   resources:
     - learn-stan/case-studies/*.html
 
