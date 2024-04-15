@@ -59,19 +59,27 @@ website:
           - text: "Stan.jl"
             url: http://stanjulia.github.io/Stan.jl/stable/INTRO/
       - text: "Related Tools"
-        menu:
-          - text: "Bayesplot"
-            href: https://mc-stan.org/bayesplot/
-          - text: "BridgeStan"
-            href: https://roualdes.github.io/bridgestan/latest/
-          - text: "BRMS"
-            url: https://paul-buerkner.github.io/brms/
-          - text: "loo"
-            href: https://mc-stan.org/loo/
-          - text: "RStanArm"
-            url: https://mc-stan.org/rstanarm
-          - text: "Stan Math Library"
-            url: https://mc-stan.org/math
+         menu:
+           - text: "bayesplot"
+             href: https://mc-stan.org/bayesplot/
+           - text: "BridgeStan"
+             href: https://roualdes.github.io/bridgestan/latest/
+           - text: "brms"
+             url: https://paul-buerkner.github.io/brms/
+           - text: "loo"
+             href: https://mc-stan.org/loo/
+           - text: "posterior"
+             url: https://mc-stan.org/posterior
+           - text: "projpred"
+             url: https://mc-stan.org/projpred
+           - text: "rstanarm"
+             url: https://mc-stan.org/rstanarm
+           - text: "rstantools"
+             url: https://mc-stan.org/rstantools
+           - text: "shinystan"
+             url: https://mc-stan.org/shinystan
+           - text: "Stan Math Library"
+             url: https://mc-stan.org/math
       - text: "About"
         href: mc-stan-org/about.qmd
     tools:
