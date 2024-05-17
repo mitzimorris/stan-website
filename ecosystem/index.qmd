@@ -1,0 +1,51 @@
+---
+title: "Stan Interfaces and Tools"
+page-layout: full
+toc-location: left
+---
+
+## Stan Ecosystem
+
+
+
+
+
+### Core Components
+
+* Stan Probabalistic Programming Language and `stanc` compiler
+
+* Stan Inference Algorithms
+  + Hamiltonian Monte Carlo (HMC) for exact Bayesian inference.
+  + Variational methods for approximate Bayesian inference.
+  + Optimization algorithms for  maximum a posteriori (MAP) estimates and penalized maximum likelihood estimation, and LaPlace Approximation to produce a sample from these estimates.
+
+* Stan Math Library
+
+### Programming Language Interfaces
+
+* Command Line Interface:  [CmdStan](https://mc-stan.org/cmdstan)
+
+* Julia: [Stan.jl](http://stanjulia.github.io/Stan.jl/stable/INTRO/)
+
+* Python: [CmdStanPy](https://mc-stan.org/cmdstanpy), [PyStan](https://mc-stan.org/pystan)and optimization
+
+* R: [CmdStanR](https://mc-stan.org/cmdstanr), [RStan](https://mc-stan.org/rstan)
+
+### High-level Interfaces
+
+* [BRMS](https://paul-buerkner.github.io/brms/)
+* [RStanArm](https://mc-stan.org/rstanarm)
+
+
+
+### Visualization, Diagnostic, and Posterior Analysis Tools
+
+* Python:  ArviZ
+
+* R: [Bayesplot](https://mc-stan.org/bayesplot/), [loo](https://mc-stan.org/loo/), [posterior](https://mc-stan.org/posterior), [projpred](https://mc-stan.org/projpred)
+
+
+### For Algorithm Developers
+
+* [BridgeStan](href: https://roualdes.github.io/bridgestan/latest/)
+  
