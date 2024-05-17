@@ -6,6 +6,7 @@ project:
     - "index.qmd"
     - "404.qmd"
     - "installation/*.qmd"
+    - "ecosystem/*.qmd"
     - "learn-stan/*.qmd"
     - "mc-stan-org/*.qmd"
   resources:
@@ -45,33 +46,7 @@ website:
           - text: "Journal Articles"
             href: learn-stan/articles.qmd
       - text: "Interfaces"
-        menu:
-          - text: "CmdStan"
-            url: https://mc-stan.org/docs/cmdstan-guide/overview.html
-          - text: "CmdStanPy"
-            url: https://mc-stan.org/cmdstanpy
-          - text: "CmdStanR"
-            url: https://mc-stan.org/cmdstanr
-          - text: "PyStan"
-            url: https://mc-stan.org/pystan
-          - text: "RStan"
-            url: https://mc-stan.org/rstan
-          - text: "Stan.jl"
-            url: http://stanjulia.github.io/Stan.jl/stable/INTRO/
-      - text: "Related Tools"
-        menu:
-          - text: "Bayesplot"
-            href: https://mc-stan.org/bayesplot/
-          - text: "BridgeStan"
-            href: https://roualdes.github.io/bridgestan/latest/
-          - text: "BRMS"
-            url: https://paul-buerkner.github.io/brms/
-          - text: "loo"
-            href: https://mc-stan.org/loo/
-          - text: "RStanArm"
-            url: https://mc-stan.org/rstanarm
-          - text: "Stan Math Library"
-            url: https://mc-stan.org/math
+        href: ecosystem/index.qmd
       - text: "About"
         href: mc-stan-org/about.qmd
     tools:
