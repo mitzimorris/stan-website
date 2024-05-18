@@ -35,7 +35,7 @@ website:
             url: https://mc-stan.org/docs/reference-manual/index.html
           - text: "Functions Reference"
             url: https://mc-stan.org/docs/functions-reference/overview.html
-      - text: "Guides and Tutorials"
+      - text: "Learning Materials"
         menu:
           - text: "Case Studies"
             href: learn-stan/case-studies.qmd
@@ -45,9 +45,9 @@ website:
             href: learn-stan/tutorials.qmd
           - text: "Journal Articles"
             href: learn-stan/articles.qmd
-      - text: "Interfaces"
-        href: ecosystem/index.qmd
-      - text: "About"
+      - text: "Toolkit"
+        href: toolkit/index.qmd
+      - text: "About mc-stan.org"
         href: mc-stan-org/about.qmd
     tools:
       - icon: github

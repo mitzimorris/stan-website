@@ -436,3 +436,35 @@ pre.sourceCode {
 .hero-banner .content-block .hero-text {
   width: 75%;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto repeat(4, 1fr);
+    gap: 0px;
+    width: 80%;
+}
+.option {
+    border: 1px solid var(--stan-dark);
+    text-align: center;
+    cursor: pointer;
+}
+.option.selected {
+    background-color: var(--stan-highlight);
+    color: var(--stan-dark);
+.grid-item {
+    padding: 10px;
+    border: 1px solid var(--stan-dark);
+    background-color: var(--stan-bg);
+    color: var(--stan-dark);
+}
+.grid-blank {
+    border: 0px;
+    background-color: var(--stan-bg);
+}
+.row-label {
+    padding: 10px;
+    color: var(--stan-dark);
+    background-color: var(--stan-highlight);
+    font-weight: bold;
+    text-align: left;
+}
