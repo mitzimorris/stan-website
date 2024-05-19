@@ -451,10 +451,14 @@ pre.sourceCode {
 .option.selected {
     background-color: var(--stan-highlight);
     color: var(--stan-dark);
+}
+.option.disabled {
+    cursor: not-allowed;
+    color: var(--stan-highlight);
+}
 .grid-item {
     padding: 10px;
     border: 1px solid var(--stan-dark);
-    background-color: var(--stan-bg);
     color: var(--stan-dark);
 }
 .grid-blank {
@@ -464,7 +468,7 @@ pre.sourceCode {
 .row-label {
     padding: 10px;
     color: var(--stan-dark);
-    background-color: var(--stan-highlight);
+    background-color: var(--stan-bg);
     font-weight: bold;
     text-align: left;
 }
