@@ -45,8 +45,8 @@ website:
             href: learn-stan/tutorials.qmd
           - text: "Journal Articles"
             href: learn-stan/articles.qmd
-      - text: "Toolkit"
-        href: toolkit/index.qmd
+      - text: "Tools"
+        href: tools/tools.qmd
       - text: "About mc-stan.org"
         href: mc-stan-org/about.qmd
     tools:

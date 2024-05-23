@@ -43,9 +43,53 @@ toc-location: left
 <script src="installer_2.js"></script>
 
 
-## Troubleshooting the Install
+## More Info
 
-List the errors, suggest fixes
+### Platform
+
+#### Linux
+
+- which C++
+
+#### MacOS
+
+- Xcode
+
+#### Windows
+
+- Conda
+
+### Language
+
+#### Julia
+
+#### Python
+
+#### R
+
+#### command shell
+
+#### Google Colab
+
+## Troubleshooting
+
+### C++ Versions
+
+### C++ Libraries
+
+- Boost
+- Sundials
+- TBB
+
+### GPU Support
+
+### RTools
+
+
+
+
+
+
 
 
 
