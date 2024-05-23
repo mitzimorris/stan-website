@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -96,7 +96,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Stan</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../installation/install.html" aria-current="page"> 
+    <a class="nav-link active" href="../install/install.html" aria-current="page"> 
 <span class="menu-text">Getting Started</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -119,10 +119,10 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-guides-and-tutorials" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Guides and Tutorials</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-learning-materials" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Learning Materials</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-guides-and-tutorials">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-learning-materials">    
         <li>
     <a class="dropdown-item" href="../learn-stan/case-studies.html">
  <span class="dropdown-text">Case Studies</span></a>
@@ -141,71 +141,13 @@ ul.task-list li input[type="checkbox"] {
   </li>  
     </ul>
   </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-interfaces" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Interfaces</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-interfaces">    
-        <li>
-    <a class="dropdown-item" href="https://mc-stan.org/docs/cmdstan-guide/overview.html">
- <span class="dropdown-text">CmdStan</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../tools/tools.html"> 
+<span class="menu-text">Tools</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="https://mc-stan.org/cmdstanpy">
- <span class="dropdown-text">CmdStanPy</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="https://mc-stan.org/cmdstanr">
- <span class="dropdown-text">CmdStanR</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="https://mc-stan.org/pystan">
- <span class="dropdown-text">PyStan</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="https://mc-stan.org/rstan">
- <span class="dropdown-text">RStan</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="http://stanjulia.github.io/Stan.jl/stable/INTRO/">
- <span class="dropdown-text">Stan.jl</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-related-tools" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Related Tools</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-related-tools">    
-        <li>
-    <a class="dropdown-item" href="https://mc-stan.org/bayesplot/">
- <span class="dropdown-text">Bayesplot</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="https://roualdes.github.io/bridgestan/latest/">
- <span class="dropdown-text">BridgeStan</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="https://paul-buerkner.github.io/brms/">
- <span class="dropdown-text">BRMS</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="https://mc-stan.org/loo/">
- <span class="dropdown-text">loo</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="https://mc-stan.org/rstanarm">
- <span class="dropdown-text">RStanArm</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="https://mc-stan.org/math">
- <span class="dropdown-text">Stan Math Library</span></a>
-  </li>  
-    </ul>
-  </li>
   <li class="nav-item">
     <a class="nav-link" href="../mc-stan-org/about.html"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text">About mc-stan.org</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -226,7 +168,18 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#download-and-install-stan" id="toc-download-and-install-stan" class="nav-link active" data-scroll-target="#download-and-install-stan">Download and Install Stan</a></li>
-  <li><a href="#troubleshooting-the-install" id="toc-troubleshooting-the-install" class="nav-link" data-scroll-target="#troubleshooting-the-install">Troubleshooting the Install</a></li>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions</a>
+  <ul class="collapse">
+  <li><a href="#platform" id="toc-platform" class="nav-link" data-scroll-target="#platform">Platform</a></li>
+  <li><a href="#language" id="toc-language" class="nav-link" data-scroll-target="#language">Language</a></li>
+  </ul></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a>
+  <ul class="collapse">
+  <li><a href="#c-versions" id="toc-c-versions" class="nav-link" data-scroll-target="#c-versions">C++ Versions</a></li>
+  <li><a href="#c-libraries" id="toc-c-libraries" class="nav-link" data-scroll-target="#c-libraries">C++ Libraries</a></li>
+  <li><a href="#gpu-support" id="toc-gpu-support" class="nav-link" data-scroll-target="#gpu-support">GPU Support</a></li>
+  <li><a href="#rtools" id="toc-rtools" class="nav-link" data-scroll-target="#rtools">RTools</a></li>
+  </ul></li>
   </ul>
 </nav>
 </nav>
@@ -242,28 +195,150 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="download-and-install-stan" class="level2">
 <h2 class="anchored" data-anchor-id="download-and-install-stan">Download and Install Stan</h2>
-<p>This section explains how to install Stan for different platforms and interfaces.</p>
-<p>It would be great to have a grid for platform / preferred programming interface.</p>
-<p>Command-line shell: good for analysis pipelines, running jobs on clusters.</p>
-<p>Actively supported interfaces:</p>
-<ul>
-<li>Python: CmdStanPy,</li>
-<li>R: CmdStanR,</li>
-<li>Julia: Stan.jl</li>
-</ul>
-<p>Coming soon? RustStan</p>
-<p>Legacy interfaces:</p>
-<ul>
-<li>RStan (latest supported Stan release: 2.32)</li>
-<li>PyStan (supports HMC but not variational inference, not supported for Windows)</li>
-</ul>
-<p>MatplotlibStan, StataStan, StrataStan</p>
+<div class="grid-container">
+<div class="row-label">
+OS
+</div>
+<div id="linux" class="os option grid-item">
+Linux
+</div>
+<div id="macos" class="os option grid-item">
+MacOS
+</div>
+<div id="windows" class="os option grid-item">
+Windows
+</div>
+<div class="grid-blank">
+
+</div>
+<div class="row-label" style="grid-row: span 2;">
+Interface
+</div>
+<div id="stan.jl" class="interface option grid-item">
+Julia
+</div>
+<div id="cmdstanpy" class="interface option grid-item">
+CmdStanPy
+</div>
+<div id="cmdstanr" class="interface option grid-item">
+CmdStanR
+</div>
+<div id="cmdstan" class="interface option grid-item">
+CmdStan
+</div>
+<div class="grid-blank">
+
+</div>
+<div id="pystan" class="interface option grid-item" style="grid-column: 3;">
+PyStan
+</div>
+<div id="rstan" class="interface option grid-item" style="grid-column: 4;">
+RStan
+</div>
+<div class="grid-blank">
+
+</div>
+<div class="row-label" style="grid-row: span 2;">
+Installer
+</div>
+<div id="julia-pkg" class="installer option grid-item">
+Julia package manager
+</div>
+<div id="pip" class="installer option grid-item">
+Pip
+</div>
+<div id="cran" class="installer option grid-item">
+CRAN
+</div>
+<div id="github-bin" class="installer option grid-item">
+Github binary
+</div>
+<div class="grid-blank">
+
+</div>
+<div id="conda" class="installer option grid-item">
+Conda-forge
+</div>
+<div id="runiverse" class="installer option grid-item">
+R Universe
+</div>
+<div id="github-src" class="installer option grid-item">
+Github source
+</div>
+<br>
+<div class="row-label" style="grid-column:1;">
+Command&nbsp;&nbsp;&nbsp;
+</div>
+<div id="command" class="grid-item row-label" style="grid-column:span 4; background-color: var(--stan-highlight);padding-left:10px;">
+
+</div>
+<p><br></p>
+</div>
+<script src="installer_2.js"></script>
 </section>
-<section id="troubleshooting-the-install" class="level2">
-<h2 class="anchored" data-anchor-id="troubleshooting-the-install">Troubleshooting the Install</h2>
-<p>List the errors, suggest fixes</p>
+<section id="instructions" class="level2">
+<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<section id="platform" class="level3">
+<h3 class="anchored" data-anchor-id="platform">Platform</h3>
+<section id="linux" class="level4">
+<h4 class="anchored" data-anchor-id="linux">Linux</h4>
+<ul>
+<li>which C++</li>
+</ul>
+</section>
+<section id="macos" class="level4">
+<h4 class="anchored" data-anchor-id="macos">MacOS</h4>
+<ul>
+<li>Xcode</li>
+</ul>
+</section>
+<section id="windows" class="level4">
+<h4 class="anchored" data-anchor-id="windows">Windows</h4>
+<ul>
+<li>Conda</li>
+</ul>
+</section>
+</section>
+<section id="language" class="level3">
+<h3 class="anchored" data-anchor-id="language">Language</h3>
+<section id="julia" class="level4">
+<h4 class="anchored" data-anchor-id="julia">Julia</h4>
+</section>
+<section id="python" class="level4">
+<h4 class="anchored" data-anchor-id="python">Python</h4>
+</section>
+<section id="r" class="level4">
+<h4 class="anchored" data-anchor-id="r">R</h4>
+</section>
+<section id="command-shell" class="level4">
+<h4 class="anchored" data-anchor-id="command-shell">command shell</h4>
+</section>
+<section id="google-colab" class="level4">
+<h4 class="anchored" data-anchor-id="google-colab">Google Colab</h4>
+</section>
+</section>
+</section>
+<section id="troubleshooting" class="level2">
+<h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
+<section id="c-versions" class="level3">
+<h3 class="anchored" data-anchor-id="c-versions">C++ Versions</h3>
+</section>
+<section id="c-libraries" class="level3">
+<h3 class="anchored" data-anchor-id="c-libraries">C++ Libraries</h3>
+<ul>
+<li>Boost</li>
+<li>Sundials</li>
+<li>TBB</li>
+</ul>
+</section>
+<section id="gpu-support" class="level3">
+<h3 class="anchored" data-anchor-id="gpu-support">GPU Support</h3>
+</section>
+<section id="rtools" class="level3">
+<h3 class="anchored" data-anchor-id="rtools">RTools</h3>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -490,6 +565,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -524,7 +617,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

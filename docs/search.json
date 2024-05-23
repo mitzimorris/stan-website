@@ -182,25 +182,39 @@
     "text": "To contribute a case study, please contact us through the Stan Forums. We require\n\na documented, reproducible example with narrative documentation (e.g., knitr or Jupyter with software/compiler versions noted and seeds fixed) and\nan open-source code license (preferably BSD or GPL for code, Creative Commons for text); authors retain all copyright."
   },
   {
-    "objectID": "installation/install.html",
-    "href": "installation/install.html",
-    "title": "Stan",
+    "objectID": "tools/tools.html",
+    "href": "tools/tools.html",
+    "title": "Stan Interfaces and Tools",
     "section": "",
-    "text": "This section explains how to install Stan for different platforms and interfaces.\nIt would be great to have a grid for platform / preferred programming interface.\nCommand-line shell: good for analysis pipelines, running jobs on clusters.\nActively supported interfaces:\n\nPython: CmdStanPy,\nR: CmdStanR,\nJulia: Stan.jl\n\nComing soon? RustStan\nLegacy interfaces:\n\nRStan (latest supported Stan release: 2.32)\nPyStan (supports HMC but not variational inference, not supported for Windows)\n\nMatplotlibStan, StataStan, StrataStan"
+    "text": "Language\n\n\n\n\n\n\nStan Interfaces\n\n\n\n\nWrite, compile, and run new Stan models\n\n\n\n\n\n\nJulia\n\n\nStan.jl\n\n\n\n\n\n\nPython\n\n\nCmdStanPy*, PyStan\n\n\n\n\n\n\nR\n\n\nCmdStanR*, RStan\n\n\n\n\n\n\n\n\n*Note: CmdStanPy and CmdStanR are recommended for new users;PyStan and RStan continue to be supported.\n\n\n\n\n\n\nshell\n\n\nCmdStan\n\n\n\n\nHigh-level Interfaces\n\n\n\n\nUse existing Stan models\n\n\n\n\n\n\nR\n\n\nBRMS Specify and fit multivariate and multilevel models in Stan using extended R-formula syntax.\n\n\n\n\n\n\nR\n\n\nRStanArm Pre-compiled Stan versions of existing R model functions.\n\n\n\n\nPosterior Analysis Tools\n\n\n\n\nValidate, visualize, and compare fitted models\n\n\n\n\n\n\nJulia\n\n\nArviZ.jl\n\n\n\n\n\n\nPython\n\n\nArviZ\n\n\n\n\n\n\nR\n\n\nBayesplot - plot model outputs, loo - leave-one-out cross validation posterior - get model estimates, projpred - check model predictions\n\n\n\n\n\n\nWeb browser\n\n\nMCMC Monitor\n\n\n\n\nFor Algorithm Developers\n\n\n\n\nAccess Stan model methods from higher-level languages\n\n\n\n\n\n\nJulia, Python, R, Rust\n\n\nBridgeStan Library with bindings to a model’s log densities, gradients, Hessians, and constraining and unconstraining transforms.\n\n\n\n\nFor Package Developers\n\n\n\n\nBuild tools that use Stan\n\n\n\n\n\n\nC++\n\n\nstan-dev/math\n\n\n\n\n\n\nR\n\n\nrstantools\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "installation/install.html#download-and-install-stan",
-    "href": "installation/install.html#download-and-install-stan",
+    "objectID": "install/install.html",
+    "href": "install/install.html",
     "title": "Stan",
     "section": "",
-    "text": "This section explains how to install Stan for different platforms and interfaces.\nIt would be great to have a grid for platform / preferred programming interface.\nCommand-line shell: good for analysis pipelines, running jobs on clusters.\nActively supported interfaces:\n\nPython: CmdStanPy,\nR: CmdStanR,\nJulia: Stan.jl\n\nComing soon? RustStan\nLegacy interfaces:\n\nRStan (latest supported Stan release: 2.32)\nPyStan (supports HMC but not variational inference, not supported for Windows)\n\nMatplotlibStan, StataStan, StrataStan"
+    "text": "OS\n\n\nLinux\n\n\nMacOS\n\n\nWindows\n\n\n\n\n\nInterface\n\n\nJulia\n\n\nCmdStanPy\n\n\nCmdStanR\n\n\nCmdStan\n\n\n\n\n\nPyStan\n\n\nRStan\n\n\n\n\n\nInstaller\n\n\nJulia package manager\n\n\nPip\n\n\nCRAN\n\n\nGithub binary\n\n\n\n\n\nConda-forge\n\n\nR Universe\n\n\nGithub source\n\n\n\nCommand"
   },
   {
-    "objectID": "installation/install.html#troubleshooting-the-install",
-    "href": "installation/install.html#troubleshooting-the-install",
+    "objectID": "install/install.html#download-and-install-stan",
+    "href": "install/install.html#download-and-install-stan",
     "title": "Stan",
-    "section": "Troubleshooting the Install",
-    "text": "Troubleshooting the Install\nList the errors, suggest fixes"
+    "section": "",
+    "text": "OS\n\n\nLinux\n\n\nMacOS\n\n\nWindows\n\n\n\n\n\nInterface\n\n\nJulia\n\n\nCmdStanPy\n\n\nCmdStanR\n\n\nCmdStan\n\n\n\n\n\nPyStan\n\n\nRStan\n\n\n\n\n\nInstaller\n\n\nJulia package manager\n\n\nPip\n\n\nCRAN\n\n\nGithub binary\n\n\n\n\n\nConda-forge\n\n\nR Universe\n\n\nGithub source\n\n\n\nCommand"
+  },
+  {
+    "objectID": "install/install.html#instructions",
+    "href": "install/install.html#instructions",
+    "title": "Stan",
+    "section": "Instructions",
+    "text": "Instructions\n\nPlatform\n\nLinux\n\nwhich C++\n\n\n\nMacOS\n\nXcode\n\n\n\nWindows\n\nConda\n\n\n\n\nLanguage\n\nJulia\n\n\nPython\n\n\nR\n\n\ncommand shell\n\n\nGoogle Colab"
+  },
+  {
+    "objectID": "install/install.html#troubleshooting",
+    "href": "install/install.html#troubleshooting",
+    "title": "Stan",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nC++ Versions\n\n\nC++ Libraries\n\nBoost\nSundials\nTBB\n\n\n\nGPU Support\n\n\nRTools"
   },
   {
     "objectID": "learn-stan/articles.html",

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -96,7 +96,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Stan</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../installation/install.html"> 
+    <a class="nav-link" href="../install/install.html"> 
 <span class="menu-text">Getting Started</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -119,10 +119,10 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-guides-and-tutorials" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Guides and Tutorials</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-learning-materials" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Learning Materials</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-guides-and-tutorials">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-learning-materials">    
         <li>
     <a class="dropdown-item" href="../learn-stan/case-studies.html">
  <span class="dropdown-text">Case Studies</span></a>
@@ -141,71 +141,13 @@ ul.task-list li input[type="checkbox"] {
   </li>  
     </ul>
   </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-interfaces" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Interfaces</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-interfaces">    
-        <li>
-    <a class="dropdown-item" href="https://mc-stan.org/docs/cmdstan-guide/overview.html">
- <span class="dropdown-text">CmdStan</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../tools/tools.html"> 
+<span class="menu-text">Tools</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="https://mc-stan.org/cmdstanpy">
- <span class="dropdown-text">CmdStanPy</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="https://mc-stan.org/cmdstanr">
- <span class="dropdown-text">CmdStanR</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="https://mc-stan.org/pystan">
- <span class="dropdown-text">PyStan</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="https://mc-stan.org/rstan">
- <span class="dropdown-text">RStan</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="http://stanjulia.github.io/Stan.jl/stable/INTRO/">
- <span class="dropdown-text">Stan.jl</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-related-tools" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Related Tools</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-related-tools">    
-        <li>
-    <a class="dropdown-item" href="https://mc-stan.org/bayesplot/">
- <span class="dropdown-text">Bayesplot</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="https://roualdes.github.io/bridgestan/latest/">
- <span class="dropdown-text">BridgeStan</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="https://paul-buerkner.github.io/brms/">
- <span class="dropdown-text">BRMS</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="https://mc-stan.org/loo/">
- <span class="dropdown-text">loo</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="https://mc-stan.org/rstanarm">
- <span class="dropdown-text">RStanArm</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="https://mc-stan.org/math">
- <span class="dropdown-text">Stan Math Library</span></a>
-  </li>  
-    </ul>
-  </li>
   <li class="nav-item">
     <a class="nav-link" href="../mc-stan-org/about.html"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text">About mc-stan.org</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -1776,6 +1718,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1810,7 +1770,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
