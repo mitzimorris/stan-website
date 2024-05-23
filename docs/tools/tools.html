@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Journal Articles</title>
+<title>Stan - Stan Interfaces and Tools</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -142,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../tools/tools.html"> 
+    <a class="nav-link active" href="../tools/tools.html" aria-current="page"> 
 <span class="menu-text">Tools</span></a>
   </li>  
   <li class="nav-item">
@@ -162,83 +162,240 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#stan-language-and-algorithms" id="toc-stan-language-and-algorithms" class="nav-link active" data-scroll-target="#stan-language-and-algorithms">Stan Language and Algorithms</a></li>
-  <li><a href="#hamiltonian-monte-carlo" id="toc-hamiltonian-monte-carlo" class="nav-link" data-scroll-target="#hamiltonian-monte-carlo">Hamiltonian Monte Carlo</a></li>
-  <li><a href="#variational-methods" id="toc-variational-methods" class="nav-link" data-scroll-target="#variational-methods">Variational Methods</a></li>
-  <li><a href="#bayesian-workflow" id="toc-bayesian-workflow" class="nav-link" data-scroll-target="#bayesian-workflow">Bayesian Workflow</a></li>
-  <li><a href="#books-using-stan" id="toc-books-using-stan" class="nav-link" data-scroll-target="#books-using-stan">Books using Stan</a></li>
-  </ul>
-</nav>
-</nav>
+  
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Stan Interfaces and Tools</h1>
+</div>
 
 
 
+<div class="quarto-title-meta column-page">
 
-<section id="stan-language-and-algorithms" class="level2">
-<h2 class="anchored" data-anchor-id="stan-language-and-algorithms">Stan Language and Algorithms</h2>
-<ul>
-<li><p>Bob Carpenter, Andrew Gelman, Matthew D. Hoffman, Daniel Lee, Ben Goodrich, Michael Betancourt, Marcus Brubaker, Jiqiang Guo, Peter Li, and Allen Riddell. 2017. Stan: A probabilistic programming language. <em>Journal of Statistical Software</em> 76(1). <a href="http://dx.doi.org/10.18637/jss.v076.i01">10.18637/jss.v076.i01</a></p></li>
-<li><p>Aki Vehtari, Andrew Gelman, and Jonah Gabry. 2016. Practical Bayesian model evaluation using leave-one-out cross-validation and WAIC. <em>Statistics and Computing</em>. doi:10.1007/s11222-016-9696-4.</p></li>
-<li><p>Robert L. Grant, Daniel C. Furr, Bob Carpenter, and Andrew Gelman. 2016. Fitting Bayesian item response models in Stata and Stan. <em>arXiv</em> 1601.03443.</p></li>
-<li><p>Andrew Gelman, Daniel Lee, and Jiqiang Guo. 2015. Stan: A probabilistic programming language for Bayesian inference and optimization. <em>Journal of Education and Behavioral Statistics</em>. 40(5):530–543.</p></li>
-<li><p>Alp Kucukelbir, Rajesh Ranganath, Andrew Gelman and David M. Blei. 2015. Automatic Variational Inference in Stan, <em>NIPS</em>.</p></li>
-<li><p>Bob Carpenter, Matthew D. Hoffman, Marcus Brubaker, Daniel Lee, Peter Li, and Michael J. Betancourt. 2015. The Stan Math Library: Reverse-Mode Automatic Differentiation in C++. <em>arXiv</em> 1509.07164.</p></li>
-</ul>
-</section>
-<section id="hamiltonian-monte-carlo" class="level2">
-<h2 class="anchored" data-anchor-id="hamiltonian-monte-carlo">Hamiltonian Monte Carlo</h2>
-<ul>
-<li><p>Michael Betancourt. 2017. A Conceptual Introduction to Hamiltonian Monte Carlo. <em>arXiv</em>:1701.02434.</p></li>
-<li><p>Cole C. Monnahan, James T. Thorson, and Trevor A. Branch. 2016. Faster estimation of Bayesian models in ecology using Hamiltonian Monte Carlo. <em>Methods in Ecology and Evolution</em>.</p></li>
-<li><p>Michael J. Betancourt. 2016. Identifying the Optimal Integration Time in Hamiltonian Monte Carlo. <em>arXiv</em>:1601.00225.</p></li>
-<li><p>Matthew D. Hoffman and Andrew Gelman. 2014. The No-U-Turn Sampler: Adaptively Setting Path Lengths in Hamiltonian Monte Carlo. <em>Journal of Machine Learning Research</em>. 15(Apr):1593–1623.</p></li>
-<li><p>Michael J. Betancourt, Mark Girolami. 2013. Hamiltonian Monte Carlo for Hierarchical Models. <em>arXiv</em> 1312.0906.</p></li>
-<li><p>Michael J. Betancourt. 2013. A General Metric for Riemannian Manifold Hamiltonian Monte Carlo. <em>arXiv</em> 1212.4693.</p></li>
-<li><p>Michael J. Betancourt. 2013. Generalizing the No-U-Turn Sampler to Riemannian Manifolds. <em>arXiv</em> 1304.1920.</p></li>
-<li><p>Radford Neal. 2011. <a href="MCMC Using Hamiltonian Dynamics">http://www.mcmchandbook.net/HandbookChapter5.pdf</a>. In <em>Handbook of Markov Chain Monte Carlo</em>, edited by Steve Brooks, Andrew Gelman, Galin L. Jones, and Xiao-Li Meng. Chapman-Hall/CRC.</p></li>
-</ul>
-</section>
-<section id="variational-methods" class="level2">
-<h2 class="anchored" data-anchor-id="variational-methods">Variational Methods</h2>
-<ul>
-<li><p>Pathfinder</p></li>
-<li><p>ADVI</p></li>
-</ul>
-</section>
-<section id="bayesian-workflow" class="level2">
-<h2 class="anchored" data-anchor-id="bayesian-workflow">Bayesian Workflow</h2>
-<ul>
-<li><p>Workflow paper</p></li>
-<li><p>Aki papers - PSIS-LOO-CV</p></li>
-</ul>
-</section>
-<section id="books-using-stan" class="level2">
-<h2 class="anchored" data-anchor-id="books-using-stan">Books using Stan</h2>
-<ul>
-<li><p>Suzuki, J. 2023. <a href="https://link.springer.com/book/10.1007/978-981-99-3838-4"><em>WAIC and WBIC with R Stan: 100 Exercises for Building Logic</em></a>. Springer.</p></li>
-<li><p>Matsuura, K.. 2022. <a href="https://link.springer.com/book/10.1007/978-981-19-4755-1"><em>Bayesian Statistical Modeling with Stan, R, and Python.</em></a> Springer.</p></li>
-<li><p>Holmes, E. E., M. D. Scheuerell, and E. J. Ward. 2019. <a href="https://nwfsc-timeseries.github.io/atsa-labs/"><em>Applied Time Series Analysis for Fisheries and Environmental Sciences</em></a>. NOAA Fisheries, Northwest Fisheries Science Center.</p></li>
-<li><p>Hilbe, J. M., R.S. de Souza, and E. E. O. Ishida. 2017. <em>Bayesian Models for Astrophysical Data Using R, JAGS, Python and Stan</em>. Cambridge University Press.</p></li>
-<li><p>Matsuura, K.. 2016. <em>Bayesian Statistical Modeling Using Stan and R</em>. Wonderful R Series, Volume 2. Kyoritsu Shuppan Co., Ltd.&nbsp;[in Japanese]</p></li>
-<li><p>McElreath, R. 2016. <em>Statistical Rethinking: A Bayesian Course with R and Stan</em>. Chapman-Hall/CRC.</p></li>
-<li><p>Korner-Nievergelt, F., Roth, T., Von Felten, S., Guélat, J., Almasi, B. and Korner-Nievergelt, P. 2015. <em>Bayesian Data Analysis in Ecology Using Linear Models with R, BUGS, and Stan</em>. Academic Press.</p></li>
-<li><p>Kruschke, J. 2014. <em>Doing Bayesian Data Analysis: A Tutorial with R, JAGS, and Stan</em>. Academic Press.</p></li>
-<li><p>Gelman, A., Carlin, J.B., Stern, H.S., Dunson, D.B., Vehtari, A. and Rubin, D.B. 2013. <em>Bayesian Data Analysis</em>, Third Edition. Chapman-Hall/CRC.</p></li>
-</ul>
+    
+  
+    
+  </div>
+  
 
 
-</section>
+</header>
+
+
+<style>
+  th:nth-child(2), td:nth-child(2) {
+     background-color: var(--stan-bg);
+  }
+</style>
+<table>
+<tbody><tr>
+<th style="width: 20%;">
+</th>
+<th style="width: 15%;">
+Language
+</th>
+<th style="width: 65%;">
+</th>
+</tr>
+<tr style="background-color: var(--stan-highlight);">
+<td>
+<b>Stan Interfaces</b>
+</td>
+<td style="background-color: var(--stan-highlight);">
+</td>
+<td>
+Write, compile, and run new Stan models
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+Julia
+</td>
+<td>
+<a href="http://stanjulia.github.io/Stan.jl/stable/INTRO/">Stan.jl</a>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+Python
+</td>
+<td>
+<a href="https://mc-stan.org/cmdstanpy">CmdStanPy</a>*, <a href="https://mc-stan.org/pystan">PyStan</a>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+R
+</td>
+<td>
+<a href="https://mc-stan.org/cmdstanr">CmdStanR</a>*, <a href="https://mc-stan.org/rstan">RStan</a>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td>
+<b>*Note:</b> CmdStanPy and CmdStanR are recommended for new users;<br>PyStan and RStan continue to be supported.
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+shell
+</td>
+<td>
+<a href="https://mc-stan.org/cmdstan">CmdStan</a>
+</td>
+</tr>
+<tr style="background-color: var(--stan-highlight);">
+<td>
+<b>High-level Interfaces</b>
+</td>
+<td style="background-color: var(--stan-highlight);">
+</td>
+<td>
+Use existing Stan models
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+R
+</td>
+<td>
+<a href="https://paul-buerkner.github.io/brms/">BRMS</a><br> Specify and fit multivariate and multilevel models in Stan using extended R-formula syntax.
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+R
+</td>
+<td>
+<a href="https://mc-stan.org/rstanarm">RStanArm</a><br> Pre-compiled Stan versions of existing R model functions.
+</td>
+</tr>
+<tr style="background-color: var(--stan-highlight);">
+<td>
+<b>Posterior Analysis Tools</b>
+</td>
+<td style="background-color: var(--stan-highlight);">
+</td>
+<td>
+Validate, visualize, and compare fitted models
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+Julia
+</td>
+<td>
+<a href="https://julia.arviz.org/ArviZ/stable/">ArviZ.jl</a>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+Python
+</td>
+<td>
+<a href="https://python.arviz.org/en/stable/">ArviZ</a>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+R
+</td>
+<td>
+<a href="https://mc-stan.org/bayesplot/">Bayesplot</a> - plot model outputs, <a href="https://mc-stan.org/loo/">loo</a> - leave-one-out cross validation<br> <a href="https://mc-stan.org/posterior">posterior</a> - get model estimates, <a href="https://mc-stan.org/projpred">projpred</a> - check model predictions
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+Web browser
+</td>
+<td>
+<a href="https://github.com/flatironinstitute/mcmc-monitor">MCMC Monitor</a>
+</td>
+</tr>
+<tr style="background-color: var(--stan-highlight);">
+<td>
+<b>For Algorithm Developers</b>
+</td>
+<td style="background-color: var(--stan-highlight);">
+</td>
+<td>
+Access Stan model methods from higher-level languages
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+Julia, Python, R, Rust
+</td>
+<td>
+<a href="https://roualdes.github.io/bridgestan/latest/">BridgeStan</a><br> Library with bindings to a model’s log densities, gradients, Hessians, and constraining and unconstraining transforms.
+</td>
+</tr>
+<tr style="background-color: var(--stan-highlight);">
+<td>
+<b>For Package Developers</b>
+</td>
+<td style="background-color: var(--stan-highlight);">
+</td>
+<td>
+Build tools that use Stan
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+C++
+</td>
+<td>
+<a href="https://mc-stan.org/math/">stan-dev/math</a>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+R
+</td>
+<td>
+<a href="https://mc-stan.org/rstantools/">rstantools</a>
+</td>
+</tr>
+</tbody></table>
+
+
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
