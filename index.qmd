@@ -17,7 +17,20 @@ description: |
 
 ::: {.g-col-8}
 
-# Stan: Open-Source Software for Statistical Modeling
+# Stan: Software for Bayesian Data Analysis
+
+:::
+:::
+:::
+
+::: {.second-banner}
+
+::: {.grid}
+
+::: {.g-col-1}
+:::
+
+::: {.g-col-8}
 
 ### Bayesian Modeling
 
@@ -27,13 +40,14 @@ Stan enables sophisticated statistical modeling using Bayesian inference, allowi
 
 Stan's probabilistic programming language is suitable for a wide range of applications, from simple linear regression to multi-level models and time-series analysis.
 
-### Interfaces for Python, R, and Julia - Runs on Linux, Mac, and Windows
+### Multi-Language, Cross-Platform Toolkit
 
 Interfaces for Python, Julia, R, and the Unix shell make it easy to use Stan in any programming environment,
-on  laptops, clusters, or the cloud.
+on  laptops, clusters, or in the cloud.  A rich ecosystem of tools for validation and visualization support
+decision-making and communication.
 
 ::: {.hero-buttons style="position: relative; display: flex; justify-content: center;"}
-[Get Started](installation/install.qmd){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
+[Get Started](install/install.qmd){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
 ::: 
 
 ::: {.g-col-3}
