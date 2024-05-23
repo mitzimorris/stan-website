@@ -10,7 +10,7 @@ toc-location: left
   <div class="os option grid-item" id="linux">Linux</div>
   <div class="os option grid-item" id="macos">MacOS</div>
   <div class="os option grid-item" id="windows">Windows</div>
-  <div class="os option grid-item" id="colab">Google Colab</div>
+  <div class="grid-blank"></div>
 
   <div class="row-label" style="grid-row: span 2;">Interface</div>
   <div class="interface option grid-item" id="stan.jl">Julia</div>
@@ -43,7 +43,7 @@ toc-location: left
 <script src="installer_2.js"></script>
 
 
-## More Info
+## Instructions
 
 ### Platform
 

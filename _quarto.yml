@@ -5,8 +5,8 @@ project:
   render:
     - "index.qmd"
     - "404.qmd"
-    - "installation/*.qmd"
-    - "ecosystem/*.qmd"
+    - "install/*.qmd"
+    - "tools/*.qmd"
     - "learn-stan/*.qmd"
     - "mc-stan-org/*.qmd"
   resources:
@@ -26,7 +26,7 @@ website:
       - text: "Stan"
         href: index.qmd
       - text: "Getting Started"
-        href: installation/install.qmd
+        href: install/install.qmd
       - text: "Documentation"
         menu:
           - text: "Stan Users Guide"

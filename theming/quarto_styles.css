@@ -416,6 +416,14 @@ pre.sourceCode {
   justify-content: center;
   color: var(--stan-highlight);
   background-color: var(--stan-dark);
+  border: 10px solid var(--stan-secondary);
+}
+
+.second-banner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border: 10px solid var(--stan-secondary);
 }
 
 .hero-banner h1 {
