@@ -8,30 +8,23 @@ description: |
   Stan combines powerful statistical modeling capabilities with user-friendly interfaces, an active community, and a commitment to open-source development.  
 ---
 
+
 ::: {.hero-banner}
-
 ::: {.grid}
-
 ::: {.g-col-1}
 :::
-
 ::: {.g-col-8}
-
 # Stan: Software for Bayesian Data Analysis
+:::
+:::
+:::
 
-:::
-:::
-:::
 
 ::: {.second-banner}
-
 ::: {.grid}
-
 ::: {.g-col-1}
 :::
-
 ::: {.g-col-8}
-
 ### Bayesian Modeling
 
 Stan enables sophisticated statistical modeling using Bayesian inference, allowing for more accurate and interpretable results in complex data scenarios.
@@ -50,23 +43,18 @@ decision-making and communication.
 [Get Started](install/install.qmd){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
 ::: 
 
-::: {.g-col-3}
-:::
-
 :::
 :::
 :::
 
-::: {style="position: relative; display: flex; justify-content: center;"}
 
+
+::: {.second-banner}
 ::: {.grid}
-
 ::: {.g-col-1}
 :::
-
 ::: {.g-col-8}
 ## Community Resources
-
 * The Stan [forums](https://discourse.mc-stan.org) provide support for all user levels and topics,
 from installing software, to writing Stan programs, to advanced Bayesian modeling techniques and methodology.
 
@@ -74,21 +62,27 @@ from installing software, to writing Stan programs, to advanced Bayesian modelin
 help users learn and use Stan effectively in their own projects.
 The [Prior Choice Recommendations](https://github.com/stan-dev/stan/wiki/Prior-Choice-Recommendations)
 provides guidance on appropriate priors for use with Stan.
+:::
+:::
+:::
 
+::: {.second-banner}
+::: {.grid}
+::: {.g-col-1}
+:::
 
+::: {.g-col-8}
 ## Developer Resources
-
 * The [Stan Developer Wiki](https://github.com/stan-dev/stan/wiki)
 
 * The [Stan Forums Developers category](https://discourse.mc-stan.org/c/stan-dev/10)
 
 * The Stan slack channel [mc-stan.slack.com](https://join.slack.com/t/mc-stan/shared_invite/zt-1le4ebi4m-UMtiOkJb4gcS16qz2wIYCw)
 is for informal developer discussions.
-
+:::
+:::
 :::
 
-::: {.g-col-3}
-:::
 
-:::
-:::
+
+what goes here and where?
