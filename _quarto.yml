@@ -5,7 +5,8 @@ project:
   render:
     - "index.qmd"
     - "404.qmd"
-    - "installation/*.qmd"
+    - "install/*.qmd"
+    - "tools/*.qmd"
     - "learn-stan/*.qmd"
     - "mc-stan-org/*.qmd"
   resources:
@@ -25,7 +26,7 @@ website:
       - text: "Stan"
         href: index.qmd
       - text: "Getting Started"
-        href: installation/install.qmd
+        href: install/install.qmd
       - text: "Documentation"
         menu:
           - text: "Stan Users Guide"
@@ -34,7 +35,7 @@ website:
             url: https://mc-stan.org/docs/reference-manual/index.html
           - text: "Functions Reference"
             url: https://mc-stan.org/docs/functions-reference/overview.html
-      - text: "Guides and Tutorials"
+      - text: "Learning Materials"
         menu:
           - text: "Case Studies"
             href: learn-stan/case-studies.qmd
@@ -44,35 +45,9 @@ website:
             href: learn-stan/tutorials.qmd
           - text: "Journal Articles"
             href: learn-stan/articles.qmd
-      - text: "Interfaces"
-        menu:
-          - text: "CmdStan"
-            url: https://mc-stan.org/docs/cmdstan-guide/overview.html
-          - text: "CmdStanPy"
-            url: https://mc-stan.org/cmdstanpy
-          - text: "CmdStanR"
-            url: https://mc-stan.org/cmdstanr
-          - text: "PyStan"
-            url: https://mc-stan.org/pystan
-          - text: "RStan"
-            url: https://mc-stan.org/rstan
-          - text: "Stan.jl"
-            url: http://stanjulia.github.io/Stan.jl/stable/INTRO/
-      - text: "Related Tools"
-        menu:
-          - text: "Bayesplot"
-            href: https://mc-stan.org/bayesplot/
-          - text: "BridgeStan"
-            href: https://roualdes.github.io/bridgestan/latest/
-          - text: "BRMS"
-            url: https://paul-buerkner.github.io/brms/
-          - text: "loo"
-            href: https://mc-stan.org/loo/
-          - text: "RStanArm"
-            url: https://mc-stan.org/rstanarm
-          - text: "Stan Math Library"
-            url: https://mc-stan.org/math
-      - text: "About"
+      - text: "Tools"
+        href: tools/tools.qmd
+      - text: "About mc-stan.org"
         href: mc-stan-org/about.qmd
     tools:
       - icon: github
