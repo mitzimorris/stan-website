@@ -419,13 +419,6 @@ pre.sourceCode {
   border: 10px solid var(--stan-secondary);
 }
 
-.second-banner {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  border: 10px solid var(--stan-secondary);
-}
-
 .hero-banner h1 {
   font-size: 2.5rem;
 }
@@ -442,6 +435,20 @@ pre.sourceCode {
 }
 
 .hero-banner .content-block .hero-text {
+  width: 75%;
+}
+
+.second-banner {
+  position: relative;
+  justify-content: left;
+  border: 2px solid var(--stan-secondary);
+}
+
+.second-banner .content-block {
+  flex-direction: row;
+}
+
+.second-banner .content-block .hero-text {
   width: 75%;
 }
 
