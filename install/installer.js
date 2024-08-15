@@ -11,21 +11,28 @@ const supportedInstallersMap = {
     "": [], // mostly handles the case where a user had selected pystan then switches to windows
 };
 
+const cmdstanpyPostamble = "<p>Then, in Python, run <code>import cmdstanpy; cmdstanpy.install_cmdstan()</code> or follow the conda instructions for CmdStan</p>";
+const cmdstanRPostamble = "<p>Then run <code>cmdstanr::install_cmdstan()</code></p>";
+
 const instructions = {
     "cmdstanpy": {
-        "pip": "<code>pip install cmdstanpy</code>",
-        "conda": "<code>conda install -c conda-forge cmdstanpy</code>",
-        "github-src": "<code>pip install -e git+https://github.com/stan-dev/cmdstanpy@develop#egg=cmdstanpy</code>",
+        "pip": "Run <code>pip install cmdstanpy</code>" + cmdstanpyPostamble,
+        "conda": "Run <code>conda install -c conda-forge cmdstanpy</code>",
+        "github-src": "Run <code>pip install -e git+https://github.com/stan-dev/cmdstanpy@develop#egg=cmdstanpy</code>" + cmdstanpyPostamble,
     },
     "cmdstanr": {
-        "runiverse": "In R, run <code>install.packages(\"cmdstanr\", repos = c('https://stan-dev.r-universe.dev', getOption(\"repos\")))</code>",
-        "github-src": "In R, run <code>remotes::install_github(\"stan-dev/cmdstanr\")</code>",
+        "runiverse": "In R, run <code>install.packages(\"cmdstanr\", repos = c('https://stan-dev.r-universe.dev', getOption(\"repos\")))</code>" + cmdstanRPostamble,
+        "github-src": "In R, run <code>remotes::install_github(\"stan-dev/cmdstanr\")</code>" + cmdstanRPostamble,
     },
     "cmdstan": {
         "github-rel": "install from github release binary.tgz",
-        "conda": "<code>conda install -c conda-forge cmdstan</code>",
+        "conda": "Run <code>conda install -c conda-forge cmdstan</code>",
         "github-src": "install from github release src.tgz",
     },
+    "pystan": {
+        "pip": "Run <code>pip install pystan</code>",
+        "conda": "Run <code>conda install -c conda-forge pystan</code>",
+    }
     // TODO: more
 }
 
