@@ -5,39 +5,23 @@ toc-location: left
 ---
 ## Download and Install Stan
 
-<div class="grid-container">
-  <div class="row-label">OS</div>
-  <div class="os option grid-item" id="linux">Linux</div>
-  <div class="os option grid-item" id="macos">MacOS</div>
-  <div class="os option grid-item" id="windows">Windows</div>
-  <div class="grid-blank"></div>
+Stan is available for all major operating systems and has packages in several
+popular languages. Most users can get started by just selecting their preferred
+options in the grid below. If you don't see your exact set-up, see (TODO) "Other Packages" below
+for more programming language options and ways of using Stan.
 
-  <div class="row-label" style="grid-row: span 2;">Interface</div>
-  <div class="interface option grid-item" id="stan.jl">Julia</div>
-  <div class="interface option grid-item" id="cmdstanpy">CmdStanPy</div>
-  <div class="interface option grid-item" id="cmdstanr">CmdStanR</div>
-  <div class="interface option grid-item" id="cmdstan">CmdStan</div>
-  <div class="grid-blank"></div>
-  <div class="interface option grid-item" style="grid-column: 3;" id="pystan">PyStan</div>
-  <div class="interface option grid-item" style="grid-column: 4;" id="rstan">RStan</div>
-  <div class="grid-blank"></div>
-
-  <div class="row-label" style="grid-row: span 2;">Installer</div>
-  <div class="installer option grid-item" id="julia-pkg">Julia package manager</div>
-  <div class="installer option grid-item" id="pip">Pip</div>
-  <div class="installer option grid-item" id="cran">CRAN</div>
-  <div class="installer option grid-item" id="github-bin">Github binary</div>
-  <div class="grid-blank"></div>
-  <div class="installer option grid-item" id="conda">Conda-forge</div>
-  <div class="installer option grid-item" id="runiverse">R Universe</div>
-  <div class="installer option grid-item" id="github-src">Github source</div>
-
-  <br/>
-  <div class="row-label" style="grid-column:1;">Command&nbsp;&nbsp;&nbsp;</div>
-  <div class="grid-item row-label" id="command"
-       style="grid-column:span 4; background-color: var(--stan-highlight);padding-left:10px;">
+<div id="install-grid" >
+</div>
+<br/>
+<div class="flex-grid">
+  <div class="row-label">Prerequisites</div>
+  <div class="col" id="prerequisites" style="background-color: var(--stan-highlight);padding-left:10px;">
   </div>
-  <br/>
+</div>
+<div class="flex-grid">
+  <div class="row-label">How to Install</div>
+  <div class="col" id="command" style="background-color: var(--stan-highlight);padding-left:10px;">
+  </div>
 </div>
 
 <script src="installer_2.js"></script>

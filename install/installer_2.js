@@ -1,46 +1,70 @@
-var supportedOperatingSystems = ['linux', 'macos', 'windows'];
-var supportedInterfaces = ['stan.jl', 'cmdstanpy', 'cmdstanr', 'cmdstan', 'pystan', 'rstan'];
-var supportedInstallers = ['julia-pkg', 'conda', 'cran', 'github-bin', 'pip', 'runiverse', 'github-src'];
+let supportedOperatingSystems = ['linux', 'macos', 'windows'];
+let supportedInterfaces = ['cmdstanpy', 'cmdstanr', 'cmdstan', 'pystan', 'rstan', 'stan.jl'];
 
-var opts = {
-    os: getDefaultSelectedOS(),
-    interface: 'cmdstan',
-    installer: 'github-bin',
+const supportedInstallersMap = {
+    "cmdstanpy": ["pip", "conda", "github-src"],
+    "cmdstanr": ["runiverse", "github-src"],
+    "cmdstan": ["github-rel", "conda", "github-src"],
+    "pystan": ["pip", "conda", "github-src"],
+    "rstan": ["cran", "runiverse", "github-src"],
+    "stan.jl": ["julia-pkg", "github-src"],
+    "": [], // mostly handles the case where a user had selected pystan then switches to windows
 };
 
-var osOptions = document.querySelectorAll('.os');
-var interfaceOptions = document.querySelectorAll('.interface');
-var installerOptions = document.querySelectorAll('.installer');
+const instructions = {
+    "cmdstanpy": {
+        "pip": "<code>pip install cmdstanpy</code>",
+        "conda": "<code>conda install -c conda-forge cmdstanpy</code>",
+        "github-src": "<code>pip install -e git+https://github.com/stan-dev/cmdstanpy@develop#egg=cmdstanpy</code>",
+    },
+    "cmdstanr": {
+        "runiverse": "In R, run <code>install.packages(\"cmdstanr\", repos = c('https://stan-dev.r-universe.dev', getOption(\"repos\")))</code>",
+        "github-src": "In R, run <code>remotes::install_github(\"stan-dev/cmdstanr\")</code>",
+    },
+    "cmdstan": {
+        "github-rel": "install from github release binary.tgz",
+        "conda": "<code>conda install -c conda-forge cmdstan</code>",
+        "github-src": "install from github release src.tgz",
+    },
+    // TODO: more
+}
 
-osOptions.forEach(option => {
-    option.addEventListener('click', function() {
-        selectedOption(osOptions, this, 'os');
-	resetOptions(interfaceOptions);
-        resetOptions(installerOptions);
-	resetAndClearInstallerOptions();
-        updateInterfaceOptions();
-        updateInstallerOptions();
-    });
-});
+const osToTitle = {
+    "linux": "Linux",
+    "macos": "macOS",
+    "windows": "Windows",
+};
 
-interfaceOptions.forEach(option => {
-    option.addEventListener('click', function() {
-        selectedOption(interfaceOptions, this, 'interface');
-	resetOptions(installerOptions);
-	resetAndClearInstallerOptions();
-        updateInstallerOptions();
-    });
-});
+const interfaceToTitle = {
+    "cmdstanpy": "CmdStanPy",
+    "cmdstanr": "CmdStanR",
+    "cmdstan": "CmdStan",
+    "pystan": "PyStan",
+    "rstan": "RStan",
+    "stan.jl": "Stan.jl",
+};
 
-installerOptions.forEach(option => {
-    option.addEventListener('click', function() {
-        selectedOption(installerOptions, this, 'installer');
-    });
-});
+const installerToTitle = {
+    "pip": "pip",
+    "conda": "conda",
+    "github-src": "GitHub (Source)",
+    "github-rel": "GitHub (Release)",
+    "cran": "CRAN",
+    "runiverse": "R-Universe",
+    "julia-pkg": "Pkg.jl",
+};
+
+let opts = {
+    os: getDefaultSelectedOS(),
+    interface: 'cmdstan',
+    installer: 'github-src',
+};
+let supportedInstallers = supportedInstallersMap[opts.interface];
+
 
 function getDefaultSelectedOS() {
-    var platform = navigator.platform.toLowerCase();
-    for (var os of supportedOperatingSystems) {
+    const platform = navigator.platform.toLowerCase();
+    for (const os of supportedOperatingSystems) {
         if (platform.indexOf(os) !== -1) {
             return os;
         }
@@ -48,111 +72,136 @@ function getDefaultSelectedOS() {
     return 'linux';
 }
 
-function selectedOption(options, selection, category) {
+function selectedOption(selection, category) {
+    const options = document.querySelectorAll('.' + category);
+
     options.forEach(option => {
         option.classList.remove('selected');
-    });
-    selection.classList.add('selected');
-    opts[category] = selection.id;
-    updateCommandMessage();
-}
-
-function updateCommandMessage() {
-    if (!isOptionSet('os') || !isOptionSet('interface') || !isOptionSet('installer')) {
-        document.getElementById('command').innerText = "Please select os, interface, and installer.";
-        return;
-    }
-
-    var key = opts.os + "," + opts.interface + "," + opts.installer;
-    var commands = {
-        "linux,stan.jl,julia-pkg": "using Pkg; Pkg.add('Stan')",
-        "linux,cmdstan,github-src": "install from github release src.tgz",
-        "linux,cmdstan,github-bin": "install from github release binary.tgz",
-        "linux,cmdstan,conda": "conda install -c conda-forge cmdstan",
-        "linux,cmdstanpy,pip": "pip install cmdstanpy",
-        "linux,cmdstanpy,conda": "conda install -c conda-forge cmdstanpy",
-        "linux,cmdstanr,cran": "install.packages('cmdstanr', repos = c('https://mc-stan.org/r-packages/', getOption('repos')))",
-        "linux,pystan,pip": "pip install pystan",
-        "linux,rstan,cran": "install.packages('rstan')",
-        "macos,stan.jl,julia-pkg": "using Pkg; Pkg.add('Stan')",
-        "macos,cmdstan,github-src": "install from github release src.tgz",
-        "macos,cmdstan,conda": "conda install -c conda-forge cmdstan",
-        "macos,cmdstanpy,pip": "pip install cmdstanpy",
-        "macos,cmdstanpy,conda": "conda install -c conda-forge cmdstanpy",
-        "macos,cmdstanr,cran": "install.packages('cmdstanr', repos = c('https://mc-stan.org/r-packages/', getOption('repos')))",
-        "macos,pystan,pip": "pip install pystan",
-        "macos,rstan,cran": "install.packages('rstan')",
-        "windows,stan.jl,julia-pkg": "using Pkg; Pkg.add('Stan')",
-        "windows,cmdstan,github-src": "install from github release src.tgz",
-        "windows,cmdstan,conda": "conda install -c conda-forge cmdstan",
-        "windows,cmdstanr,cran": "install.packages('cmdstanr', repos = c('https://mc-stan.org/r-packages/', getOption('repos')))",
-        "windows,cmdstanpy,pip": "pip install cmdstanpy",
-        "windows,cmdstanpy,conda": "conda install -c conda-forge cmdstanpy",
-        "windows,rstan,cran": "install.packages('rstan')",
-    };
-    var command = commands[key];
-    document.getElementById('command').innerText = command ? command : "Instructions not available.";
-}
-
-function updateInterfaceOptions() {
-    interfaceOptions.forEach(option => {
-        option.classList.remove('disabled');
-        if (opts.os === 'windows' && option.id === 'pystan') {
-            option.classList.add('disabled');
+        if (option.id === selection) {
+            option.classList.add('selected');
         }
     });
-}
-
-function updateInstallerOptions() {
-    installerOptions.forEach(option => {
-        option.classList.remove('disabled');
-        if ((opts.interface === 'cmdstanr'  || opts.interface === 'rstan') && (option.id !== 'cran' && option.id !== 'runiverse')) {
-            option.classList.add('disabled');
-        }
-	if (opts.interface === 'pystan' && option.id !== 'pip') {
-            option.classList.add('disabled');
-        }
-	if (opts.interface === 'cmdstanpy' && (option.id !== 'pip' && option.id !== 'conda')) {
-            option.classList.add('disabled');
-        }
-        if (opts.interface === 'cmdstan' && (option.id !== 'github-src' && option.id !== 'github-bin' && option.id !== 'conda')) {
-            option.classList.add('disabled');
-        }
-	if (opts.interface === 'stan.jl' && option.id !== 'julia-pkg') {
-            option.classList.add('disabled');
-        }
-    });
-}
-
-function resetOptions(options) {
-    options.forEach(option => {
-        option.classList.remove('disabled');
-    });
-}
-
-function resetAndClearInstallerOptions() {
-    resetOptions(installerOptions);
-    installerOptions.forEach(option => {
-        option.classList.remove('selected');
-    });
-    opts.installer = '';
-    updateCommandMessage();
+    opts[category] = selection;
+    updateInstructions();
 }
 
 function isOptionSet(category) {
     return opts[category] && opts[category] !== '';
 }
 
+function updateInstructions() {
+    if (!isOptionSet('os') || !isOptionSet('interface') || !isOptionSet('installer')) {
+        document.getElementById('prerequisites').innerText = "";
+        document.getElementById('command').innerText = "Please select OS, interface, and preferred package manager.";
+        return;
+    }
+
+    const command = instructions[opts.interface]?.[opts.installer];
+    document.getElementById('command').innerHTML = command ?? "Instructions not available.";
+}
+
+function updateInterfaceOptions() {
+    document.querySelectorAll('.interface').forEach(option => {
+        option.classList.remove('disabled');
+        if (opts.os === 'windows' && option.id === 'pystan') {
+            option.classList.add('disabled');
+            if (option.classList.contains('selected')) {
+                option.classList.remove('selected');
+                opts.interface = '';
+            }
+        }
+    });
+}
 
 
-// Pre-select user's operating system
-document.addEventListener('DOMContentLoaded', function() {
+function updateInstallerOptions() {
+    // only show supported installers for the selected interface
+    supportedInstallers = supportedInstallersMap[opts.interface];
+    const gridDiv = document.getElementById('install-grid');
+    gridDiv.children[2]?.remove();
+    addRow('Installer', supportedInstallers);
+
+    let found = false;
+    document.querySelectorAll('.installer').forEach(option => {
+        if (option.id === opts.installer) {
+            option.classList.add('selected');
+            found = true;
+        }
+    });
+
+    if (!found) {
+        opts.installer = '';
+    }
+
+}
+
+function updateNeeded(category) {
+    if (category === 'os') {
+        updateInterfaceOptions();
+        updateInstallerOptions();
+    } else if (category === 'interface') {
+        updateInstallerOptions();
+    }
+
+    updateInstructions();
+}
+
+
+function getTitle(category, str) {
+    if (category === 'interface') {
+        return interfaceToTitle[str];
+    } else if (category === 'installer') {
+        return installerToTitle[str];
+    } else if (category === 'os') {
+        return osToTitle[str];
+    }
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+function addRow(label, items) {
+    const row = document.createElement('div');
+    row.classList.add('flex-grid');
+
+    const category = label.toLowerCase();
+
+    const rowLabel = document.createElement('div');
+    rowLabel.classList.add('row-label');
+    rowLabel.innerText = label;
+    row.appendChild(rowLabel);
+
+    for (const item of items) {
+        const itemDiv = document.createElement('div');
+        itemDiv.classList.add('option');
+        itemDiv.classList.add('grid-item');
+        itemDiv.classList.add('col');
+        itemDiv.classList.add(category);
+        itemDiv.id = item;
+        itemDiv.innerText = getTitle(category, item);
+
+        itemDiv.addEventListener('click', function () {
+            if (this.classList.contains('disabled')) {
+                return;
+            }
+            selectedOption(item, category);
+            updateNeeded(category);
+        });
+
+        row.appendChild(itemDiv);
+    }
+
+    const gridDiv = document.getElementById('install-grid');
+    gridDiv.appendChild(row);
+
+}
+
+// Draw grid and select defaults
+document.addEventListener('DOMContentLoaded', function () {
+    addRow('OS', supportedOperatingSystems);
+    addRow('Interface', supportedInterfaces);
+    addRow('Installer', supportedInstallers);
+
+    updateInstructions();
     document.getElementById(opts.os).classList.add('selected');
     document.getElementById(opts.interface).classList.add('selected');
     document.getElementById(opts.installer).classList.add('selected');
-    updateCommandMessage();
-    resetOptions(interfaceOptions);
-    resetOptions(installerOptions);
-    updateInterfaceOptions();
-    updateInstallerOptions();
 });
