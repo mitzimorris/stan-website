@@ -36,6 +36,12 @@ const instructions = {
     // TODO: more
 }
 
+const prerequisites = {
+    "linux": "Stan requires a C++17 compiler. On .deb based distros, <code>sudo apt-get install build-essential</code> will install what you need.",
+    "macos": "Stan requires a C++17 compiler. We recommend installing Xcode from the App Store and then run <code>xcode-select --install</code>.",
+    "windows": "Stan requires a C++17 compiler and some additional tools for building. We recommend RTools TODO",
+};
+
 const osToTitle = {
     "linux": "Linux",
     "macos": "macOS",
@@ -97,11 +103,14 @@ function isOptionSet(category) {
 }
 
 function updateInstructions() {
+    const prereq = prerequisites[opts.os];
+    document.getElementById('prerequisites').innerHTML = prereq ?? "Prerequisites not available.";
+
     if (!isOptionSet('os') || !isOptionSet('interface') || !isOptionSet('installer')) {
-        document.getElementById('prerequisites').innerText = "";
-        document.getElementById('command').innerText = "Please select OS, interface, and preferred package manager.";
+        document.getElementById('command').innerText = "Please select interface and preferred package manager.";
         return;
     }
+
 
     const command = instructions[opts.interface]?.[opts.installer];
     document.getElementById('command').innerHTML = command ?? "Instructions not available.";
