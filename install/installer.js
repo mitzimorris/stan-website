@@ -11,7 +11,10 @@ const supportedInstallersMap = {
     "": [], // mostly handles the case where a user had selected pystan then switches to windows
 };
 
-const cmdstanpyPostamble = "<p>Then, in Python, run <code>import cmdstanpy; cmdstanpy.install_cmdstan()</code> or follow the conda instructions for CmdStan</p>";
+const cmdstanpyPostamble = `
+<p>Then, in Python, run <code>import cmdstanpy; cmdstanpy.install_cmdstan()</code> or follow the conda instructions for CmdStan.</p>
+<p>For more information, see the <a href="https://mc-stan.org/cmdstanpy/installation.html" target="_blank">CmdStanPy documentation</a>.</p>
+`;
 const cmdstanRPostamble = "<p>Then run <code>cmdstanr::install_cmdstan()</code></p>";
 
 const instructions = {
