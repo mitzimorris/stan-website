@@ -1,14 +1,15 @@
 ---
 pagetitle: "Get Stan"
 page-layout: full
-toc-location: left
+toc-location: right
+toc-depth: 3
 ---
 ## Download and Install Stan
 
 Stan is available for all major operating systems and has packages in several
 popular languages. Most users can get started by just selecting their preferred
-options in the grid below. If you don't see your exact set-up, see [Other packages and environments](#other-packages) below
-for more programming language options and ways of using Stan.
+options in the grid below. If you don't see your exact set-up, see [Other Stan interfaces](#other-packages) below.
+
 
 
 ::: {#install-grid}
@@ -68,7 +69,7 @@ For more information, see the
 ::::: {.install #install-cmdstanpy-conda .hidden}
 Run `conda install -c conda-forge cmdstanpy`.
 
-Note: this will also install CmdStan and any system prerequesites.
+Note: this will also install CmdStan and any system prerequisites.
 :::::
 
 ::::: {.install #install-cmdstanpy-github-src .hidden}
@@ -95,7 +96,7 @@ Run `conda install -c conda-forge r-cmdstanr`.
 Note: this will also install CmdStan and any system prerequesites.
 :::::
 
-::::: {.install #install-cmdstanr-github-src .hidden}
+::::: {.Install #install-cmdstanr-github-src .hidden}
 In R, run `remotes::install_github("stan-dev/cmdstanr")`.
 Then run `cmdstanr::install_cmdstan()` or follow the manual installation instructions for CmdStan.
 
@@ -141,24 +142,77 @@ TODO 11
 
 <script src="installer.js"></script>
 
-## In-Depth Instructions
 
-### Platform
 
-#### Linux
+## Installers
 
-- which C++
 
-#### MacOS
+#### Native installers:
 
-- Xcode
+* R users can use R's `install.packages()` function to manage libraries.
+* Python users can use Python's `pip` utility.
+* Julia users can manage packages with the built-in `Pkg` module using commands like `Pkg.add()`.
 
-#### Windows
+#### Conda
 
-- Conda
-- RTools
+Conda simplifies the installation process by ensuring that all required libraries and tools are compatible with each other
+and is available for Linux, Mac, and Windows platforms.
+Conda is available from [Anaconda](anaconda.com) and [Miniconda](miniconda.com).
 
-## Other packages and environments {#other-packages}
+## Prerequisite:  C++
+
+### C++ on Linux
+
+The conda installers for CmdStan, CmdStanPy, and CmdStanR will install C++17 and GNU-Make utilities
+
+For Debian-based distributions, run
+```
+sudo apt-get install build-essential
+```
+
+### C++ on MacOS
+
+We strongly recommend installing Xcode from the Apple App Store.  Then run
+```
+xcode-select --install
+```
+
+
+### C++ on Windows
+
+On a Windows 10 machine, we strongly recommend installing Anaconda.
+R Users can also use the RTools distribution.
+
+
+### C++ Libraries
+
+- Boost
+- Sundials
+- TBB
+
+
+## CmdStan-based Interfaces
+
+Both CmdStanPy and CmdStanR require a local CmdStan installation and provide scripts and methods to manage this.
+The default location is a hidden directory under the user's home directory named `.cmdstan`.
+This directory contains one or more versions of CmdStan.
+
+#### Building
+
+- command shell
+
+- from Python
+
+- from R
+
+#### Managing release versions
+
+- CmdStanPy
+
+- CmdStanR
+
+
+## Other Stan Interfaces {#other-packages}
 
 #### Google Colab
 
@@ -178,19 +232,6 @@ As of Release 3.10.0, PyStan is no longer being actively supported.
 :::
 
 ## Troubleshooting
-
-### C++ Versions
-
-### C++ Libraries
-
-- Boost
-- Sundials
-- TBB
-
-### GPU Support
-
-
-
 
 
 

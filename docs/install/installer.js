@@ -83,18 +83,10 @@ function updateInstructions() {
             found = true;
         }
     });
-
     if (!found) {
         document.getElementById('install-please-select').classList.remove('hidden');
     }
 }
-
-function updateInterfaceOptions() {
-    document.querySelectorAll('.interface').forEach(option => {
-        option.classList.remove('disabled');
-    });
-}
-
 
 function updateInstallerOptions() {
     // only show supported installers for the selected interface
@@ -110,11 +102,9 @@ function updateInstallerOptions() {
             found = true;
         }
     });
-
     if (!found) {
         opts.installer = '';
     }
-
 }
 
 function updateNeeded(category) {
@@ -124,7 +114,6 @@ function updateNeeded(category) {
     } else if (category === 'interface') {
         updateInstallerOptions();
     }
-
     updateInstructions();
 }
 

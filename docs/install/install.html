@@ -108,7 +108,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../theming/quarto_styles.css">
 </head>
 
-<body class="floating nav-fixed">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -196,39 +196,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
   <li><a href="#download-and-install-stan" id="toc-download-and-install-stan" class="nav-link active" data-scroll-target="#download-and-install-stan">Download and Install Stan</a></li>
-  <li><a href="#in-depth-instructions" id="toc-in-depth-instructions" class="nav-link" data-scroll-target="#in-depth-instructions">In-Depth Instructions</a>
+  <li><a href="#installers" id="toc-installers" class="nav-link" data-scroll-target="#installers">Installers</a></li>
+  <li><a href="#prerequisite-c" id="toc-prerequisite-c" class="nav-link" data-scroll-target="#prerequisite-c">Prerequisite: C++</a>
   <ul class="collapse">
-  <li><a href="#platform" id="toc-platform" class="nav-link" data-scroll-target="#platform">Platform</a></li>
-  </ul></li>
-  <li><a href="#other-packages" id="toc-other-packages" class="nav-link" data-scroll-target="#other-packages">Other packages and environments</a></li>
-  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a>
-  <ul class="collapse">
-  <li><a href="#c-versions" id="toc-c-versions" class="nav-link" data-scroll-target="#c-versions">C++ Versions</a></li>
+  <li><a href="#c-on-linux" id="toc-c-on-linux" class="nav-link" data-scroll-target="#c-on-linux">C++ on Linux</a></li>
+  <li><a href="#c-on-macos" id="toc-c-on-macos" class="nav-link" data-scroll-target="#c-on-macos">C++ on MacOS</a></li>
+  <li><a href="#c-on-windows" id="toc-c-on-windows" class="nav-link" data-scroll-target="#c-on-windows">C++ on Windows</a></li>
   <li><a href="#c-libraries" id="toc-c-libraries" class="nav-link" data-scroll-target="#c-libraries">C++ Libraries</a></li>
-  <li><a href="#gpu-support" id="toc-gpu-support" class="nav-link" data-scroll-target="#gpu-support">GPU Support</a></li>
   </ul></li>
+  <li><a href="#cmdstan-based-interfaces" id="toc-cmdstan-based-interfaces" class="nav-link" data-scroll-target="#cmdstan-based-interfaces">CmdStan-based Interfaces</a></li>
+  <li><a href="#other-packages" id="toc-other-packages" class="nav-link" data-scroll-target="#other-packages">Other Stan Interfaces</a></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
   </ul>
 </nav>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 
 
 
 <section id="download-and-install-stan" class="level2">
 <h2 class="anchored" data-anchor-id="download-and-install-stan">Download and Install Stan</h2>
-<p>Stan is available for all major operating systems and has packages in several popular languages. Most users can get started by just selecting their preferred options in the grid below. If you don’t see your exact set-up, see <a href="#other-packages">Other packages and environments</a> below for more programming language options and ways of using Stan.</p>
+<p>Stan is available for all major operating systems and has packages in several popular languages. Most users can get started by just selecting their preferred options in the grid below. If you don’t see your exact set-up, see <a href="#other-packages">Other Stan interfaces</a> below.</p>
 <div id="install-grid">
 <p><!-- Filled in by JS --></p>
 </div>
@@ -266,7 +263,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div id="install-cmdstanpy-conda" class="install hidden">
 <p>Run <code>conda install -c conda-forge cmdstanpy</code>.</p>
-<p>Note: this will also install CmdStan and any system prerequesites.</p>
+<p>Note: this will also install CmdStan and any system prerequisites.</p>
 </div>
 <div id="install-cmdstanpy-github-src" class="install hidden">
 <p>Run <code>pip install -e git+https://github.com/stan-dev/cmdstanpy@develop#egg=cmdstanpy</code>. Then, in Python, run <code>import cmdstanpy; cmdstanpy.install_cmdstan()</code> or follow the manual installation instructions for CmdStan.</p>
@@ -281,7 +278,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Run <code>conda install -c conda-forge r-cmdstanr</code>.</p>
 <p>Note: this will also install CmdStan and any system prerequesites.</p>
 </div>
-<div id="install-cmdstanr-github-src" class="install hidden">
+<div id="install-cmdstanr-github-src" class="Install hidden">
 <p>In R, run <code>remotes::install_github("stan-dev/cmdstanr")</code>. Then run <code>cmdstanr::install_cmdstan()</code> or follow the manual installation instructions for CmdStan.</p>
 <p>For more information, see the <a href="https://mc-stan.org/cmdstanr/articles/cmdstanr.html#installing-cmdstan" target="_blank">CmdStanR documentation</a></p>
 </div>
@@ -320,33 +317,68 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <script src="installer.js"></script>
 </section>
-<section id="in-depth-instructions" class="level2">
-<h2 class="anchored" data-anchor-id="in-depth-instructions">In-Depth Instructions</h2>
-<section id="platform" class="level3">
-<h3 class="anchored" data-anchor-id="platform">Platform</h3>
-<section id="linux" class="level4">
-<h4 class="anchored" data-anchor-id="linux">Linux</h4>
+<section id="installers" class="level2">
+<h2 class="anchored" data-anchor-id="installers">Installers</h2>
+<section id="native-installers" class="level4">
+<h4 class="anchored" data-anchor-id="native-installers">Native installers:</h4>
 <ul>
-<li>which C++</li>
+<li>R users can use R’s <code>install.packages()</code> function to manage libraries.</li>
+<li>Python users can use Python’s <code>pip</code> utility.</li>
+<li>Julia users can manage packages with the built-in <code>Pkg</code> module using commands like <code>Pkg.add()</code>.</li>
 </ul>
 </section>
-<section id="macos" class="level4">
-<h4 class="anchored" data-anchor-id="macos">MacOS</h4>
+<section id="conda" class="level4">
+<h4 class="anchored" data-anchor-id="conda">Conda</h4>
+<p>Conda simplifies the installation process by ensuring that all required libraries and tools are compatible with each other and is available for Linux, Mac, and Windows platforms. Conda is available from <a href="anaconda.com">Anaconda</a> and <a href="miniconda.com">Miniconda</a>.</p>
+</section>
+</section>
+<section id="prerequisite-c" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisite-c">Prerequisite: C++</h2>
+<section id="c-on-linux" class="level3">
+<h3 class="anchored" data-anchor-id="c-on-linux">C++ on Linux</h3>
+<p>The conda installers for CmdStan, CmdStanPy, and CmdStanR will install C++17 and GNU-Make utilities</p>
+<p>For Debian-based distributions, run</p>
+<pre><code>sudo apt-get install build-essential</code></pre>
+</section>
+<section id="c-on-macos" class="level3">
+<h3 class="anchored" data-anchor-id="c-on-macos">C++ on MacOS</h3>
+<p>We strongly recommend installing Xcode from the Apple App Store. Then run</p>
+<pre><code>xcode-select --install</code></pre>
+</section>
+<section id="c-on-windows" class="level3">
+<h3 class="anchored" data-anchor-id="c-on-windows">C++ on Windows</h3>
+<p>On a Windows 10 machine, we strongly recommend installing Anaconda. R Users can also use the RTools distribution.</p>
+</section>
+<section id="c-libraries" class="level3">
+<h3 class="anchored" data-anchor-id="c-libraries">C++ Libraries</h3>
 <ul>
-<li>Xcode</li>
+<li>Boost</li>
+<li>Sundials</li>
+<li>TBB</li>
 </ul>
 </section>
-<section id="windows" class="level4">
-<h4 class="anchored" data-anchor-id="windows">Windows</h4>
+</section>
+<section id="cmdstan-based-interfaces" class="level2">
+<h2 class="anchored" data-anchor-id="cmdstan-based-interfaces">CmdStan-based Interfaces</h2>
+<p>Both CmdStanPy and CmdStanR require a local CmdStan installation and provide scripts and methods to manage this. The default location is a hidden directory under the user’s home directory named <code>.cmdstan</code>. This directory contains one or more versions of CmdStan.</p>
+<section id="building" class="level4">
+<h4 class="anchored" data-anchor-id="building">Building</h4>
 <ul>
-<li>Conda</li>
-<li>RTools</li>
+<li><p>command shell</p></li>
+<li><p>from Python</p></li>
+<li><p>from R</p></li>
 </ul>
 </section>
+<section id="managing-release-versions" class="level4">
+<h4 class="anchored" data-anchor-id="managing-release-versions">Managing release versions</h4>
+<ul>
+<li><p>CmdStanPy</p></li>
+<li><p>CmdStanR</p></li>
+</ul>
 </section>
 </section>
 <section id="other-packages" class="level2">
-<h2 class="anchored" data-anchor-id="other-packages">Other packages and environments</h2>
+<h2 class="anchored" data-anchor-id="other-packages">Other Stan Interfaces</h2>
 <section id="google-colab" class="level4">
 <h4 class="anchored" data-anchor-id="google-colab">Google Colab</h4>
 </section>
@@ -356,7 +388,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="pystan" class="level4">
 <h4 class="anchored" data-anchor-id="pystan">PyStan</h4>
 <p>PyStan is available from via pip:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>python3 <span class="op">-</span>m pip install pystan</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>python3 <span class="op">-</span>m pip install pystan</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>See <a href="https://pystan.readthedocs.io/en/latest/installation.html">PyStan installation instructions</a> for further details.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -375,22 +407,8 @@ Note
 </section>
 <section id="troubleshooting" class="level2">
 <h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
-<section id="c-versions" class="level3">
-<h3 class="anchored" data-anchor-id="c-versions">C++ Versions</h3>
-</section>
-<section id="c-libraries" class="level3">
-<h3 class="anchored" data-anchor-id="c-libraries">C++ Libraries</h3>
-<ul>
-<li>Boost</li>
-<li>Sundials</li>
-<li>TBB</li>
-</ul>
-</section>
-<section id="gpu-support" class="level3">
-<h3 class="anchored" data-anchor-id="gpu-support">GPU Support</h3>
 
 
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
