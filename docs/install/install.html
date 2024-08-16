@@ -203,13 +203,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#download-and-install-stan" id="toc-download-and-install-stan" class="nav-link active" data-scroll-target="#download-and-install-stan">Download and Install Stan</a></li>
-  <li><a href="#installers" id="toc-installers" class="nav-link" data-scroll-target="#installers">Installers</a></li>
   <li><a href="#prerequisite-c" id="toc-prerequisite-c" class="nav-link" data-scroll-target="#prerequisite-c">Prerequisite: C++</a>
   <ul class="collapse">
   <li><a href="#c-on-linux" id="toc-c-on-linux" class="nav-link" data-scroll-target="#c-on-linux">C++ on Linux</a></li>
   <li><a href="#c-on-macos" id="toc-c-on-macos" class="nav-link" data-scroll-target="#c-on-macos">C++ on MacOS</a></li>
   <li><a href="#c-on-windows" id="toc-c-on-windows" class="nav-link" data-scroll-target="#c-on-windows">C++ on Windows</a></li>
-  <li><a href="#c-libraries" id="toc-c-libraries" class="nav-link" data-scroll-target="#c-libraries">C++ Libraries</a></li>
   </ul></li>
   <li><a href="#cmdstan-based-interfaces" id="toc-cmdstan-based-interfaces" class="nav-link" data-scroll-target="#cmdstan-based-interfaces">CmdStan-based Interfaces</a></li>
   <li><a href="#other-packages" id="toc-other-packages" class="nav-link" data-scroll-target="#other-packages">Other Stan Interfaces</a></li>
@@ -225,7 +223,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="download-and-install-stan" class="level2">
 <h2 class="anchored" data-anchor-id="download-and-install-stan">Download and Install Stan</h2>
-<p>Stan is available for all major operating systems and has packages in several popular languages. Most users can get started by just selecting their preferred options in the grid below. If you don’t see your exact set-up, see <a href="#other-packages">Other Stan interfaces</a> below.</p>
+<p>Stan is available for all major operating systems and several programming languages. You can get started by selecting your OS, programming language interface, and preferred installation method in the grid below. If you don’t see your exact set-up, see <a href="#other-packages">Other Stan interfaces</a> below.</p>
 <div id="install-grid">
 <p><!-- Filled in by JS --></p>
 </div>
@@ -278,7 +276,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Run <code>conda install -c conda-forge r-cmdstanr</code>.</p>
 <p>Note: this will also install CmdStan and any system prerequesites.</p>
 </div>
-<div id="install-cmdstanr-github-src" class="Install hidden">
+<div id="install-cmdstanr-github-src" class="install hidden">
 <p>In R, run <code>remotes::install_github("stan-dev/cmdstanr")</code>. Then run <code>cmdstanr::install_cmdstan()</code> or follow the manual installation instructions for CmdStan.</p>
 <p>For more information, see the <a href="https://mc-stan.org/cmdstanr/articles/cmdstanr.html#installing-cmdstan" target="_blank">CmdStanR documentation</a></p>
 </div>
@@ -316,21 +314,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <script src="installer.js"></script>
-</section>
-<section id="installers" class="level2">
-<h2 class="anchored" data-anchor-id="installers">Installers</h2>
-<section id="native-installers" class="level4">
-<h4 class="anchored" data-anchor-id="native-installers">Native installers:</h4>
-<ul>
-<li>R users can use R’s <code>install.packages()</code> function to manage libraries.</li>
-<li>Python users can use Python’s <code>pip</code> utility.</li>
-<li>Julia users can manage packages with the built-in <code>Pkg</code> module using commands like <code>Pkg.add()</code>.</li>
-</ul>
-</section>
-<section id="conda" class="level4">
-<h4 class="anchored" data-anchor-id="conda">Conda</h4>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Conda simplifies the installation process by ensuring that all required libraries and tools are compatible with each other and is available for Linux, Mac, and Windows platforms. Conda is available from <a href="anaconda.com">Anaconda</a> and <a href="miniconda.com">Miniconda</a>.</p>
-</section>
+</div>
+</div>
 </section>
 <section id="prerequisite-c" class="level2">
 <h2 class="anchored" data-anchor-id="prerequisite-c">Prerequisite: C++</h2>
@@ -347,15 +343,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="c-on-windows" class="level3">
 <h3 class="anchored" data-anchor-id="c-on-windows">C++ on Windows</h3>
-<p>On a Windows 10 machine, we strongly recommend installing Anaconda. R Users can also use the RTools distribution.</p>
-</section>
-<section id="c-libraries" class="level3">
-<h3 class="anchored" data-anchor-id="c-libraries">C++ Libraries</h3>
-<ul>
-<li>Boost</li>
-<li>Sundials</li>
-<li>TBB</li>
-</ul>
+<p>On a Windows 10 machine, we strongly recommend first installing Anaconda or miniconda and then using the conda installer to be CmdStanR or RStan, since the conda packages include a C++ toolchain.</p>
+<p>Alternatively, R Users can get the RTools distribution, or install it from within CmdStanR using the <code>get_toolchain</code> method.</p>
 </section>
 </section>
 <section id="cmdstan-based-interfaces" class="level2">
@@ -407,8 +396,19 @@ Note
 </section>
 <section id="troubleshooting" class="level2">
 <h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
+<section id="windows-locations" class="level4">
+<h4 class="anchored" data-anchor-id="windows-locations">Windows locations</h4>
+</section>
+<section id="c-libraries-fail-to-compile" class="level4">
+<h4 class="anchored" data-anchor-id="c-libraries-fail-to-compile">C++ Libraries fail to compile</h4>
+<ul>
+<li>Boost</li>
+<li>Sundials</li>
+<li>TBB</li>
+</ul>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->

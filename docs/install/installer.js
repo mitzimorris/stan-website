@@ -109,7 +109,6 @@ function updateInstallerOptions() {
 
 function updateNeeded(category) {
     if (category === 'os') {
-        updateInterfaceOptions();
         updateInstallerOptions();
     } else if (category === 'interface') {
         updateInstallerOptions();

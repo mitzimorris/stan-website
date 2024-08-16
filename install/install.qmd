@@ -6,10 +6,9 @@ toc-depth: 3
 ---
 ## Download and Install Stan
 
-Stan is available for all major operating systems and has packages in several
-popular languages. Most users can get started by just selecting their preferred
-options in the grid below. If you don't see your exact set-up, see [Other Stan interfaces](#other-packages) below.
-
+Stan is available for all major operating systems and several programming languages.
+You can get started by selecting your OS, programming language interface, and preferred installation method in the grid below.
+If you don't see your exact set-up, see [Other Stan interfaces](#other-packages) below.
 
 
 ::: {#install-grid}
@@ -96,7 +95,7 @@ Run `conda install -c conda-forge r-cmdstanr`.
 Note: this will also install CmdStan and any system prerequesites.
 :::::
 
-::::: {.Install #install-cmdstanr-github-src .hidden}
+::::: {.install #install-cmdstanr-github-src .hidden}
 In R, run `remotes::install_github("stan-dev/cmdstanr")`.
 Then run `cmdstanr::install_cmdstan()` or follow the manual installation instructions for CmdStan.
 
@@ -144,20 +143,11 @@ TODO 11
 
 
 
-## Installers
-
-
-#### Native installers:
-
-* R users can use R's `install.packages()` function to manage libraries.
-* Python users can use Python's `pip` utility.
-* Julia users can manage packages with the built-in `Pkg` module using commands like `Pkg.add()`.
-
-#### Conda
-
+::: {.callout-note}
 Conda simplifies the installation process by ensuring that all required libraries and tools are compatible with each other
 and is available for Linux, Mac, and Windows platforms.
 Conda is available from [Anaconda](anaconda.com) and [Miniconda](miniconda.com).
+:::
 
 ## Prerequisite:  C++
 
@@ -180,15 +170,10 @@ xcode-select --install
 
 ### C++ on Windows
 
-On a Windows 10 machine, we strongly recommend installing Anaconda.
-R Users can also use the RTools distribution.
+On a Windows 10 machine, we strongly recommend first installing Anaconda or miniconda and then using the conda installer to be CmdStanR or RStan,
+since the conda packages include a C++ toolchain.
 
-
-### C++ Libraries
-
-- Boost
-- Sundials
-- TBB
+Alternatively, R Users can get the RTools distribution, or install it from within CmdStanR using the `get_toolchain` method.
 
 
 ## CmdStan-based Interfaces
@@ -233,6 +218,13 @@ As of Release 3.10.0, PyStan is no longer being actively supported.
 
 ## Troubleshooting
 
+#### Windows locations
+
+#### C++ Libraries fail to compile
+
+- Boost
+- Sundials
+- TBB
 
 
 
