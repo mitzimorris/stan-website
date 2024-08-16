@@ -89,6 +89,12 @@ For more information, see the
 [CmdStanR documentation](https://mc-stan.org/cmdstanr/articles/cmdstanr.html#installing-cmdstan){target="_blank"}
 :::::
 
+::::: {.install #install-cmdstanr-conda .hidden}
+Run `conda install -c conda-forge r-cmdstanr`.
+
+Note: this will also install CmdStan and any system prerequesites.
+:::::
+
 ::::: {.install #install-cmdstanr-github-src .hidden}
 In R, run `remotes::install_github("stan-dev/cmdstanr")`.
 Then run `cmdstanr::install_cmdstan()` or follow the manual installation instructions for CmdStan.
@@ -123,6 +129,11 @@ TODO 7
 :::::
 ::::: {.install #install-rstan-runiverse .hidden}
 TODO 8
+:::::
+::::: {.install #install-rstan-conda .hidden}
+Run `conda install -c conda-forge r-rstan`.
+
+Note: this will also install any system prerequesites.
 :::::
 ::::: {.install #install-rstan-github-src .hidden}
 TODO 9

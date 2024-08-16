@@ -3,10 +3,10 @@ let supportedInterfaces = ['cmdstanpy', 'cmdstanr', 'cmdstan', 'pystan', 'rstan'
 
 const supportedInstallersMap = {
     "cmdstanpy": ["pip", "conda", "github-src"],
-    "cmdstanr": ["runiverse", "github-src"],
+    "cmdstanr": ["runiverse", "conda", "github-src"],
     "cmdstan": ["github-rel", "conda", "github-src"],
     "pystan": ["pip", "conda", "github-src"],
-    "rstan": ["cran", "runiverse", "github-src"],
+    "rstan": ["cran", "runiverse", "conda", "github-src"],
     "stan.jl": ["julia-pkg", "github-src"],
     "": [], // mostly handles the case where a user had selected pystan then switches to windows
 };
