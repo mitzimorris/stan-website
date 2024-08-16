@@ -215,6 +215,7 @@ function addRow(label, items) {
 
 // Draw grid and select defaults
 document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('install-grid').innerHTML = '';
     addRow('OS', supportedOperatingSystems);
     addRow('Interface', supportedInterfaces);
     addRow('Installer', supportedInstallers);

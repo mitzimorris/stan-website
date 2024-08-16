@@ -10,18 +10,32 @@ popular languages. Most users can get started by just selecting their preferred
 options in the grid below. If you don't see your exact set-up, see (TODO) "Other Packages" below
 for more programming language options and ways of using Stan.
 
-<div id="install-grid" >
-<!-- Filled in by JS -->
-</div>
-<br />
-<div class="flex-grid">
-  <div class="row-label">Prerequisites</div>
-  <div class="col" id="prerequisites" style="background-color: var(--stan-highlight);padding-left:10px;"></div>
-</div>
-<div class="flex-grid">
-  <div class="row-label">How to Install</div>
-  <div class="col" id="command" style="background-color: var(--stan-highlight);padding-left:10px;"></div>
-</div>
+
+::: {#install-grid}
+ <!-- Filled in by JS -->
+:::
+
+::: {.flex-grid}
+
+:::: {.row-label}
+Prerequisites
+::::
+:::: {.col .highlight-box #prerequisites}
+
+::::
+
+:::
+
+::: {.flex-grid}
+
+:::: {.row-label}
+How to Install
+::::
+:::: {.col .highlight-box #command}
+
+::::
+
+:::
 
 <script src="installer.js"></script>
 

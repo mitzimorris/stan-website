@@ -505,3 +505,8 @@ pre.sourceCode {
   flex: 1;
   margin-top: 0.25rem;
 }
+
+.highlight-box {
+  background-color: var(--stan-highlight);
+  padding-left: 10px;
+}
