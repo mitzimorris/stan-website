@@ -168,17 +168,16 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#download-and-install-stan" id="toc-download-and-install-stan" class="nav-link active" data-scroll-target="#download-and-install-stan">Download and Install Stan</a></li>
-  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions</a>
+  <li><a href="#in-depth-instructions" id="toc-in-depth-instructions" class="nav-link" data-scroll-target="#in-depth-instructions">In-Depth Instructions</a>
   <ul class="collapse">
   <li><a href="#platform" id="toc-platform" class="nav-link" data-scroll-target="#platform">Platform</a></li>
-  <li><a href="#language" id="toc-language" class="nav-link" data-scroll-target="#language">Language</a></li>
   </ul></li>
+  <li><a href="#other-packages" id="toc-other-packages" class="nav-link" data-scroll-target="#other-packages">Other packages and environments</a></li>
   <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a>
   <ul class="collapse">
   <li><a href="#c-versions" id="toc-c-versions" class="nav-link" data-scroll-target="#c-versions">C++ Versions</a></li>
   <li><a href="#c-libraries" id="toc-c-libraries" class="nav-link" data-scroll-target="#c-libraries">C++ Libraries</a></li>
   <li><a href="#gpu-support" id="toc-gpu-support" class="nav-link" data-scroll-target="#gpu-support">GPU Support</a></li>
-  <li><a href="#rtools" id="toc-rtools" class="nav-link" data-scroll-target="#rtools">RTools</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -195,89 +194,110 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="download-and-install-stan" class="level2">
 <h2 class="anchored" data-anchor-id="download-and-install-stan">Download and Install Stan</h2>
-<div class="grid-container">
+<p>Stan is available for all major operating systems and has packages in several popular languages. Most users can get started by just selecting their preferred options in the grid below. If you don’t see your exact set-up, see <a href="#other-packages">Other packages and environments</a> below for more programming language options and ways of using Stan.</p>
+<div id="install-grid">
+<p><!-- Filled in by JS --></p>
+</div>
+<!-- The following two boxes contain divs which are hidden/unhidden based on the above grid.
+  They can contain normal markdown as we see fit
+ -->
+<div id="prerequsite-box" class="flex-grid">
 <div class="row-label">
-OS
+<p>Prerequisites</p>
 </div>
-<div id="linux" class="os option grid-item">
-Linux
+<div class="col highlight-box">
+<div id="prereq-windows" class="prereq hidden">
+<p>Stan requires a C++17 compiler and some additional tools for building. The <code>conda</code> option of certain packages can install these for you, or we recommend RTools TODO</p>
 </div>
-<div id="macos" class="os option grid-item">
-MacOS
+<div id="prereq-macos" class="prereq hidden">
+<p>Stan requires a C++17 compiler. The <code>conda</code> option of certain packages can install this for you, or we recommend to install Xcode from the App Store and then run <code>xcode-select --install</code>.</p>
 </div>
-<div id="windows" class="os option grid-item">
-Windows
+<div id="prereq-linux" class="prereq hidden">
+<p>Stan requires a C++17 compiler. The <code>conda</code> option of certain packages can install this for you, or on .deb based distros, <code>sudo apt-get install build-essential</code> will install what you need.</p>
 </div>
-<div class="grid-blank">
-
 </div>
-<div class="row-label" style="grid-row: span 2;">
-Interface
 </div>
-<div id="stan.jl" class="interface option grid-item">
-Julia
+<div id="install-box" class="flex-grid">
+<div class="row-label">
+<p>How to Install</p>
 </div>
-<div id="cmdstanpy" class="interface option grid-item">
-CmdStanPy
+<div class="col highlight-box">
+<div id="install-please-select" class="install">
+<p>Please select interface and preferred package manager.</p>
 </div>
-<div id="cmdstanr" class="interface option grid-item">
-CmdStanR
+<!-- ---------- CmdStanPy ---------- -->
+<div id="install-cmdstanpy-pip" class="install hidden">
+<p>Run <code>pip install cmdstanpy</code>. Then, in Python, run <code>import cmdstanpy; cmdstanpy.install_cmdstan()</code> or follow the manual installation instructions for CmdStan.</p>
+<p>For more information, see the <a href="https://mc-stan.org/cmdstanpy/installation.html" target="_blank">CmdStanPy documentation</a>.</p>
 </div>
-<div id="cmdstan" class="interface option grid-item">
-CmdStan
+<div id="install-cmdstanpy-conda" class="install hidden">
+<p>Run <code>conda install -c conda-forge cmdstanpy</code>.</p>
+<p>Note: this will also install CmdStan and any system prerequesites.</p>
 </div>
-<div class="grid-blank">
-
+<div id="install-cmdstanpy-github-src" class="install hidden">
+<p>Run <code>pip install -e git+https://github.com/stan-dev/cmdstanpy@develop#egg=cmdstanpy</code>. Then, in Python, run <code>import cmdstanpy; cmdstanpy.install_cmdstan()</code> or follow the manual installation instructions for CmdStan.</p>
+<p>For more information, see the <a href="https://mc-stan.org/cmdstanpy/installation.html" target="_blank">CmdStanPy documentation</a>.</p>
 </div>
-<div id="pystan" class="interface option grid-item" style="grid-column: 3;">
-PyStan
+<!-- ---------- CmdStanR ---------- -->
+<div id="install-cmdstanr-runiverse" class="install hidden">
+<p>In R, run <code>install.packages("cmdstanr", repos = c('https://stan-dev.r-universe.dev', getOption("repos")))</code>. Then run <code>cmdstanr::install_cmdstan()</code> or follow the manual installation instructions for CmdStan.</p>
+<p>For more information, see the <a href="https://mc-stan.org/cmdstanr/articles/cmdstanr.html#installing-cmdstan" target="_blank">CmdStanR documentation</a></p>
 </div>
-<div id="rstan" class="interface option grid-item" style="grid-column: 4;">
-RStan
+<div id="install-cmdstanr-conda" class="install hidden">
+<p>Run <code>conda install -c conda-forge r-cmdstanr</code>.</p>
+<p>Note: this will also install CmdStan and any system prerequesites.</p>
 </div>
-<div class="grid-blank">
-
+<div id="install-cmdstanr-github-src" class="install hidden">
+<p>In R, run <code>remotes::install_github("stan-dev/cmdstanr")</code>. Then run <code>cmdstanr::install_cmdstan()</code> or follow the manual installation instructions for CmdStan.</p>
+<p>For more information, see the <a href="https://mc-stan.org/cmdstanr/articles/cmdstanr.html#installing-cmdstan" target="_blank">CmdStanR documentation</a></p>
 </div>
-<div class="row-label" style="grid-row: span 2;">
-Installer
+<!-- ---------- CmdStan ---------- -->
+<div id="install-cmdstan-github-rel" class="install hidden">
+<p>TODO 1</p>
 </div>
-<div id="julia-pkg" class="installer option grid-item">
-Julia package manager
+<div id="install-cmdstan-conda" class="install hidden">
+<p>TODO 2</p>
 </div>
-<div id="pip" class="installer option grid-item">
-Pip
+<div id="install-cmdstan-github-src" class="install hidden">
+<p>TODO 3</p>
 </div>
-<div id="cran" class="installer option grid-item">
-CRAN
+<!-- ---------- Pystan ---------- -->
+<div id="install-pystan-pip" class="install hidden">
+<p>TODO 4</p>
 </div>
-<div id="github-bin" class="installer option grid-item">
-Github binary
+<div id="install-pystan-conda" class="install hidden">
+<p>TODO 5</p>
 </div>
-<div class="grid-blank">
-
+<div id="install-pystan-github-src" class="install hidden">
+<p>TODO 6</p>
 </div>
-<div id="conda" class="installer option grid-item">
-Conda-forge
+<!-- ---------- RStan ---------- -->
+<div id="install-rstan-cran" class="install hidden">
+<p>TODO 7</p>
 </div>
-<div id="runiverse" class="installer option grid-item">
-R Universe
+<div id="install-rstan-runiverse" class="install hidden">
+<p>TODO 8</p>
 </div>
-<div id="github-src" class="installer option grid-item">
-Github source
+<div id="install-rstan-conda" class="install hidden">
+<p>Run <code>conda install -c conda-forge r-rstan</code>.</p>
+<p>Note: this will also install any system prerequesites.</p>
 </div>
-<br>
-<div class="row-label" style="grid-column:1;">
-Command&nbsp;&nbsp;&nbsp;
+<div id="install-rstan-github-src" class="install hidden">
+<p>TODO 9</p>
 </div>
-<div id="command" class="grid-item row-label" style="grid-column:span 4; background-color: var(--stan-highlight);padding-left:10px;">
-
+<!-- ---------- Stan.jl ---------- -->
+<div id="install-stan.jl-julia-pkg" class="install hidden">
+<p>TODO 10</p>
 </div>
-<p><br></p>
+<div id="install-stan.jl-github-src" class="install hidden">
+<p>TODO 11</p>
 </div>
-<script src="installer_2.js"></script>
+</div>
+</div>
+<script src="installer.js"></script>
 </section>
-<section id="instructions" class="level2">
-<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<section id="in-depth-instructions" class="level2">
+<h2 class="anchored" data-anchor-id="in-depth-instructions">In-Depth Instructions</h2>
 <section id="platform" class="level3">
 <h3 class="anchored" data-anchor-id="platform">Platform</h3>
 <section id="linux" class="level4">
@@ -296,26 +316,18 @@ Command&nbsp;&nbsp;&nbsp;
 <h4 class="anchored" data-anchor-id="windows">Windows</h4>
 <ul>
 <li>Conda</li>
+<li>RTools</li>
 </ul>
 </section>
 </section>
-<section id="language" class="level3">
-<h3 class="anchored" data-anchor-id="language">Language</h3>
-<section id="julia" class="level4">
-<h4 class="anchored" data-anchor-id="julia">Julia</h4>
 </section>
-<section id="python" class="level4">
-<h4 class="anchored" data-anchor-id="python">Python</h4>
-</section>
-<section id="r" class="level4">
-<h4 class="anchored" data-anchor-id="r">R</h4>
-</section>
-<section id="command-shell" class="level4">
-<h4 class="anchored" data-anchor-id="command-shell">command shell</h4>
-</section>
+<section id="other-packages" class="level2">
+<h2 class="anchored" data-anchor-id="other-packages">Other packages and environments</h2>
 <section id="google-colab" class="level4">
 <h4 class="anchored" data-anchor-id="google-colab">Google Colab</h4>
 </section>
+<section id="mathematica-stata-etc" class="level4">
+<h4 class="anchored" data-anchor-id="mathematica-stata-etc">Mathematica, Stata, etc?</h4>
 </section>
 </section>
 <section id="troubleshooting" class="level2">
@@ -333,9 +345,6 @@ Command&nbsp;&nbsp;&nbsp;
 </section>
 <section id="gpu-support" class="level3">
 <h3 class="anchored" data-anchor-id="gpu-support">GPU Support</h3>
-</section>
-<section id="rtools" class="level3">
-<h3 class="anchored" data-anchor-id="rtools">RTools</h3>
 
 
 </section>
