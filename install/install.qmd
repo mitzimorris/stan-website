@@ -7,7 +7,7 @@ toc-location: left
 
 Stan is available for all major operating systems and has packages in several
 popular languages. Most users can get started by just selecting their preferred
-options in the grid below. If you don't see your exact set-up, see (TODO) "Other Packages" below
+options in the grid below. If you don't see your exact set-up, see [Other packages and environments](#other-packages) below
 for more programming language options and ways of using Stan.
 
 
@@ -157,7 +157,7 @@ TODO 11
 - Conda
 - RTools
 
-## Other packages and environments
+## Other packages and environments {#other-packages}
 
 #### Google Colab
 
