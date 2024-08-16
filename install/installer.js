@@ -1,14 +1,12 @@
 let supportedOperatingSystems = ['linux', 'macos', 'windows'];
-let supportedInterfaces = ['cmdstanpy', 'cmdstanr', 'cmdstan', 'pystan', 'rstan', 'stan.jl'];
+let supportedInterfaces = ['cmdstanpy', 'cmdstanr', 'cmdstan', 'rstan', 'stan.jl'];
 
 const supportedInstallersMap = {
     "cmdstanpy": ["pip", "conda", "github-src"],
     "cmdstanr": ["runiverse", "conda", "github-src"],
     "cmdstan": ["github-rel", "conda", "github-src"],
-    "pystan": ["pip", "conda", "github-src"],
     "rstan": ["cran", "runiverse", "conda", "github-src"],
-    "stan.jl": ["julia-pkg", "github-src"],
-    "": [], // mostly handles the case where a user had selected pystan then switches to windows
+    "stan.jl": ["julia-pkg", "github-src"]
 };
 
 const osToTitle = {
@@ -21,7 +19,6 @@ const interfaceToTitle = {
     "cmdstanpy": "CmdStanPy",
     "cmdstanr": "CmdStanR",
     "cmdstan": "CmdStan",
-    "pystan": "PyStan",
     "rstan": "RStan",
     "stan.jl": "Stan.jl",
 };
@@ -95,13 +92,6 @@ function updateInstructions() {
 function updateInterfaceOptions() {
     document.querySelectorAll('.interface').forEach(option => {
         option.classList.remove('disabled');
-        if (opts.os === 'windows' && option.id === 'pystan') {
-            option.classList.add('disabled');
-            if (option.classList.contains('selected')) {
-                option.classList.remove('selected');
-                opts.interface = '';
-            }
-        }
     });
 }
 
