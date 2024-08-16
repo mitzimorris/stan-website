@@ -113,16 +113,6 @@ TODO 2
 ::::: {.install #install-cmdstan-github-src .hidden}
 TODO 3
 :::::
-<!-- ---------- Pystan ---------- -->
-::::: {.install #install-pystan-pip .hidden}
-TODO 4
-:::::
-::::: {.install #install-pystan-conda .hidden}
-TODO 5
-:::::
-::::: {.install #install-pystan-github-src .hidden}
-TODO 6
-:::::
 <!-- ---------- RStan ---------- -->
 ::::: {.install #install-rstan-cran .hidden}
 TODO 7
@@ -172,7 +162,20 @@ TODO 11
 
 #### Google Colab
 
-#### Mathematica, Stata, etc?
+#### Mathematica
+
+#### PyStan
+
+PyStan is available from via pip:
+```python
+python3 -m pip install pystan
+```
+
+See [PyStan installation instructions](https://pystan.readthedocs.io/en/latest/installation.html) for further details.
+
+::: {.callout-note}
+As of Release 3.10.0, PyStan is no longer being actively supported.
+:::
 
 ## Troubleshooting
 
