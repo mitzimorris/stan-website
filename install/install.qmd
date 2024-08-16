@@ -15,31 +15,132 @@ for more programming language options and ways of using Stan.
  <!-- Filled in by JS -->
 :::
 
-::: {.flex-grid}
-
+<!-- The following two boxes contain divs which are hidden/unhidden based on the above grid.
+  They can contain normal markdown as we see fit
+ -->
+::: {#prerequsite-box .flex-grid}
 :::: {.row-label}
 Prerequisites
 ::::
-:::: {.col .highlight-box #prerequisites}
+:::: {.col .highlight-box}
+
+::::: {.prereq #prereq-windows .hidden}
+Stan requires a C++17 compiler and some additional tools for building. The `conda`
+option of certain packages can install these for you, or we recommend RTools TODO
+:::::
+
+::::: {.prereq #prereq-macos .hidden}
+Stan requires a C++17 compiler. The `conda` option of certain packages can install
+this for you, or we recommend to install Xcode from the App Store and then run `xcode-select --install`.
+:::::
+
+::::: {.prereq #prereq-linux .hidden}
+Stan requires a C++17 compiler. The `conda` option of certain packages can install
+this for you, or on .deb based distros, `sudo apt-get install build-essential` will install what you need.
+:::::
 
 ::::
 
 :::
 
-::: {.flex-grid}
+::: {#install-box .flex-grid}
 
 :::: {.row-label}
 How to Install
 ::::
-:::: {.col .highlight-box #command}
+:::: {.col .highlight-box}
+
+::::: {.install #install-please-select}
+Please select interface and preferred package manager.
+:::::
+
+<!-- ---------- CmdStanPy ---------- -->
+
+::::: {.install #install-cmdstanpy-pip .hidden}
+Run `pip install cmdstanpy`. Then, in Python, run
+`import cmdstanpy; cmdstanpy.install_cmdstan()` or follow the manual
+installation instructions for CmdStan.
+
+For more information, see the
+[CmdStanPy documentation](https://mc-stan.org/cmdstanpy/installation.html){target="_blank"}.
+:::::
+
+::::: {.install #install-cmdstanpy-conda .hidden}
+Run `conda install -c conda-forge cmdstanpy`.
+
+Note: this will also install CmdStan and any system prerequesites.
+:::::
+
+::::: {.install #install-cmdstanpy-github-src .hidden}
+Run `pip install -e git+https://github.com/stan-dev/cmdstanpy@develop#egg=cmdstanpy`.
+Then, in Python, run `import cmdstanpy; cmdstanpy.install_cmdstan()`
+or follow the manual installation instructions for CmdStan.
+
+For more information, see the
+[CmdStanPy documentation](https://mc-stan.org/cmdstanpy/installation.html){target="_blank"}.
+:::::
+
+<!-- ---------- CmdStanR ---------- -->
+::::: {.install #install-cmdstanr-runiverse .hidden}
+In R, run `install.packages("cmdstanr", repos = c('https://stan-dev.r-universe.dev', getOption("repos")))`.
+Then run `cmdstanr::install_cmdstan()` or follow the manual installation instructions for CmdStan.
+
+For more information, see the
+[CmdStanR documentation](https://mc-stan.org/cmdstanr/articles/cmdstanr.html#installing-cmdstan){target="_blank"}
+:::::
+
+::::: {.install #install-cmdstanr-github-src .hidden}
+In R, run `remotes::install_github("stan-dev/cmdstanr")`.
+Then run `cmdstanr::install_cmdstan()` or follow the manual installation instructions for CmdStan.
+
+For more information, see the
+[CmdStanR documentation](https://mc-stan.org/cmdstanr/articles/cmdstanr.html#installing-cmdstan){target="_blank"}
+:::::
+
+<!-- ---------- CmdStan ---------- -->
+::::: {.install #install-cmdstan-github-rel .hidden}
+TODO 1
+:::::
+::::: {.install #install-cmdstan-conda .hidden}
+TODO 2
+:::::
+::::: {.install #install-cmdstan-github-src .hidden}
+TODO 3
+:::::
+<!-- ---------- Pystan ---------- -->
+::::: {.install #install-pystan-pip .hidden}
+TODO 4
+:::::
+::::: {.install #install-pystan-conda .hidden}
+TODO 5
+:::::
+::::: {.install #install-pystan-github-src .hidden}
+TODO 6
+:::::
+<!-- ---------- RStan ---------- -->
+::::: {.install #install-rstan-cran .hidden}
+TODO 7
+:::::
+::::: {.install #install-rstan-runiverse .hidden}
+TODO 8
+:::::
+::::: {.install #install-rstan-github-src .hidden}
+TODO 9
+:::::
+<!-- ---------- Stan.jl ---------- -->
+::::: {.install #install-stan.jl-julia-pkg .hidden}
+TODO 10
+:::::
+::::: {.install #install-stan.jl-github-src .hidden}
+TODO 11
+:::::
 
 ::::
-
 :::
 
 <script src="installer.js"></script>
 
-## Instructions
+## In-Depth Instructions
 
 ### Platform
 
@@ -54,18 +155,13 @@ How to Install
 #### Windows
 
 - Conda
+- RTools
 
-### Language
-
-#### Julia
-
-#### Python
-
-#### R
-
-#### command shell
+## Other packages and environments
 
 #### Google Colab
+
+#### Mathematica, Stata, etc?
 
 ## Troubleshooting
 
@@ -79,7 +175,6 @@ How to Install
 
 ### GPU Support
 
-### RTools
 
 
 

@@ -11,40 +11,6 @@ const supportedInstallersMap = {
     "": [], // mostly handles the case where a user had selected pystan then switches to windows
 };
 
-const cmdstanpyPostamble = `
-<p>Then, in Python, run <code>import cmdstanpy; cmdstanpy.install_cmdstan()</code> or follow the conda instructions for CmdStan.</p>
-<p>For more information, see the <a href="https://mc-stan.org/cmdstanpy/installation.html" target="_blank">CmdStanPy documentation</a>.</p>
-`;
-const cmdstanRPostamble = "<p>Then run <code>cmdstanr::install_cmdstan()</code></p>";
-
-const instructions = {
-    "cmdstanpy": {
-        "pip": "Run <code>pip install cmdstanpy</code>" + cmdstanpyPostamble,
-        "conda": "Run <code>conda install -c conda-forge cmdstanpy</code>",
-        "github-src": "Run <code>pip install -e git+https://github.com/stan-dev/cmdstanpy@develop#egg=cmdstanpy</code>" + cmdstanpyPostamble,
-    },
-    "cmdstanr": {
-        "runiverse": "In R, run <code>install.packages(\"cmdstanr\", repos = c('https://stan-dev.r-universe.dev', getOption(\"repos\")))</code>" + cmdstanRPostamble,
-        "github-src": "In R, run <code>remotes::install_github(\"stan-dev/cmdstanr\")</code>" + cmdstanRPostamble,
-    },
-    "cmdstan": {
-        "github-rel": "install from github release binary.tgz",
-        "conda": "Run <code>conda install -c conda-forge cmdstan</code>",
-        "github-src": "install from github release src.tgz",
-    },
-    "pystan": {
-        "pip": "Run <code>pip install pystan</code>",
-        "conda": "Run <code>conda install -c conda-forge pystan</code>",
-    }
-    // TODO: more
-}
-
-const prerequisites = {
-    "linux": "Stan requires a C++17 compiler. On .deb based distros, <code>sudo apt-get install build-essential</code> will install what you need.",
-    "macos": "Stan requires a C++17 compiler. We recommend installing Xcode from the App Store and then run <code>xcode-select --install</code>.",
-    "windows": "Stan requires a C++17 compiler and some additional tools for building. We recommend RTools TODO",
-};
-
 const osToTitle = {
     "linux": "Linux",
     "macos": "macOS",
@@ -98,25 +64,32 @@ function selectedOption(selection, category) {
         }
     });
     opts[category] = selection;
-    updateInstructions();
-}
-
-function isOptionSet(category) {
-    return opts[category] && opts[category] !== '';
 }
 
 function updateInstructions() {
-    const prereq = prerequisites[opts.os];
-    document.getElementById('prerequisites').innerHTML = prereq ?? "Prerequisites not available.";
+    const prereqs = document.querySelectorAll('.prereq');
+    prereqs.forEach(prereq => {
+        prereq.classList.remove('hidden');
+        if (prereq.id !== `prereq-${opts.os}`) {
+            prereq.classList.add('hidden');
+        }
+    });
 
-    if (!isOptionSet('os') || !isOptionSet('interface') || !isOptionSet('installer')) {
-        document.getElementById('command').innerText = "Please select interface and preferred package manager.";
-        return;
+    const instructions = document.querySelectorAll('.install');
+    const key = `install-${opts.interface}-${opts.installer}`;
+    let found = false;
+    instructions.forEach(instruction => {
+        instruction.classList.remove('hidden');
+        if (instruction.id !== key) {
+            instruction.classList.add('hidden');
+        } else {
+            found = true;
+        }
+    });
+
+    if (!found) {
+        document.getElementById('install-please-select').classList.remove('hidden');
     }
-
-
-    const command = instructions[opts.interface]?.[opts.installer];
-    document.getElementById('command').innerHTML = command ?? "Instructions not available.";
 }
 
 function updateInterfaceOptions() {
