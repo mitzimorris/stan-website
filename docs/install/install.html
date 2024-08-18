@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -203,13 +169,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#download-and-install-stan" id="toc-download-and-install-stan" class="nav-link active" data-scroll-target="#download-and-install-stan">Download and Install Stan</a></li>
-  <li><a href="#prerequisite-c" id="toc-prerequisite-c" class="nav-link" data-scroll-target="#prerequisite-c">Prerequisite: C++</a>
-  <ul class="collapse">
-  <li><a href="#c-on-linux" id="toc-c-on-linux" class="nav-link" data-scroll-target="#c-on-linux">C++ on Linux</a></li>
-  <li><a href="#c-on-macos" id="toc-c-on-macos" class="nav-link" data-scroll-target="#c-on-macos">C++ on MacOS</a></li>
-  <li><a href="#c-on-windows" id="toc-c-on-windows" class="nav-link" data-scroll-target="#c-on-windows">C++ on Windows</a></li>
-  </ul></li>
-  <li><a href="#cmdstan-based-interfaces" id="toc-cmdstan-based-interfaces" class="nav-link" data-scroll-target="#cmdstan-based-interfaces">CmdStan-based Interfaces</a></li>
+  <li><a href="#prerequisite-c17" id="toc-prerequisite-c17" class="nav-link" data-scroll-target="#prerequisite-c17">Prerequisite: C++17</a></li>
+  <li><a href="#local-cmdstan-installations-for-cmdstanpy-cmdstanr-and-stan.jl" id="toc-local-cmdstan-installations-for-cmdstanpy-cmdstanr-and-stan.jl" class="nav-link" data-scroll-target="#local-cmdstan-installations-for-cmdstanpy-cmdstanr-and-stan.jl">Local CmdStan installations for CmdStanPy, CmdStanR, and Stan.jl</a></li>
   <li><a href="#other-packages" id="toc-other-packages" class="nav-link" data-scroll-target="#other-packages">Other Stan Interfaces</a></li>
   <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
   </ul>
@@ -236,7 +197,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="col highlight-box">
 <div id="prereq-windows" class="prereq hidden">
-<p>Stan requires a C++17 compiler and some additional tools for building. The <code>conda</code> option of certain packages can install these for you, or we recommend RTools TODO</p>
+<p>Stan requires a C++17 compiler and some build utilities.. The <code>conda</code> option of certain packages can install these for you, otherwise these are bundled together by <a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a>.</p>
 </div>
 <div id="prereq-macos" class="prereq hidden">
 <p>Stan requires a C++17 compiler. The <code>conda</code> option of certain packages can install this for you, or we recommend to install Xcode from the App Store and then run <code>xcode-select --install</code>.</p>
@@ -274,7 +235,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div id="install-cmdstanr-conda" class="install hidden">
 <p>Run <code>conda install -c conda-forge r-cmdstanr</code>.</p>
-<p>Note: this will also install CmdStan and any system prerequesites.</p>
+<p>Note: this will also install CmdStan and any system prerequisites.</p>
 </div>
 <div id="install-cmdstanr-github-src" class="install hidden">
 <p>In R, run <code>remotes::install_github("stan-dev/cmdstanr")</code>. Then run <code>cmdstanr::install_cmdstan()</code> or follow the manual installation instructions for CmdStan.</p>
@@ -282,34 +243,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <!-- ---------- CmdStan ---------- -->
 <div id="install-cmdstan-github-rel" class="install hidden">
-<p>TODO 1</p>
+<p>Download a release from GitHub: https://github.com/stan-dev/cmdstan/releases.</p>
+<p>Then follow <a href="https://mc-stan.org/docs/cmdstan-guide/installation.html#building-cmdstan" target="_blank">these instructions to build CmdStan</a>.</p>
 </div>
 <div id="install-cmdstan-conda" class="install hidden">
-<p>TODO 2</p>
+<p>Run <code>conda install -c conda-forge cmdstan</code>.</p>
+<p>Note: this will also install CmdStan and any system prerequisites.</p>
 </div>
 <div id="install-cmdstan-github-src" class="install hidden">
-<p>TODO 3</p>
+<p>Run <code>git clone https://github.com/stan-dev/cmdstan.git --recursive</code></p>
+<p>This will download the source code from the current development branch of CmdStan into a directory named cmdstan, along with the submodules for core Stan code and the Stan math library.</p>
+<p>Then follow <a href="https://mc-stan.org/docs/cmdstan-guide/installation.html#building-cmdstan" target="_blank">these instructions to build CmdStan</a>.</p>
 </div>
 <!-- ---------- RStan ---------- -->
 <div id="install-rstan-cran" class="install hidden">
-<p>TODO 7</p>
+<p>In R, run <code>install.packages("rstan")</code></p>
+<p>For more information, see the <a href="https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started" target="_blank">RStan Getting Started wiki</a></p>
 </div>
 <div id="install-rstan-runiverse" class="install hidden">
-<p>TODO 8</p>
+<p>In R, run <code>install.packages("rstan", repos = c('https://stan-dev.r-universe.dev', getOption("repos")))</code>.</p>
+<p>For more information, see the <a href="https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started" target="_blank">RStan Getting Started wiki</a></p>
 </div>
 <div id="install-rstan-conda" class="install hidden">
 <p>Run <code>conda install -c conda-forge r-rstan</code>.</p>
-<p>Note: this will also install any system prerequesites.</p>
+<p>Note: this will also install any system prerequisites.</p>
 </div>
 <div id="install-rstan-github-src" class="install hidden">
-<p>TODO 9</p>
+<p>Run <code>git clone https://github.com/stan-dev/rstan.git --recursive</code></p>
+<p>For more information, see the <a href="https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started" target="_blank">RStan Getting Started wiki</a></p>
 </div>
 <!-- ---------- Stan.jl ---------- -->
 <div id="install-stan.jl-julia-pkg" class="install hidden">
-<p>TODO 10</p>
+<p>To install Stan.jl e.g.&nbsp;in the Julia REPL: <code>] add Stan</code>, then use Conda.jl or conda to install CmdStan.</p>
+<p>See <a href="http://stanjulia.github.io/Stan.jl/v6.0/INSTALLATION.html">Stan.jl documentation</a> for further details.</p>
 </div>
 <div id="install-stan.jl-github-src" class="install hidden">
-<p>TODO 11</p>
+<p>Run <code>https://github.com/StanJulia/Stan.jl.git</code>, then follow instructions in the README file.</p>
 </div>
 </div>
 </div>
@@ -324,61 +293,44 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Conda simplifies the installation process by ensuring that all required libraries and tools are compatible with each other and is available for Linux, Mac, and Windows platforms. Conda is available from <a href="anaconda.com">Anaconda</a> and <a href="miniconda.com">Miniconda</a>.</p>
+<p>Conda simplifies the installation process by ensuring that all required libraries and tools are compatible with each other and is available for Linux, Mac, and Windows platforms.</p>
+<p>You can either install <a href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a>, a free, minimal installer for conda or you can get the full <a href="https://docs.continuum.io/anaconda/">Anaconda</a> system which provides graphical installer wizards for <a href="https://www.anaconda.com/products/distribution#macos" target="_blank">MacOS</a> and <a href="https://www.anaconda.com/products/distribution#windows" target="_blank">Windows</a> users.</p>
+<p>Julia users can install <a href="https://github.com/JuliaPy/Conda.jl" target="_blank">Conda.jl</a>.</p>
 </div>
 </div>
 </section>
-<section id="prerequisite-c" class="level2">
-<h2 class="anchored" data-anchor-id="prerequisite-c">Prerequisite: C++</h2>
-<section id="c-on-linux" class="level3">
-<h3 class="anchored" data-anchor-id="c-on-linux">C++ on Linux</h3>
-<p>The conda installers for CmdStan, CmdStanPy, and CmdStanR will install C++17 and GNU-Make utilities</p>
-<p>For Debian-based distributions, run</p>
-<pre><code>sudo apt-get install build-essential</code></pre>
-</section>
-<section id="c-on-macos" class="level3">
-<h3 class="anchored" data-anchor-id="c-on-macos">C++ on MacOS</h3>
-<p>We strongly recommend installing Xcode from the Apple App Store. Then run</p>
-<pre><code>xcode-select --install</code></pre>
-</section>
-<section id="c-on-windows" class="level3">
-<h3 class="anchored" data-anchor-id="c-on-windows">C++ on Windows</h3>
-<p>On a Windows 10 machine, we strongly recommend first installing Anaconda or miniconda and then using the conda installer to be CmdStanR or RStan, since the conda packages include a C++ toolchain.</p>
-<p>Alternatively, R Users can get the RTools distribution, or install it from within CmdStanR using the <code>get_toolchain</code> method.</p>
-</section>
-</section>
-<section id="cmdstan-based-interfaces" class="level2">
-<h2 class="anchored" data-anchor-id="cmdstan-based-interfaces">CmdStan-based Interfaces</h2>
-<p>Both CmdStanPy and CmdStanR require a local CmdStan installation and provide scripts and methods to manage this. The default location is a hidden directory under the user’s home directory named <code>.cmdstan</code>. This directory contains one or more versions of CmdStan.</p>
-<section id="building" class="level4">
-<h4 class="anchored" data-anchor-id="building">Building</h4>
+<section id="prerequisite-c17" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisite-c17">Prerequisite: C++17</h2>
+<p>Stan requires a C++17 compiler and the GNU Make utility.</p>
 <ul>
-<li><p>command shell</p></li>
-<li><p>from Python</p></li>
-<li><p>from R</p></li>
+<li><p>On Linux, these are bundled into the meta-package <code>build-essential</code>. To install, run command:<br>
+<code>sudo apt-get install build-essential</code></p></li>
+<li><p>On Mac, these are included with Xcode. Install Xcode from the App Store and then run command:<br>
+<code>xcode-select --install</code></p></li>
+<li><p>On Windows 10, we strongly recommend first installing Anaconda or miniconda and then using the conda installer to be CmdStanR or RStan, since the conda packages include a C++ toolchain.<br>
+Alternatively, R Users can get <a href="https://cran.r-project.org/bin/windows/Rtools/" target="_blank">Rtools</a> from CRAN, or try to install it from within CmdStanR using the <code>install_toolchain</code> method.</p></li>
 </ul>
 </section>
-<section id="managing-release-versions" class="level4">
-<h4 class="anchored" data-anchor-id="managing-release-versions">Managing release versions</h4>
+<section id="local-cmdstan-installations-for-cmdstanpy-cmdstanr-and-stan.jl" class="level2">
+<h2 class="anchored" data-anchor-id="local-cmdstan-installations-for-cmdstanpy-cmdstanr-and-stan.jl">Local CmdStan installations for CmdStanPy, CmdStanR, and Stan.jl</h2>
+<p>CmdStanPy, CmdStanR and require a local CmdStan installation and provide scripts and methods to manage this. The default installation location is in the user’s home directory and is named <code>.cmdstan</code> (a hidden directory). This directory contains one or more versions of CmdStan. Both interfaces provide the following functions to manage the CmdStan installations:</p>
 <ul>
-<li><p>CmdStanPy</p></li>
-<li><p>CmdStanR</p></li>
+<li><code>install_cmdstan</code> - downloads, installs, and builds the latest CmdStan relese or specified release</li>
+<li><code>rebuild_cmdstan</code> - rebuild the specified release. On Mac, often required after an Xcode update.</li>
+<li><code>show_versions</code> - shows all installed CmdStan versions</li>
+<li><code>cmdstan_path</code> - shows which version of CmdStan is being used</li>
+<li><code>set_cmdstan_path</code> - specify which version of CmdStan to use.</li>
 </ul>
-</section>
+<p>For Stan.jl, use Conda.jl or conda to install CmdStan.</p>
 </section>
 <section id="other-packages" class="level2">
 <h2 class="anchored" data-anchor-id="other-packages">Other Stan Interfaces</h2>
-<section id="google-colab" class="level4">
-<h4 class="anchored" data-anchor-id="google-colab">Google Colab</h4>
-</section>
-<section id="mathematica" class="level4">
-<h4 class="anchored" data-anchor-id="mathematica">Mathematica</h4>
-</section>
-<section id="pystan" class="level4">
-<h4 class="anchored" data-anchor-id="pystan">PyStan</h4>
-<p>PyStan is available from via pip:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>python3 <span class="op">-</span>m pip install pystan</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>See <a href="https://pystan.readthedocs.io/en/latest/installation.html">PyStan installation instructions</a> for further details.</p>
+<ul>
+<li><p>Google Colab - prebuilt CmdStan binaries for Google Colab are available from the <a href="https://github.com/stan-dev/cmdstan/releases" target="_blank">GitHub CmdStan releases page</a>.</p></li>
+<li><p>MathematicaStan - available from GitHub repository: https://github.com/stan-dev/MathematicaStan</p></li>
+<li><p>MatlabStan - installation instructions available on the <a href="https://github.com/brian-lau/MatlabStan/wiki" target="_blank">MatlabStan wiki</a></p></li>
+<li><p>PyStan is available from via pip, run commmand: <code>python -m pip install pystan</code>.</p></li>
+</ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -392,7 +344,6 @@ Note
 <p>As of Release 3.10.0, PyStan is no longer being actively supported.</p>
 </div>
 </div>
-</section>
 </section>
 <section id="troubleshooting" class="level2">
 <h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>

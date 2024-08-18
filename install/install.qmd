@@ -25,8 +25,9 @@ Prerequisites
 :::: {.col .highlight-box}
 
 ::::: {.prereq #prereq-windows .hidden}
-Stan requires a C++17 compiler and some additional tools for building. The `conda`
-option of certain packages can install these for you, or we recommend RTools TODO
+Stan requires a C++17 compiler and some build utilities.. The `conda`
+option of certain packages can install these for you, otherwise these are bundled together
+by [Rtools](https://cran.r-project.org/bin/windows/Rtools/).
 :::::
 
 ::::: {.prereq #prereq-macos .hidden}
@@ -92,7 +93,7 @@ For more information, see the
 ::::: {.install #install-cmdstanr-conda .hidden}
 Run `conda install -c conda-forge r-cmdstanr`.
 
-Note: this will also install CmdStan and any system prerequesites.
+Note: this will also install CmdStan and any system prerequisites.
 :::::
 
 ::::: {.install #install-cmdstanr-github-src .hidden}
@@ -105,35 +106,57 @@ For more information, see the
 
 <!-- ---------- CmdStan ---------- -->
 ::::: {.install #install-cmdstan-github-rel .hidden}
-TODO 1
+Download a release from GitHub:  https://github.com/stan-dev/cmdstan/releases.
+
+Then follow [these instructions to build CmdStan](https://mc-stan.org/docs/cmdstan-guide/installation.html#building-cmdstan){target="_blank"}.
 :::::
 ::::: {.install #install-cmdstan-conda .hidden}
-TODO 2
+Run `conda install -c conda-forge cmdstan`.
+
+Note: this will also install CmdStan and any system prerequisites.
 :::::
 ::::: {.install #install-cmdstan-github-src .hidden}
-TODO 3
+Run `git clone https://github.com/stan-dev/cmdstan.git --recursive`
+
+This will download the source code from the current development branch of CmdStan into a directory named cmdstan,
+along with the submodules for core Stan code and the Stan math library.
+
+Then follow [these instructions to build CmdStan](https://mc-stan.org/docs/cmdstan-guide/installation.html#building-cmdstan){target="_blank"}.
 :::::
 <!-- ---------- RStan ---------- -->
 ::::: {.install #install-rstan-cran .hidden}
-TODO 7
+In R, run `install.packages("rstan")`
+
+For more information, see the
+[RStan Getting Started wiki](https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started){target="_blank"}
 :::::
 ::::: {.install #install-rstan-runiverse .hidden}
-TODO 8
+In R, run `install.packages("rstan", repos = c('https://stan-dev.r-universe.dev', getOption("repos")))`.
+
+For more information, see the
+[RStan Getting Started wiki](https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started){target="_blank"}
 :::::
 ::::: {.install #install-rstan-conda .hidden}
 Run `conda install -c conda-forge r-rstan`.
 
-Note: this will also install any system prerequesites.
+Note: this will also install any system prerequisites.
 :::::
 ::::: {.install #install-rstan-github-src .hidden}
-TODO 9
+Run `git clone https://github.com/stan-dev/rstan.git --recursive`
+
+For more information, see the
+[RStan Getting Started wiki](https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started){target="_blank"}
 :::::
 <!-- ---------- Stan.jl ---------- -->
 ::::: {.install #install-stan.jl-julia-pkg .hidden}
-TODO 10
+To install Stan.jl e.g. in the Julia REPL: `] add Stan`,
+then use Conda.jl or conda to install CmdStan.
+
+See [Stan.jl documentation](http://stanjulia.github.io/Stan.jl/v6.0/INSTALLATION.html) for further details.
 :::::
 ::::: {.install #install-stan.jl-github-src .hidden}
-TODO 11
+Run `https://github.com/StanJulia/Stan.jl.git`,
+then follow instructions in the README file.
 :::::
 
 ::::
@@ -146,71 +169,59 @@ TODO 11
 ::: {.callout-note}
 Conda simplifies the installation process by ensuring that all required libraries and tools are compatible with each other
 and is available for Linux, Mac, and Windows platforms.
-Conda is available from [Anaconda](anaconda.com) and [Miniconda](miniconda.com).
+
+You can either install [miniconda](https://docs.conda.io/en/latest/miniconda.html), a free, minimal installer for conda
+or you can get the full [Anaconda](https://docs.continuum.io/anaconda/) system
+which provides graphical installer wizards for [MacOS](https://www.anaconda.com/products/distribution#macos){target="_blank"}
+and [Windows](https://www.anaconda.com/products/distribution#windows){target="_blank"} users.
+
+Julia users can install [Conda.jl](https://github.com/JuliaPy/Conda.jl){target="_blank"}.
 :::
 
-## Prerequisite:  C++
-
-### C++ on Linux
-
-The conda installers for CmdStan, CmdStanPy, and CmdStanR will install C++17 and GNU-Make utilities
-
-For Debian-based distributions, run
-```
-sudo apt-get install build-essential
-```
-
-### C++ on MacOS
-
-We strongly recommend installing Xcode from the Apple App Store.  Then run
-```
-xcode-select --install
-```
+## Prerequisite:  C++17
 
 
-### C++ on Windows
+Stan requires a C++17 compiler and the GNU Make utility.
 
-On a Windows 10 machine, we strongly recommend first installing Anaconda or miniconda and then using the conda installer to be CmdStanR or RStan,
-since the conda packages include a C++ toolchain.
+* On Linux, these are bundled into the meta-package `build-essential`.
+To install, run command:\
+`sudo apt-get install build-essential`
 
-Alternatively, R Users can get the RTools distribution, or install it from within CmdStanR using the `get_toolchain` method.
+
+* On Mac, these are included with Xcode.
+Install Xcode from the App Store and then run command:\
+`xcode-select --install`
+
+* On Windows 10, we strongly recommend first installing Anaconda or miniconda and then using the conda installer to be CmdStanR or RStan,
+since the conda packages include a C++ toolchain.\
+Alternatively, R Users can get [Rtools](https://cran.r-project.org/bin/windows/Rtools/){target="_blank"} from CRAN,
+or try to install it from within CmdStanR using the `install_toolchain` method.
 
 
-## CmdStan-based Interfaces
+## Local CmdStan installations for CmdStanPy, CmdStanR, and Stan.jl
 
-Both CmdStanPy and CmdStanR require a local CmdStan installation and provide scripts and methods to manage this.
-The default location is a hidden directory under the user's home directory named `.cmdstan`.
+CmdStanPy, CmdStanR and require a local CmdStan installation and provide scripts and methods to manage this.
+The default installation location is in the user's home directory and is named `.cmdstan` (a hidden directory).
 This directory contains one or more versions of CmdStan.
+Both interfaces provide the following functions to manage the CmdStan installations:
 
-#### Building
+* `install_cmdstan` - downloads, installs, and builds the latest CmdStan relese or specified release
+* `rebuild_cmdstan` - rebuild the specified release.  On Mac, often required after an Xcode update.
+* `show_versions` - shows all installed CmdStan versions
+* `cmdstan_path` - shows which version of CmdStan is being used
+* `set_cmdstan_path` - specify which version of CmdStan to use.
 
-- command shell
-
-- from Python
-
-- from R
-
-#### Managing release versions
-
-- CmdStanPy
-
-- CmdStanR
-
+For Stan.jl, use Conda.jl or conda to install CmdStan.
 
 ## Other Stan Interfaces {#other-packages}
 
-#### Google Colab
+* Google Colab - prebuilt CmdStan binaries for Google Colab are available from the [GitHub CmdStan releases page](https://github.com/stan-dev/cmdstan/releases){target="_blank"}.
 
-#### Mathematica
+* MathematicaStan - available from GitHub repository:  https://github.com/stan-dev/MathematicaStan
 
-#### PyStan
+* MatlabStan - installation instructions available on the [MatlabStan wiki](https://github.com/brian-lau/MatlabStan/wiki){target="_blank"}
 
-PyStan is available from via pip:
-```python
-python3 -m pip install pystan
-```
-
-See [PyStan installation instructions](https://pystan.readthedocs.io/en/latest/installation.html) for further details.
+* PyStan is available from via pip, run commmand:  `python -m pip install pystan`.
 
 ::: {.callout-note}
 As of Release 3.10.0, PyStan is no longer being actively supported.
