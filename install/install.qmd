@@ -178,7 +178,7 @@ and [Windows](https://www.anaconda.com/products/distribution#windows){target="_b
 Julia users can install [Conda.jl](https://github.com/JuliaPy/Conda.jl){target="_blank"}.
 :::
 
-## Prerequisite:  C++17
+## Prerequisite:  C++17 toolchain
 
 
 Stan requires a C++17 compiler and the GNU Make utility.
@@ -188,30 +188,35 @@ To install, run command:\
 `sudo apt-get install build-essential`
 
 
-* On Mac, these are included with Xcode.
+* On Mac, the Clang compiler and GNU Make are included with Xcode, the Apple toolset for software developers.
 Install Xcode from the App Store and then run command:\
 `xcode-select --install`
 
-* On Windows 10, we strongly recommend first installing Anaconda or miniconda and then using the conda installer to be CmdStanR or RStan,
-since the conda packages include a C++ toolchain.\
-Alternatively, R Users can get [Rtools](https://cran.r-project.org/bin/windows/Rtools/){target="_blank"} from CRAN,
-or try to install it from within CmdStanR using the `install_toolchain` method.
+* On Windows 10, there are two ways to get a Stan-compatible C++ toolchain:
+   + Use the conda installer for CmdStan, CmdStanPy or CmdStanR or RStan, since these packages all include the required toolchain.
+   + R Users can get [Rtools](https://cran.r-project.org/bin/windows/Rtools/){target="_blank"} from CRAN; the CmdStanR `install_cmdstan()` function will do this automatically.
 
 
 ## Local CmdStan installations for CmdStanPy, CmdStanR, and Stan.jl
 
-CmdStanPy, CmdStanR and require a local CmdStan installation and provide scripts and methods to manage this.
+CmdStanPy, CmdStanR, and Stan.jl and require a local CmdStan installation.
+Both CmdStanPy and CmdStanR provide method `install_cmdstan` to do this from within Python or R;
+and CmdStanPy also provides this as a command-line function.
+See the online documentation:
+
+* CmdStanPy:  [install_cmdstan function](https://mc-stan.org/cmdstanpy/installation.html#function-install-cmdstan)
+* CmdStanR: [install_cmdstan function](https://mc-stan.org/cmdstanr/reference/install_cmdstan.html)
+* Stan.jl [build instructions](https://github.com/StanJulia/Stan.jl/blob/master/INSTALLING_CMDSTAN.md)
+
 The default installation location is in the user's home directory and is named `.cmdstan` (a hidden directory).
 This directory contains one or more versions of CmdStan.
-Both interfaces provide the following functions to manage the CmdStan installations:
 
-* `install_cmdstan` - downloads, installs, and builds the latest CmdStan relese or specified release
+Both CmdStanPy and CmdStanR provide the following functions:
+
 * `rebuild_cmdstan` - rebuild the specified release.  On Mac, often required after an Xcode update.
 * `show_versions` - shows all installed CmdStan versions
 * `cmdstan_path` - shows which version of CmdStan is being used
 * `set_cmdstan_path` - specify which version of CmdStan to use.
-
-For Stan.jl, use Conda.jl or conda to install CmdStan.
 
 ## Other Stan Interfaces {#other-packages}
 
@@ -227,21 +232,66 @@ For Stan.jl, use Conda.jl or conda to install CmdStan.
 As of Release 3.10.0, PyStan is no longer being actively supported.
 :::
 
-## Troubleshooting
+## Troubleshooting the Install
 
-#### Windows locations
+To help troubleshoot problems that arise when trying to use Stan,
+we provide the following summary of the chain of events in conditioning a model on data and doing inference:
 
-#### C++ Libraries fail to compile
+* Compile model
+  + Stan compiler translates Stan file to C++ file
+  + C++ file is compiled to executable program, via GNU Make
 
-- Boost
-- Sundials
-- TBB
+* Run inference algorithm
+  + Interfaces run compiled executable program
+  + Compiled executable generates per-chain outputs
+
+If the program contains syntax errors, these will be caught and reported by the Stan compiler (program `stanc`).
+If the Stan program is successfully translated to C++, then it should compile; error messages from the C++ compiler indicate a problem with the C++ toolchain.
+
+If a model fails to run or appears to run slowly, this is a strong indication that the model is poorly specified given the data.
+Consult the [Stan User's Guide](https://mc-stan.org/docs/stan-users-guide/){target="_blank"} or search the [Stan Forums on Discourse](https://discourse.mc-stan.org){target="_blank"}
 
 
+Common Points of failure; how to address them.
 
+* Software download failed.
+  + workaround:  check internet connectivity, disk space, and file permissions
 
+* C++ components fail to compile
+  + Workaround: we highly recommend installing using conda to create a clean environment for Stan and its toolchain.
 
+* Stan model fails to compile with error message about a "".(PCH file)()
+  + Fix:  for CmdStan based systems, rebuild CmdStan.
 
+See CmdStan Guide section [Troubleshooting the Installation](https://mc-stan.org/docs/cmdstan-guide/installation.html#troubleshooting-the-installation){target="_blank"} for further details.
+
+## Syntax Aware Editors
+
+* [RStudio 1.2 Stan](https://resources.rstudio.com/rstudio-blog/rstudio-1-2-preview-stan){target="_blank"} - [(Source code)](https://github.com/rstudio/rstudio/blob/main/src/gwt/acesupport/acemode/stan_highlight_rules.js){target="_blank"}
+
+* [Emacs mode for Stan](https://github.com/stan-dev/stan-mode){target="_blank"}
+
+* [stan-vim: syntax highlighting, automatic indentation, code folding and more.](https://github.com/eigenfoo/stan-vim){target="_blank"}
+
+* [stan.vim: Vim syntax highlighting for Stan](https://github.com/maverickg/stan.vim){target="_blank"}
+
+* [Stan language support for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=wardbrian.vscode-stan-extension){target="_blank"}
+
+* [Stan language support in Atom](https://github.com/stan-dev/atom-language-stan){target="_blank"}
+
+* [Stan Syntax Package for Sublime Text](https://github.com/djsutherland/sublime-stan){target="_blank"}
+
+* [Jupyterlab extension to highlight Stan syntax.](https://www.npmjs.com/package/jupyterlab-stan-highlight){target="_blank"}
+
+* [Kate: Kate is a Feature-Packed Text Editor.](https://kate-editor.org/){target="_blank"}  This highlighting is also the one used by the [pandoc](https://pandoc.org/){target="_blank"} tool used by RMarkdown.  [(Source code)](https://invent.kde.org/frameworks/syntax-highlighting/-/blob/master/data/syntax/stan.xml){target="_blank"}
+
+* JavaScript [Prism: a lightweight, robust, and elegant syntax highlighting library.](https://prismjs.com/){target="_blank"} - [(Source code)](https://github.com/PrismJS/prism/blob/master/components/prism-stan.js){target="_blank"}
+
+* [Highlight.js: a syntax highlighter written in JavaScript](https://github.com/highlightjs/highlight.js){target="_blank"} - [(Source code)](https://github.com/highlightjs/highlight.js/blob/main/src/languages/stan.js){target="_blank"}
+
+* [lstbayes: LaTeX Listings language drivers for BUGS, JAGS, and Stan](https://github.com/jrnold/lstbayes){target="_blank"}
+
+* [Pygments: a generic syntax highlighter](https://pygments.org/){target="_blank"} - [(Source code)](https://github.com/pygments/pygments/blob/master/pygments/lexers/modeling.py){target="_blank"}
 
 
 
