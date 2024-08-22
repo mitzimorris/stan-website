@@ -1,14 +1,14 @@
 ---
 pagetitle: "Get Stan"
 page-layout: full
-toc-location: left
+toc-location: right
+toc-depth: 3
 ---
 ## Download and Install Stan
 
-Stan is available for all major operating systems and has packages in several
-popular languages. Most users can get started by just selecting their preferred
-options in the grid below. If you don't see your exact set-up, see [Other packages and environments](#other-packages) below
-for more programming language options and ways of using Stan.
+Stan is available for all major operating systems and several programming languages.
+You can get started by selecting your OS, programming language interface, and preferred installation method in the grid below.
+If you don't see your exact set-up, see [Other Stan interfaces](#other-packages) below.
 
 
 ::: {#install-grid}
@@ -25,8 +25,9 @@ Prerequisites
 :::: {.col .highlight-box}
 
 ::::: {.prereq #prereq-windows .hidden}
-Stan requires a C++17 compiler and some additional tools for building. The `conda`
-option of certain packages can install these for you, or we recommend RTools TODO
+Stan requires a C++17 compiler and some build utilities.. The `conda`
+option of certain packages can install these for you, otherwise these are bundled together
+by [Rtools](https://cran.r-project.org/bin/windows/Rtools/).
 :::::
 
 ::::: {.prereq #prereq-macos .hidden}
@@ -68,7 +69,7 @@ For more information, see the
 ::::: {.install #install-cmdstanpy-conda .hidden}
 Run `conda install -c conda-forge cmdstanpy`.
 
-Note: this will also install CmdStan and any system prerequesites.
+Note: this will also install CmdStan and any system prerequisites.
 :::::
 
 ::::: {.install #install-cmdstanpy-github-src .hidden}
@@ -92,11 +93,12 @@ For more information, see the
 ::::: {.install #install-cmdstanr-conda .hidden}
 Run `conda install -c conda-forge r-cmdstanr`.
 
-Note: this will also install CmdStan and any system prerequesites.
+Note: this will also install CmdStan and any system prerequisites.
 :::::
 
 ::::: {.install #install-cmdstanr-github-src .hidden}
 In R, run `remotes::install_github("stan-dev/cmdstanr")`.
+
 Then run `cmdstanr::install_cmdstan()` or follow the manual installation instructions for CmdStan.
 
 For more information, see the
@@ -105,45 +107,57 @@ For more information, see the
 
 <!-- ---------- CmdStan ---------- -->
 ::::: {.install #install-cmdstan-github-rel .hidden}
-TODO 1
+Download a release from GitHub:  https://github.com/stan-dev/cmdstan/releases.
+
+Then follow [these instructions to build CmdStan](https://mc-stan.org/docs/cmdstan-guide/installation.html#building-cmdstan){target="_blank"}.
 :::::
 ::::: {.install #install-cmdstan-conda .hidden}
-TODO 2
+Run `conda install -c conda-forge cmdstan`.
+
+Note: this will also install CmdStan and any system prerequisites.
 :::::
 ::::: {.install #install-cmdstan-github-src .hidden}
-TODO 3
-:::::
-<!-- ---------- Pystan ---------- -->
-::::: {.install #install-pystan-pip .hidden}
-TODO 4
-:::::
-::::: {.install #install-pystan-conda .hidden}
-TODO 5
-:::::
-::::: {.install #install-pystan-github-src .hidden}
-TODO 6
+Run `git clone https://github.com/stan-dev/cmdstan.git --recursive`
+
+This will download the source code from the current development branch of CmdStan into a directory named cmdstan,
+along with the submodules for core Stan code and the Stan math library.
+
+Then follow [these instructions to build CmdStan](https://mc-stan.org/docs/cmdstan-guide/installation.html#building-cmdstan){target="_blank"}.
 :::::
 <!-- ---------- RStan ---------- -->
 ::::: {.install #install-rstan-cran .hidden}
-TODO 7
+In R, run `install.packages("rstan")`
+
+For more information, see the
+[RStan Getting Started wiki](https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started){target="_blank"}
 :::::
 ::::: {.install #install-rstan-runiverse .hidden}
-TODO 8
+In R, run `install.packages("rstan", repos = c('https://stan-dev.r-universe.dev', getOption("repos")))`.
+
+For more information, see the
+[RStan Getting Started wiki](https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started){target="_blank"}
 :::::
 ::::: {.install #install-rstan-conda .hidden}
 Run `conda install -c conda-forge r-rstan`.
 
-Note: this will also install any system prerequesites.
+Note: this will also install any system prerequisites.
 :::::
 ::::: {.install #install-rstan-github-src .hidden}
-TODO 9
+remotes::install_github("stan-dev/rstan", ref = "develop", subdir = "rstan/rstan")
+
+For more information, see the
+RStan wiki page [Installing RStan from Source](https://github.com/stan-dev/rstan/wiki/Installing-RStan-from-Source)
 :::::
 <!-- ---------- Stan.jl ---------- -->
 ::::: {.install #install-stan.jl-julia-pkg .hidden}
-TODO 10
+To install Stan.jl e.g. in the Julia REPL: `] add Stan`,
+then use Conda.jl or conda to install CmdStan.
+
+See [Stan.jl documentation](http://stanjulia.github.io/Stan.jl/v6.0/INSTALLATION.html) for further details.
 :::::
 ::::: {.install #install-stan.jl-github-src .hidden}
-TODO 11
+Run `https://github.com/StanJulia/Stan.jl.git`,
+then follow instructions in the README file.
 :::::
 
 ::::
@@ -151,50 +165,151 @@ TODO 11
 
 <script src="installer.js"></script>
 
-## In-Depth Instructions
-
-### Platform
-
-#### Linux
-
-- which C++
-
-#### MacOS
-
-- Xcode
-
-#### Windows
-
-- Conda
-- RTools
-
-## Other packages and environments {#other-packages}
-
-#### Google Colab
-
-#### Mathematica, Stata, etc?
-
-## Troubleshooting
-
-### C++ Versions
-
-### C++ Libraries
-
-- Boost
-- Sundials
-- TBB
-
-### GPU Support
 
 
+::: {.callout-note}
+Conda simplifies the installation process by ensuring that all required libraries and tools are compatible with each other
+and is available for Linux, Mac, and Windows platforms.
+
+You can either install [miniconda](https://docs.conda.io/en/latest/miniconda.html), a free, minimal installer for conda
+or you can get the full [Anaconda](https://docs.continuum.io/anaconda/) system
+which provides graphical installer wizards for [MacOS](https://www.anaconda.com/products/distribution#macos){target="_blank"}
+and [Windows](https://www.anaconda.com/products/distribution#windows){target="_blank"} users.
+
+Julia users can install [Conda.jl](https://github.com/JuliaPy/Conda.jl){target="_blank"}.
+:::
+
+## Prerequisite:  C++17 toolchain
 
 
+Stan requires a C++17 compiler and the GNU Make utility.
+
+* On Linux, these are bundled into the meta-package `build-essential`.
+To install, run command:\
+`sudo apt-get install build-essential`
 
 
+* On Mac, the Clang compiler and GNU Make are included with Xcode, the Apple toolset for software developers.
+Install Xcode from the App Store and then run command:\
+`xcode-select --install`
+
+\tightlist
+* On Windows 10, there are two ways to get a Stan-compatible C++ toolchain:
+   + Use the conda installer for CmdStan, CmdStanPy or CmdStanR or RStan, since these packages all include the required toolchain.
+   + Get [Rtools](https://cran.r-project.org/bin/windows/Rtools/){target="_blank"}
+which includes a C++17 compiler, GNU Make for windows, and a few Unix utilities.\
+CmdStanR users can call the internal function `cmdstanr:::install_toolchain`.\
+CmdStanPy provides both the function `cmdstanpy::get_cxx_toolchain` and command line script `get_cxx_toolchain`.
+
+## Local CmdStan installations for CmdStanPy, CmdStanR, and Stan.jl
+
+CmdStanPy, CmdStanR, and Stan.jl and require a local CmdStan installation.
+Both CmdStanPy and CmdStanR provide method `install_cmdstan` to do this from within Python or R;
+and CmdStanPy also provides this as a command-line function.
+See the online documentation:
+
+* CmdStanPy:  [install_cmdstan function](https://mc-stan.org/cmdstanpy/installation.html#function-install-cmdstan)
+* CmdStanR: [install_cmdstan function](https://mc-stan.org/cmdstanr/reference/install_cmdstan.html)
+* Stan.jl [build instructions](https://github.com/StanJulia/Stan.jl/blob/master/INSTALLING_CMDSTAN.md)
+
+The default installation location is in the user's home directory and is named `.cmdstan` (a hidden directory).
+This directory contains one or more versions of CmdStan.
+
+Both CmdStanPy and CmdStanR provide the following functions:
+
+* `rebuild_cmdstan` - rebuild the specified release.  On Mac, often required after an Xcode update.
+* `show_versions` - shows all installed CmdStan versions
+* `cmdstan_path` - shows which version of CmdStan is being used
+* `set_cmdstan_path` - specify which version of CmdStan to use.
+
+## Other Stan Interfaces {#other-packages}
+
+* Google Colab - prebuilt CmdStan binaries for Google Colab are available from the [GitHub CmdStan releases page](https://github.com/stan-dev/cmdstan/releases){target="_blank"}.
+Installing these binaries at the start of a Colab session is much faster than installing CmdStan during a Colab session.
+
+* MathematicaStan - available from GitHub repository:  https://github.com/stan-dev/MathematicaStan
+
+* MatlabStan - installation instructions available on the [MatlabStan wiki](https://github.com/brian-lau/MatlabStan/wiki){target="_blank"}
+
+* PyStan is available from via pip, run commmand:  `python -m pip install pystan`.
+
+::: {.callout-note}
+As of Release 3.10.0, PyStan is no longer being actively supported.
+:::
+
+## High-level Stan Interfaces for R Users
+
+* [BRMS](https://github.com/paul-buerkner/brms) - The BRMS package (Bayesian Regression Models using Stan)
+simplifies and streamlines the use of Stan by providing an extended R formula syntax for model specification,
+not unlike that of package LME4.
+
+* [RStanArm](https://mc-stan.org/rstanarm/) - RStanArm provides Stan versions of other R model-fitting functions.
+It provides precompiled versions of common models which are robust to sampling problems.
+
+* [Rethinking](https://github.com/rmcelreath/rethinking) - this package accompanies the book and course materials
+for [Statistical Rethinking, 2nd Ed](https://www.taylorfrancis.com/books/mono/10.1201/9780429029608/statistical-rethinking-richard-mcelreath)
+by Richard McElreath.
+
+## Troubleshooting the Install
+
+To help troubleshoot problems that arise when trying to use Stan,
+we provide the following summary of the chain of events in conditioning a model on data and doing inference:
+
+* Compile model
+  + Stan compiler translates Stan file to C++ file
+  + C++ file is compiled to executable program, via GNU Make
+
+* Run inference algorithm
+  + Interfaces run compiled executable program
+  + Compiled executable generates per-chain outputs
+
+If the program contains syntax errors, these will be caught and reported by the Stan compiler (program `stanc`).
+If the Stan program is successfully translated to C++, then it should compile; error messages from the C++ compiler indicate a problem with the C++ toolchain.
+
+If a model fails to run or appears to run slowly, this is a strong indication that the model is poorly specified given the data.
+Consult the [Stan User's Guide](https://mc-stan.org/docs/stan-users-guide/){target="_blank"} or search the [Stan Forums on Discourse](https://discourse.mc-stan.org){target="_blank"}
 
 
+Common Points of failure; how to address them.
 
+* Software download failed.
+  + workaround:  check internet connectivity, disk space, and file permissions
 
+* C++ components fail to compile
+  + Workaround: we highly recommend installing using conda to create a clean environment for Stan and its toolchain.
+
+* Stan model fails to compile with error message about a "".(PCH file)()
+  + Fix:  for CmdStan based systems, rebuild CmdStan.
+
+See CmdStan Guide section [Troubleshooting the Installation](https://mc-stan.org/docs/cmdstan-guide/installation.html#troubleshooting-the-installation){target="_blank"} for further details.
+
+## Syntax Aware Editors
+
+* [RStudio 1.2 Stan](https://resources.rstudio.com/rstudio-blog/rstudio-1-2-preview-stan){target="_blank"} - [(Source code)](https://github.com/rstudio/rstudio/blob/main/src/gwt/acesupport/acemode/stan_highlight_rules.js){target="_blank"}
+
+* [Emacs mode for Stan](https://github.com/stan-dev/stan-mode){target="_blank"}
+
+* [stan-vim: syntax highlighting, automatic indentation, code folding and more.](https://github.com/eigenfoo/stan-vim){target="_blank"}
+
+* [stan.vim: Vim syntax highlighting for Stan](https://github.com/maverickg/stan.vim){target="_blank"}
+
+* [Stan language support for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=wardbrian.vscode-stan-extension){target="_blank"}
+
+* [Stan language support in Atom](https://github.com/stan-dev/atom-language-stan){target="_blank"}
+
+* [Stan Syntax Package for Sublime Text](https://github.com/djsutherland/sublime-stan){target="_blank"}
+
+* [Jupyterlab extension to highlight Stan syntax.](https://www.npmjs.com/package/jupyterlab-stan-highlight){target="_blank"}
+
+* [Kate: Kate is a Feature-Packed Text Editor.](https://kate-editor.org/){target="_blank"}  This highlighting is also the one used by the [pandoc](https://pandoc.org/){target="_blank"} tool used by RMarkdown.  [(Source code)](https://invent.kde.org/frameworks/syntax-highlighting/-/blob/master/data/syntax/stan.xml){target="_blank"}
+
+* JavaScript [Prism: a lightweight, robust, and elegant syntax highlighting library.](https://prismjs.com/){target="_blank"} - [(Source code)](https://github.com/PrismJS/prism/blob/master/components/prism-stan.js){target="_blank"}
+
+* [Highlight.js: a syntax highlighter written in JavaScript](https://github.com/highlightjs/highlight.js){target="_blank"} - [(Source code)](https://github.com/highlightjs/highlight.js/blob/main/src/languages/stan.js){target="_blank"}
+
+* [lstbayes: LaTeX Listings language drivers for BUGS, JAGS, and Stan](https://github.com/jrnold/lstbayes){target="_blank"}
+
+* [Pygments: a generic syntax highlighter](https://pygments.org/){target="_blank"} - [(Source code)](https://github.com/pygments/pygments/blob/master/pygments/lexers/modeling.py){target="_blank"}
 
 
 
