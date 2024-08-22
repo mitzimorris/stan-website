@@ -98,6 +98,7 @@ Note: this will also install CmdStan and any system prerequisites.
 
 ::::: {.install #install-cmdstanr-github-src .hidden}
 In R, run `remotes::install_github("stan-dev/cmdstanr")`.
+
 Then run `cmdstanr::install_cmdstan()` or follow the manual installation instructions for CmdStan.
 
 For more information, see the
@@ -142,10 +143,10 @@ Run `conda install -c conda-forge r-rstan`.
 Note: this will also install any system prerequisites.
 :::::
 ::::: {.install #install-rstan-github-src .hidden}
-Run `git clone https://github.com/stan-dev/rstan.git --recursive`
+remotes::install_github("stan-dev/rstan", ref = "develop", subdir = "rstan/rstan")
 
 For more information, see the
-[RStan Getting Started wiki](https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started){target="_blank"}
+RStan wiki page [Installing RStan from Source](https://github.com/stan-dev/rstan/wiki/Installing-RStan-from-Source)
 :::::
 <!-- ---------- Stan.jl ---------- -->
 ::::: {.install #install-stan.jl-julia-pkg .hidden}
@@ -192,10 +193,13 @@ To install, run command:\
 Install Xcode from the App Store and then run command:\
 `xcode-select --install`
 
+\tightlist
 * On Windows 10, there are two ways to get a Stan-compatible C++ toolchain:
    + Use the conda installer for CmdStan, CmdStanPy or CmdStanR or RStan, since these packages all include the required toolchain.
-   + R Users can get [Rtools](https://cran.r-project.org/bin/windows/Rtools/){target="_blank"} from CRAN; the CmdStanR `install_cmdstan()` function will do this automatically.
-
+   + Get [Rtools](https://cran.r-project.org/bin/windows/Rtools/){target="_blank"}
+which includes a C++17 compiler, GNU Make for windows, and a few Unix utilities.\
+CmdStanR users can call the internal function `cmdstanr:::install_toolchain`.\
+CmdStanPy provides both the function `cmdstanpy::get_cxx_toolchain` and command line script `get_cxx_toolchain`.
 
 ## Local CmdStan installations for CmdStanPy, CmdStanR, and Stan.jl
 
@@ -221,6 +225,7 @@ Both CmdStanPy and CmdStanR provide the following functions:
 ## Other Stan Interfaces {#other-packages}
 
 * Google Colab - prebuilt CmdStan binaries for Google Colab are available from the [GitHub CmdStan releases page](https://github.com/stan-dev/cmdstan/releases){target="_blank"}.
+Installing these binaries at the start of a Colab session is much faster than installing CmdStan during a Colab session.
 
 * MathematicaStan - available from GitHub repository:  https://github.com/stan-dev/MathematicaStan
 
@@ -231,6 +236,19 @@ Both CmdStanPy and CmdStanR provide the following functions:
 ::: {.callout-note}
 As of Release 3.10.0, PyStan is no longer being actively supported.
 :::
+
+## High-level Stan Interfaces for R Users
+
+* [BRMS](https://github.com/paul-buerkner/brms) - The BRMS package (Bayesian Regression Models using Stan)
+simplifies and streamlines the use of Stan by providing an extended R formula syntax for model specification,
+not unlike that of package LME4.
+
+* [RStanArm](https://mc-stan.org/rstanarm/) - RStanArm provides Stan versions of other R model-fitting functions.
+It provides precompiled versions of common models which are robust to sampling problems.
+
+* [Rethinking](https://github.com/rmcelreath/rethinking) - this package accompanies the book and course materials
+for [Statistical Rethinking, 2nd Ed](https://www.taylorfrancis.com/books/mono/10.1201/9780429029608/statistical-rethinking-richard-mcelreath)
+by Richard McElreath.
 
 ## Troubleshooting the Install
 
