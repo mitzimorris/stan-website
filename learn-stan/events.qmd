@@ -1,0 +1,69 @@
+---
+pagetitle: Stan Events
+page-layout: full
+toc-location: left
+---
+
+# StanCon, StanConnect, & other Stan Events
+
+## Upcoming Events
+
+## Past Events
+
+### StanCon 2024
+
+Organizers
+: Charles Margossian, Will Pearse, 
+
+Location & Date
+: Oxford University, September 9-13, 2024
+
+Tutorials
+: * Introduction to Stan -- Richard McElreath
+ * Model selection -- Aki Vehtari, Noa Kallioinen, and Teemu Säilynoja
+ * Bayesian hierarchical models in Stan -- Sean Pinkney
+ * Bayesian optmization with Stan -- Anna Riha and Elizaveta Semenova
+ * Biodiversity modeling and forecasting -- Will Pearse
+ * Infectious disease modeling in Stan -- Juliette Unwin
+
+### StanCon 2023
+
+Organizers
+: Charles Margossian, Debashis Mondal, Yi Zhang, Eric Ward
+
+Location & Date
+: Washington University, June 20-23, 2023
+
+Tutorials
+: * Fundamentals of Stan -- Charles Margossian
+ * Bayesian workflow illustrated using BRMS -- Mitzi Morris
+ * Hierarchical models in Stan: varieties, optimizations & nuances -- Mike Lawrence
+ * Building a GPT in Stan -- Daniel Lee
+ * Cognitive diagnostic models in R and Stan -- Jake Thompson
+ * Advances of model assessment, selection, and inference after model selection --  Andrew Johnson
+
+### StanCon 2020
+
+Location & Date
+: Online, 24 hour event, August 13, 2020
+
+
+
+
+
+#### StanConnect 2022
+
+Title:
+Stan through space and time
+
+Organizer:
+
+
+#### StanConnect 2021
+
+Title
+: Checking your model, simulation-based calibration
+
+Organizer
+: Hyunji Moon
+
