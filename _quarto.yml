@@ -41,7 +41,7 @@ website:
             href: learn-stan/case-studies.qmd
           - text: "Tutorials"
             href: learn-stan/tutorials.qmd
-          - text: "Journal Articles"
+          - text: "Journal Articles & Books"
             href: learn-stan/articles.qmd
           - text: "Stan Events"
             href: learn-stan/events.qmd
