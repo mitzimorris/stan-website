@@ -4,11 +4,9 @@ page-layout: full
 toc-location: left
 ---
 
-# StanCon, StanConnect, & other Stan Events
+# Materials from StanCon, StanConnect, & other Stan Events
 
-## Upcoming Events
-
-## Past Events
+## StanCon
 
 ### StanCon 2024
 
@@ -16,7 +14,7 @@ Organizers
 : Charles Margossian, Will Pearse, 
 
 Location & Date
-: Oxford University, September 9-13, 2024
+: Oxford University, England -- September 9-13, 2024
 
 Tutorials
 : * Introduction to Stan -- Richard McElreath
@@ -26,13 +24,14 @@ Tutorials
  * Biodiversity modeling and forecasting -- Will Pearse
  * Infectious disease modeling in Stan -- Juliette Unwin
 
+
 ### StanCon 2023
 
 Organizers
 : Charles Margossian, Debashis Mondal, Yi Zhang, Eric Ward
 
 Location & Date
-: Washington University, June 20-23, 2023
+: Washington University, USA -- June 20-23, 2023
 
 Tutorials
 : * Fundamentals of Stan -- Charles Margossian
@@ -47,22 +46,99 @@ Tutorials
 Location & Date
 : Online, 24 hour event, August 13, 2020
 
+### StanCon 2019
 
+Organizers
+: University of Cambridge
 
+Location & Date
+: University of Cambridge -- August 20-23, 2019
 
+Tutorials
+: * Population and ODE-based models using Stan and Torsten -- Charles Margossian & Yi Zhang
+* Hierarchical Modeling with Stan -- Ben Goodrich
+* Model assessment and selection -- Aki Vehtari
+* A Dive into Stan’s C++ Model Concept -- Daniel Lee
+* Introduction to Stan for Programmers -- Jonathan Auerbach & Breck Baldwin
+* Basics of Bayesian inference and Stan -- Jonah Gabry & Lauren Kennedy
 
-#### StanConnect 2022
+### StanCon 2018
 
-Title:
-Stan through space and time
+Organizers
+: Aalto University 
 
-Organizer:
+Location & Date
+: Aalto University, Helsinki, Finland -- August 29-31, 2018
 
+Tutorials
+: * Basics of Bayesian inference and Stan -- Jonah Gabry & Lauren Kennedy
+* Hierarchical models -- Ben Goodrich
+* Stan C++ development: adding a new function to Stan -- Bob Carpenter, Sean Talts & Mitzi Morris
+* Ordinary differential equation (ODE) models in Stan -- Daniel Lee
+* Productization of Stan -- Eric Novik
+* Model assessment and selection -- Aki Vehtari
 
-#### StanConnect 2021
+### StanCon 2018
 
-Title
-: Checking your model, simulation-based calibration
+Organizers
+: Aalto University 
+
+Location & Date
+: Aalto University, Helsinki, Finland -- August 29-31, 2018
+
+Tutorials
+: * Basics of Bayesian inference and Stan -- Jonah Gabry & Lauren Kennedy
+* Hierarchical models -- Ben Goodrich
+* Stan C++ development: adding a new function to Stan -- Bob Carpenter, Sean Talts & Mitzi Morris
+* Ordinary differential equation (ODE) models in Stan -- Daniel Lee
+* Productization of Stan -- Eric Novik
+* Model assessment and selection -- Aki Vehtari
+
+### StanCon 2018
+
+Organizers
+: 
+
+Location & Date
+: Asilomar Conference Center, Pacific Grove, California, USA -- Jan 10-12, 2018
+
+Tutorials
+: * Introduction to Stan -- Jonah Sol Gabry, Mitzi Morris & Sean Talts
+* Executive decision making the Bayesian way -- Jonathan Auerback & Eric Novik
+* Advanced Hierarchical Models in Stan -- Ben Goodrich
+* Model assessment, selection and inference after model selection -- Aki Vehtari
+* How to develop for Stan at the C++ level -- Charles Margossian
+* A Dive into Stan’s C++ Model Concept -- Daniel Lee
+
+## StanConnect
+
+### Stan Through Space and Time (2022)
+
+Organizer
+: James Hogg
+
+Details
+: A 3-hour event showcasing the use of Stan in spatial statistics and for modeling time series data 
+
+### Ecology (2021)
+
+Organizer
+: Jacob B. Socolar
+
+Details
+: A 2-day event showcasing applications of Stan for ecological analyses
+
+### Biomedical (2021)
+
+Organizer
+: Luiz Max Carvalho
+
+### Cognitive Science and Neuroscience (2021)
+
+Organizer
+: Bruno Nicenboim
+
+### Checking your model, simulation-based calibration (2021)
 
 Organizer
 : Hyunji Moon
