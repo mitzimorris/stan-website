@@ -283,33 +283,27 @@ Common Points of failure; how to address them.
 
 See CmdStan Guide section [Troubleshooting the Installation](https://mc-stan.org/docs/cmdstan-guide/installation.html#troubleshooting-the-installation){target="_blank"} for further details.
 
-## Syntax Aware Editors
+## Introductory Notebooks, Vignettes, and Tutorials
 
-* [RStudio 1.2 Stan](https://resources.rstudio.com/rstudio-blog/rstudio-1-2-preview-stan){target="_blank"} - [(Source code)](https://github.com/rstudio/rstudio/blob/main/src/gwt/acesupport/acemode/stan_highlight_rules.js){target="_blank"}
+### Python
 
-* [Emacs mode for Stan](https://github.com/stan-dev/stan-mode){target="_blank"}
+* CmdStanPy User's Guide Examples
 
-* [stan-vim: syntax highlighting, automatic indentation, code folding and more.](https://github.com/eigenfoo/stan-vim){target="_blank"}
+* "Getting Started with Bayesian Statistics using Stan and Python" by Bob Carpenter
 
-* [stan.vim: Vim syntax highlighting for Stan](https://github.com/maverickg/stan.vim){target="_blank"}
+* [Multilevel regression modeling with CmdStanPy and plotnine](case-studies/radon_cmdstanpy_plotnine.html){target="_blank"}
 
-* [Stan language support for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=wardbrian.vscode-stan-extension){target="_blank"}
+### R
 
-* [Stan language support in Atom](https://github.com/stan-dev/atom-language-stan){target="_blank"}
+* CmdStanR Vignettes
 
-* [Stan Syntax Package for Sublime Text](https://github.com/djsutherland/sublime-stan){target="_blank"}
+* 2019 Ben Goodrich presentation on hierarchical models with RStan, BRMS, and RStanArm
 
-* [Jupyterlab extension to highlight Stan syntax.](https://www.npmjs.com/package/jupyterlab-stan-highlight){target="_blank"}
+### General Overview
 
-* [Kate: Kate is a Feature-Packed Text Editor.](https://kate-editor.org/){target="_blank"}  This highlighting is also the one used by the [pandoc](https://pandoc.org/){target="_blank"} tool used by RMarkdown.  [(Source code)](https://invent.kde.org/frameworks/syntax-highlighting/-/blob/master/data/syntax/stan.xml){target="_blank"}
+* StanCon 2023 "Fundamentals of Stan"
 
-* JavaScript [Prism: a lightweight, robust, and elegant syntax highlighting library.](https://prismjs.com/){target="_blank"} - [(Source code)](https://github.com/PrismJS/prism/blob/master/components/prism-stan.js){target="_blank"}
-
-* [Highlight.js: a syntax highlighter written in JavaScript](https://github.com/highlightjs/highlight.js){target="_blank"} - [(Source code)](https://github.com/highlightjs/highlight.js/blob/main/src/languages/stan.js){target="_blank"}
-
-* [lstbayes: LaTeX Listings language drivers for BUGS, JAGS, and Stan](https://github.com/jrnold/lstbayes){target="_blank"}
-
-* [Pygments: a generic syntax highlighter](https://pygments.org/){target="_blank"} - [(Source code)](https://github.com/pygments/pygments/blob/master/pygments/lexers/modeling.py){target="_blank"}
-
-
-
+* Course notes: *Software for MCMC* from Odd Kolbjørnsen, Spring 2023, Oslo Uni\
+\fontsize{9pt}{9.4}\selectfont
+www.uio.no/studier/emner/matnat/math/STK4051/v23/timeplan/lecture_12_softwareformcmc.pdf
+\normalsize
