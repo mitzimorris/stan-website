@@ -35,18 +35,18 @@ website:
             url: https://mc-stan.org/docs/reference-manual/index.html
           - text: "Functions Reference"
             url: https://mc-stan.org/docs/functions-reference/overview.html
-      - text: "Learning Materials"
+      - text: "Learning Resources"
         menu:
-          - text: "Case Studies"
-            href: learn-stan/case-studies.qmd
           - text: "Tutorials"
             href: learn-stan/tutorials.qmd
-          - text: "Journal Articles & Books"
-            href: learn-stan/articles.qmd
-          - text: "Stan Events"
-            href: learn-stan/events.qmd
+          - text: "Case Studies"
+            href: learn-stan/case-studies.qmd
           - text: "Field Guides"
             href: learn-stan/field-guides.qmd
+          - text: "Publications"
+            href: learn-stan/publications.qmd
+          - text: "Events & Workshops"
+            href: learn-stan/events.qmd
       - text: "Tools"
         href: tools/tools.qmd
       - text: "About mc-stan.org"
