@@ -4,9 +4,8 @@ page-layout: full
 toc-location: left
 ---
 
-# Materials from StanCon, StanConnect, & other Stan Events
 
-## StanCon
+## Past StanCons
 
 ### StanCon 2024
 
@@ -94,10 +93,12 @@ Tutorials
 * Productization of Stan -- Eric Novik
 * Model assessment and selection -- Aki Vehtari
 
+[Materials from StanCon 2018 Helsinki](https://github.com/stan-dev/stancon_talks/tree/master/2018-helsinki){target="_blank"}
+
 ### StanCon 2018
 
 Organizers
-: 
+: Columbia University
 
 Location & Date
 : Asilomar Conference Center, Pacific Grove, California, USA -- Jan 10-12, 2018
@@ -110,36 +111,16 @@ Tutorials
 * How to develop for Stan at the C++ level -- Charles Margossian
 * A Dive into Stan’s C++ Model Concept -- Daniel Lee
 
-## StanConnect
+[Materials from StanCon 2018 Asilomar](https://github.com/stan-dev/stancon_talks/tree/master/2018#materials-from-stancon-2018-asilomar){target="_blank"}
 
-### Stan Through Space and Time (2022)
+### StanCon 2017
 
-Organizer
-: James Hogg
+Organizers
+: Columbia University
 
-Details
-: A 3-hour event showcasing the use of Stan in spatial statistics and for modeling time series data 
+Location & Date
+: Columbia University, New York, USA - Jan 17, 2017
 
-### Ecology (2021)
+[Program](https://github.com/stan-dev/stancon/2017/program/program.pdf){target="_blank"}
 
-Organizer
-: Jacob B. Socolar
-
-Details
-: A 2-day event showcasing applications of Stan for ecological analyses
-
-### Biomedical (2021)
-
-Organizer
-: Luiz Max Carvalho
-
-### Cognitive Science and Neuroscience (2021)
-
-Organizer
-: Bruno Nicenboim
-
-### Checking your model, simulation-based calibration (2021)
-
-Organizer
-: Hyunji Moon
-
+[Contributed Talks](https://github.com/stan-dev/stancon_talks/tree/master/2017/Contributed-Talks){target="_blank"}

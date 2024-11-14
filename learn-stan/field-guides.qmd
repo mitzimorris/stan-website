@@ -20,3 +20,37 @@ out on the Stan forums.
 * [Stan for Cognitive Science](https://cognitive-science-stan.github.io/)
 
 
+
+## StanConnect
+
+### Stan Through Space and Time (2022)
+
+Organizer
+: James Hogg
+
+Details
+: A 3-hour event showcasing the use of Stan in spatial statistics and for modeling time series data 
+
+### Ecology (2021)
+
+Organizer
+: Jacob B. Socolar
+
+Details
+: A 2-day event showcasing applications of Stan for ecological analyses
+
+### Biomedical (2021)
+
+Organizer
+: Luiz Max Carvalho
+
+### Cognitive Science and Neuroscience (2021)
+
+Organizer
+: Bruno Nicenboim
+
+### Checking your model, simulation-based calibration (2021)
+
+Organizer
+: Hyunji Moon
+
