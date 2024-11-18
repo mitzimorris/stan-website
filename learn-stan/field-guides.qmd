@@ -4,24 +4,41 @@ page-layout: full
 toc-location: left
 ---
 
-# Specialized Field Guides
+# Domain-Specific Resources
 
-Tutorials, case studies, software packages, and publications related to
-specific fields. These pages are maintained by volunteers from the Stan
-community. If you would like to contribute one for your field please reach
-out on the Stan forums.
+## Field Guides
 
-* [Stan for Education Research](https://education-stan.github.io)
+Topic Guides list tutorials, case studies, and resources for specific fields.
+They provide working examples of Stan implementations of commonly used models for that domain.
+If you would like to contribute one for your field,
+see this announcementas announced:  [Fostering Stan user communities through domain-specific resource pages ](https://discourse.mc-stan.org/t/fostering-stan-user-communities-through-domain-specific-resource-pages/11544)
+
+
+* [Education Research Using Stan](https://education-stan.github.io)
+    + Topics covered:  Item Response Theory, Cognitive Diagnosis Models, Multilevel Modeling
+    + Maintainer: [Sofia Rabe-Hesketh](https://bse.berkeley.edu/sophia-rabe-hesketh)
 
 * [Stan for Ecology](https://stanecology.github.io/)
+    + Maintainer: [Vianey Leos Barajas](https://www.statistics.utoronto.ca/people/directories/all-faculty/vianey-leos-barajas)
 
-* [Satan for Epidemiolog](https://epidemiology-stan.github.io/)
+* [Stan for Epidemiology](https://epidemiology-stan.github.io/)
+    + Topics covered:  Disease transmission (SIR models), disease mapping (ICAR, BYM models), survival analysis, longitudinal data.
+    + Maintainer: [Léo Grinsztajn](leo.grinsztajn@inria.fr)
+
   
 * [Stan for Cognitive Science](https://cognitive-science-stan.github.io/)
+    + Provides a well-curated list of CogSci papers using Stan, BRMS, or RStanArm.
+    + Maintainer: [Bruno Nicenboim](https://www.tilburguniversity.edu/staff/b-nicenboim)
 
 
 
 ## StanConnect
+
+StanConnect is a virtual miniseries which consists of 3-hour meetings/mini-symposia
+where each meeting is like "session" of an organized conference.
+This series was started in 2021 and reprised in 2022.
+Future StanConnect series will be announced on [Discourse](https://discourse.mc-stan.org/tag/stanconnect).
+
 
 ### Stan Through Space and Time (2022)
 
