@@ -21,8 +21,6 @@ The official Stan YouTube channel is:  [https://www.youtube.com/channel/UCwgN5sr
 * [Stan Tutorials](https://www.youtube.com/playlist?list=PLCrWEzJgSUqwL85xIj1wubGdY15C5Gf7H){target="_blank"} &nbsp; Maggie Lieu.</br>
 A series of 8 videos that will get you started using Stan in R and Python.
 
-### Contributed Videos
-
 * [Statistical Rethinking Winter 2019 Lecture 15](https://www.youtube.com/watch?v=AALYPv5xSos&list=PLCrWEzJgSUqzcQOaXB_Sz0hIF5VsFeW86&index=1&pp=gAQBiAQB){target="_blank"} &nbsp; Richard McElreath.
 
 * [How to write your first Stan program](https://youtu.be/YZZSYIx1-mw?si=7l1IBbmbQLPfwZAH){target="_blank"} &nbsp; Ben Lambert.

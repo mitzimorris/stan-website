@@ -42,7 +42,7 @@ see this announcements announced:  [Fostering Stan user communities through doma
 StanConnect is a virtual miniseries which consists of 3-hour meetings/mini-symposia
 where each meeting is like "session" of an organized conference.
 This series was started in 2021 and reprised in 2022.
-Future StanConnect series will be announced on [Discourse](https://discourse.mc-stan.org/tag/stanconnect).
+Future sessions in the StanConnect series will be announced on [Discourse](https://discourse.mc-stan.org/tag/stanconnect).
 
 
 ### Stan Through Space and Time (2022)
