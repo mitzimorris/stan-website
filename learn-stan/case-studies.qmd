@@ -1,10 +1,8 @@
 ---
-pagetitle: Case Studies
+title: Stan Case Studies
 page-layout: full
-toc-location: left
+toc-location: right
 ---
-
-# Stan Case Studies
 
 The case studies on this page are intended to reflect best practices in Bayesian methodology and Stan programming. We aim to keep them current with the latest version of the Stan language, but there may be times when case studies need updating to reflect the latest Stan features and syntax.
 
@@ -25,7 +23,7 @@ Keywords
 : causal inference, instrumental variables analysis, one-sided compliance, principal stratification
 
 Source Repository
-: [example-models/education/causal_iv_one-sided](https://github.com/joonho112/example-models/tree/master/education/causal_iv_one-sided)
+: [example-models/education/causal_iv_one-sided](https://github.com/joonho112/example-models/tree/master/education/causal_iv_one-sided){target="_blank"}
 (GitHub)
 
 Dependencies
@@ -50,7 +48,7 @@ Keywords
 Bayesian Model Evaluation
 
 Source Repository
-: [example-models/education/sem](https://github.com/education-stan/example-models/tree/master/education/sem)
+: [example-models/education/sem](https://github.com/education-stan/example-models/tree/master/education/sem){target="_blank"}
 (GitHub)
 
 Dependencies
@@ -64,13 +62,13 @@ License
 ###  Multilevel regression modeling with CmdStanPy and plotnine
 
 This notebook is a short introduction to multilevel regression modeling
-using the [CmdStanPy](https://mc-stan.org/cmdstanpy/) interface and
+using the [CmdStanPy](https://mc-stan.org/cmdstanpy/){target="_blank"}interface and
 [plotnine](https://plotnine.readthedocs.io/en/stable/), a Python implementation
-of a [_grammar of graphics_](https://vita.had.co.nz/papers/layered-grammar.pdf)
-based on [ggplot2](https://en.wikipedia.org/wiki/Ggplot2).
+of a [_grammar of graphics_](https://vita.had.co.nz/papers/layered-grammar.pdf){target="_blank"}
+based on [ggplot2](https://en.wikipedia.org/wiki/Ggplot2){target="_blank"}.
 
 
-[View](case-studies/radon_cmdstanpy_plotnine.html) (HTML)
+[View](case-studies/radon_cmdstanpy_plotnine.html){target="_blank"}(HTML)
 
 Authors
 : Mitzi Morris
@@ -80,7 +78,7 @@ Keywords
 linear regression, posterior predictive checks, radon
 
 Source Repository
-: [example-models/jupyter/radon](https://github.com/stan-dev/example-models/tree/master/jupyter/radon)
+: [example-models/jupyter/radon](https://github.com/stan-dev/example-models/tree/master/jupyter/radon){target="_blank"}
 (GitHub)
 
 Dependencies
@@ -95,7 +93,7 @@ License
 
 In this case study, we perform image reconstruction in Stan by implementing the HoloML phase retrieval model and then solving the inverse problem with optimization. This case study requires Stan 2.30 or greater in order to use the Fourier transform functions added in that version. 
 
-[View](case-studies/HoloML_in_Stan.html) (HTML)
+[View](case-studies/HoloML_in_Stan.html){target="_blank"}(HTML)
 
 Authors
 : Brian Ward, Bob Carpenter, and David Barmherzig
@@ -104,7 +102,7 @@ Keywords
 : image reconstruction, phase retrieval, Fourier transforms, deconvolution
 
 Source Repository
-: [WardBrian/holoml-in-stan](https://github.com/WardBrian/holoml-in-stan)
+: [WardBrian/holoml-in-stan](https://github.com/WardBrian/holoml-in-stan){target="_blank"}
 (GitHub)
 
 Dependencies
@@ -121,7 +119,7 @@ License
 
 In this case study, we fit the Bayesian latent class model using Hamiltonian Monte Carlo sampling and Variational Bayes in Stan and illustrate the issue of label switching and its treatment with simulated and empirical data. 
 
-[View](case-studies/Latent_class_case_study.html) (HTML)
+[View](case-studies/Latent_class_case_study.html){target="_blank"}(HTML)
 
 Authors
 : Feng Ji, Aybolek Amanmyradova, Sophia Rabe-Hesketh
@@ -130,7 +128,7 @@ Keywords
 : latent class models, label-switching, post-hoc relabeling, variational Bayes
 
 Source Repository
-: [example-models/education/latent_class](https://github.com/education-stan/example-models/tree/master/education/latent_class)
+: [example-models/education/latent_class](https://github.com/education-stan/example-models/tree/master/education/latent_class){target="_blank"}
 (GitHub)
 
 Dependencies
@@ -146,7 +144,7 @@ License
 
 The Bayesian model of planetary motion is a simple but powerful example that illustrates important concepts, as well as gaps, in prescribed modeling workflows. Our focus is on Bayesian inference using Markov chains Monte Carlo for a model based on an ordinary differential equations (ODE). Our example presents unexpected multimodality, causing our inference to be unreliable and what is more, dramatically slowing down our ODE integrators. What do we do when our chains do not mix and do not forget their starting points? Reasoning about the computational statistics at hand and the physics of the modeled phenomenon, we diagnose how the modes arise and how to improve our inference. Our process for fitting the model is iterative, starting with a simplification and building the model back up, and makes extensive use of visualization.
 
-[View](case-studies/planetary_motion/planetary_motion.html) (HTML)
+[View](case-studies/planetary_motion/planetary_motion.html){target="_blank"}(HTML)
 
 Authors
 : Charles Margossian and Andrew Gelman
@@ -155,7 +153,7 @@ Keywords
 : ordinary differential equations, multimodality, classical mechanics
 
 Source Repository
-: [example-models/knitr/planetary_motion](https://github.com/stan-dev/example-models/tree/master/knitr/planetary_motion)
+: [example-models/knitr/planetary_motion](https://github.com/stan-dev/example-models/tree/master/knitr/planetary_motion){target="_blank"}
 (GitHub)
 
 Dependencies
@@ -170,7 +168,7 @@ Cmdstan 2.24 introduces a new interface for working with
 Hidden Markov Models (HMMs). This is an example of how to use that
 interface. 
 
-[View](case-studies/hmm-example.html) (HTML)
+[View](case-studies/hmm-example.html){target="_blank"}(HTML)
 
 Authors
 : Ben Bales
@@ -179,7 +177,7 @@ Keywords
 : Hidden Markov Models, HMMs, cmdstanr, Stan programming
 
 Source Repository
-: [example-models/knitr/hmm-example](https://github.com/stan-dev/example-models/tree/master/knitr/hmm-example)
+: [example-models/knitr/hmm-example](https://github.com/stan-dev/example-models/tree/master/knitr/hmm-example){target="_blank"}
 (GitHub)
 
 Dependencies
@@ -192,7 +190,7 @@ License
 
 In this case study, we demonstrate how Stan’s segment function can speed computation on sparse matrices of pairwise neighbors in plant-plant interaction models. In addition, we present solutions to common problems of fitting neighborhood models with hierarchical effects, including a comparison of centered vs. non-centered parameterizations.
 
-[View](case-studies/plantInteractions.html) (HTML)
+[View](case-studies/plantInteractions.html){target="_blank"}(HTML)
 
 Authors
 : Cristina Barber, Andrii Zaiats, Cara Applestein and T.Trevor Caughlin
@@ -201,7 +199,7 @@ Keywords
 : plants, neighbor interactions, sparse matrix, segment function
 
 Source Repository
-: [Cristinabarber/Neighbor_Interactions](https://github.com/Cristinabarber/Neighbor_Interactions)
+: [Cristinabarber/Neighbor_Interactions](https://github.com/Cristinabarber/Neighbor_Interactions){target="_blank"}
 (GitHub)
 
 R Package Dependencies
@@ -213,13 +211,13 @@ License
 
 ### Predicting Engine Failure with Hierarchical Gaussian Process
 
-This gaussian process case study is an extension of the StanCon [talk](https://www.youtube.com/watch?v=1FJyNntNMH4&feature=youtu.be)
+This gaussian process case study is an extension of the StanCon [talk](https://www.youtube.com/watch?v=1FJyNntNMH4&feature=youtu.be){target="_blank"}
 "Failure prediction in hierarchical equipment system: spline fitting naval ship failure".
 Many comparison criteria exist, but in terms of prediction accuracy, the gaussian process model outperformed the spline model. However, this accuracy comes at a cost of a more detailed and iterative checking process. This case study shows how identification and underfitting problems diagnosed from pushforward and predictive checks are addressed through reparameterization and adding variables. Basically, our data is highly unbalanced per category with lots of missing data. Also, due to the hierarchical structure of the system, such as shared engine types, the hierarchical model is applicable. For a detailed explanation of the data and spline model, please refer to
-[this notebook](https://github.com/hyunjimoon/reliability_prediction/blob/master/spline/Failure%20prediction%20in%20hierarchical%20equipment%20system.ipynb).
+[this notebook](https://github.com/hyunjimoon/reliability_prediction/blob/master/spline/Failure%20prediction%20in%20hierarchical%20equipment%20system.ipynb){target="_blank"}.
 
 
-[View](case-studies/gaussian-process.html) (HTML)
+[View](case-studies/gaussian-process.html){target="_blank"}(HTML)
 
 Author
 : Hyunji Moon, Jungin Choi
@@ -228,7 +226,7 @@ Keywords
 : Hierarchical Gaussian process, Bayesian workflow
 
 Source Repository
-: [example-models/knitr/gaussian-process](https://github.com/stan-dev/example-models/tree/master/knitr/gaussian-process)
+: [example-models/knitr/gaussian-process](https://github.com/stan-dev/example-models/tree/master/knitr/gaussian-process){target="_blank"}
 (GitHub)
 
 Dependencies
@@ -244,7 +242,7 @@ specify the ODE system function. This document should serve as an overview of th
 interface changes as well as a tutorial for converting code written with the old
 ODE interface.
 
-[View](case-studies/convert_odes.html) (HTML)
+[View](case-studies/convert_odes.html){target="_blank"}(HTML)
 
 Authors
 : Ben Bales, Sebastian Weber
@@ -253,7 +251,7 @@ Keywords
 : ordinary differential equations, cmdstanr, Stan programming
 
 Source Repository
-: [example-models/knitr/convert-odes](https://github.com/stan-dev/example-models/tree/master/knitr/convert-odes)
+: [example-models/knitr/convert-odes](https://github.com/stan-dev/example-models/tree/master/knitr/convert-odes){target="_blank"}
 (GitHub)
 
 Dependencies
@@ -273,7 +271,7 @@ In this tutorial, we demonstrate with a simple Susceptible-Infected-Recovered (S
 We also introduce more advanced topics which can help practitioners fit sophisticated models; notably, how to use simulations to probe our model and our priors, and computational techniques to scale ODE-based models.
 
 
-[View](case-studies/boarding_school_case_study.html) (HTML)
+[View](case-studies/boarding_school_case_study.html){target="_blank"}(HTML)
 
 Authors
 : Leo Grinsztajn, Elizaveta Semenova, Charles C. Margossian, and Julien Riou
@@ -282,7 +280,7 @@ Keywords
 : Disease transmission, Compartment models, Ordinary Differential Equations, Bayesian Workflow
 
 Source Repository
-: [charlesm93/disease\_transmission\_workflow](https://github.com/charlesm93/disease_transmission_workflow)
+: [charlesm93/disease\_transmission\_workflow](https://github.com/charlesm93/disease_transmission_workflow){target="_blank"}
 (GitHub)
 
 Dependencies
@@ -296,11 +294,11 @@ License
 Stan 2.23 introduced `reduce_sum`, a new way to parallelize the execution
 of a single Stan chain across multiple cores.  This introduction copies directly
 from Richard McElreath’s
-[Multithreading and Map-Reduce in Stan 2.18.0: A Minimal Example](https://github.com/rmcelreath/cmdstan_map_rect_tutorial)
+[Multithreading and Map-Reduce in Stan 2.18.0: A Minimal Example](https://github.com/rmcelreath/cmdstan_map_rect_tutorial){target="_blank"}
 
 
 
-[View](case-studies/reduce_sum_tutorial.html) (HTML)
+[View](case-studies/reduce_sum_tutorial.html){target="_blank"}(HTML)
 
 Author
 : Ben Bales
@@ -309,7 +307,7 @@ Keywords
 : within-chain parallel computation, cmdstanr, Stan programming
 
 Source Repository
-: [example-models/knitr/reduce-sum](https://github.com/stan-dev/example-models/tree/master/knitr/reduce-sum)
+: [example-models/knitr/reduce-sum](https://github.com/stan-dev/example-models/tree/master/knitr/reduce-sum){target="_blank"}
 (GitHub)
 
 Dependencies
@@ -327,11 +325,11 @@ model and data so that anyone with a modern web browser and a Google account
 can run your analysis with Google Colaboratory free cloud servers.  It shows
 you how to quickly set up a Stan installation in the cloud and introduces
 two lightweight interfaces:
-[CmdStanR](https://mc-stan.org/cmdstanr/articles/cmdstanr.html) and
-[CmdStanPy](https://cmdstanpy.readthedocs.io/en/latest/index.html).
+[CmdStanR](https://mc-stan.org/cmdstanr/articles/cmdstanr.html){target="_blank"} and
+[CmdStanPy](https://cmdstanpy.readthedocs.io/en/latest/index.html){target="_blank"}.
 
 
-[View](case-studies/jupyter_colab_notebooks_2020.html) (HTML)
+[View](case-studies/jupyter_colab_notebooks_2020.html){target="_blank"}(HTML)
 
 Author
 : Mitzi Morris
@@ -340,7 +338,7 @@ Keywords
 : Jupyter, Google Colab, teaching Stan, online classroom, cloud computing
 
 Source Repository
-: [example-models/knitr/cloud-compute-2020](https://github.com/stan-dev/example-models/tree/master/knitr/cloud-compute-2020)
+: [example-models/knitr/cloud-compute-2020](https://github.com/stan-dev/example-models/tree/master/knitr/cloud-compute-2020){target="_blank"}
 (GitHub)
 
 Dependencies
@@ -358,7 +356,7 @@ License
 
 In this document, we discuss the implementation of Bayesian model-based inference for causal effects in Stan. We start by providing an introduction to the Bayesian inferential framework by analyzing a simulated dataset generated under unconfounded treatment assignment. Then we analyze an example dataset obtained from a completely randomized experiment focusing on the specification of the joint distribution of the potential outcomes.
 
-[View](case-studies/model-based_causal_inference_for_RCT.html) (HTML)
+[View](case-studies/model-based_causal_inference_for_RCT.html){target="_blank"}(HTML)
 
 Author
 : JoonHo Lee, Avi Feller and Sophia Rabe-Hesketh
@@ -367,7 +365,7 @@ Keywords
 : causal inference, completely randomized experiments
 
 Source Repository
-: [example-models/education/causal_rct](https://github.com/stan-dev/example-models/tree/master/education/causal_rct)
+: [example-models/education/causal_rct](https://github.com/stan-dev/example-models/tree/master/education/causal_rct){target="_blank"}
 
 R Package Dependencies
 : `rstan`, `rstanarm`, `bayesplot`, `tidyverse`, `gridExtra`, `Matching`
@@ -380,7 +378,7 @@ License
 
 This case study shows how we can apply Bayesian inference to Hidden Markov Models (HMMs) using Stan to extract useful information from basketball player tracking data. Specifically we show how to tag drive events and how to determine defensive assignment. Before diving into basketball data we show how to fit an HMM in Stan using a simple example. This should help build some intuition for those who are unfamiliar with HMMs and will also show how to specify an HMM using Stan.
 
-[View](case-studies/bball-hmm.html) (HTML)
+[View](case-studies/bball-hmm.html){target="_blank"}(HTML)
 
 Author
 : Imad Ali
@@ -389,7 +387,7 @@ Keywords
 : hidden markov models, sports
 
 Source Repository
-: [imadmali/bball-hmm](https://github.com/imadmali/bball-hmm)
+: [imadmali/bball-hmm](https://github.com/imadmali/bball-hmm){target="_blank"}
 (GitHub)
 
 R Package Dependencies
@@ -403,7 +401,7 @@ License
 
 In this case study, we use Stan to build a series of models to estimate the probability of a successful putt using data from professional golfers.  We fit and check the fit of a series of models, demonstrating the benefits of modeling based on substantive (rather than purely statistical) principles.  We successfully fit to a small dataset and then have to expand the model to fit a new, larger dataset.  We use weakly informative priors and a model-misfit error term to enable the fit.
 
-[View](case-studies/golf.html) (HTML)
+[View](case-studies/golf.html){target="_blank"}(HTML)
 
 Author
 : Andrew Gelman
@@ -412,7 +410,7 @@ Keywords
 : nonlinear regression, sports
 
 Source Repository
-: [example-models/knitr/golf](https://github.com/stan-dev/example-models/tree/master/knitr/golf)
+: [example-models/knitr/golf](https://github.com/stan-dev/example-models/tree/master/knitr/golf){target="_blank"}
 (GitHub)
 
 R Package Dependencies
@@ -425,7 +423,7 @@ License
 
 In this case study, we use Stan to fit the Dyadic Item Response Theory (dIRT) model proposed by (Gin et al. 2019) to measure interactions between pairs of individuals when the responses to items represent the actions/behaviors/perceptions of an individual (called the 'actor') made within the context of a dyad formed with another individual (called the 'partner'). The dIRT model is fit using Stan (version 2.18.1) in R via the rstan package.
 
-[View](case-studies/dyadic_irt_model.html) (HTML)
+[View](case-studies/dyadic_irt_model.html){target="_blank"}(HTML)
 
 Author
 : Nicholas Sim, Brian Gin, Anders Skrondal and Sophia Rabe-Hesketh
@@ -434,7 +432,7 @@ Keywords
 : item response theory, social relations model, dyadic data
 
 Source Repository
-: [example-models/education/dyadic_irt_model](https://github.com/education-stan/example-models/tree/master/education/dyadic_irt_model)
+: [example-models/education/dyadic_irt_model](https://github.com/education-stan/example-models/tree/master/education/dyadic_irt_model){target="_blank"}
 (GitHub)
 
 R Package Dependencies
@@ -449,7 +447,7 @@ License
 
 In this tutorial, we illustrate how to fit a multilevel linear model within a full Bayesian framework using rstanarm. This tutorial is aimed primarily at educational researchers who have used lme4 in R to fit models to their data and who may be interested in learning how to fit Bayesian multilevel models. However, for readers who have not used lme4 before, we briefly review the use of the package for fitting multilevel models.
 
-[View](case-studies/tutorial_rstanarm.html) (HTML)
+[View](case-studies/tutorial_rstanarm.html){target="_blank"}(HTML)
 
 Author
 : JoonHo Lee, Nicholas Sim, Feng Ji, and Sophia Rabe-Hesketh
@@ -458,7 +456,7 @@ Keywords
 : education, rstanarm, multilevel models, linear mixed models, hierarchical linear models
 
 Source Repository
-: [example-models/education/tutorial_rstanarm](https://github.com/stan-dev/example-models/tree/master/education/tutorial_rstanarm)
+: [example-models/education/tutorial_rstanarm](https://github.com/stan-dev/example-models/tree/master/education/tutorial_rstanarm){target="_blank"}
 (GitHub)
 
 R Package Dependencies
@@ -482,7 +480,7 @@ Hudson’s Bay Company. Posterior predictive checks for replicated data
 show the model fits this data well. Full Bayesian inference may be
 used to estimate future (or past) populations.
 
-[View](case-studies/lotka-volterra-predator-prey.html) (HTML)
+[View](case-studies/lotka-volterra-predator-prey.html){target="_blank"}(HTML)
 
 Author
 : Bob Carpenter
@@ -492,7 +490,7 @@ Keywords
 equations, posterior predictive checks
 
 Source Repository
-: [stan-dev/example-models/knitr/lotka-volterra]()
+: [stan-dev/example-models/knitr/lotka-volterra](){target="_blank"}
 (GitHub)
 
 R Package Dependencies
@@ -514,7 +512,7 @@ locations. This case study shows how to express and fit these models
 in Stan.
 
 
-[View](case-studies/nngp.html) (HTML)
+[View](case-studies/nngp.html){target="_blank"}(HTML)
 
 Author
 : Lu Zhang
@@ -524,7 +522,7 @@ Keywords
 latent process, regression
 
 Source Repository
-: [LuZhangstat/NNGP_STAN](https://github.com/LuZhangstat/NNGP_STAN)
+: [LuZhangstat/NNGP_STAN](https://github.com/LuZhangstat/NNGP_STAN){target="_blank"}
 (GitHub)
 
 R Package Dependencies
@@ -546,7 +544,7 @@ generalized Pareto distribution (GPD) to model geomagnetic storm data
 from the World Data Center for Geomagnetism.
 
 
-[View](case-studies/gpareto_functions.html) (HTML)
+[View](case-studies/gpareto_functions.html){target="_blank"}(HTML)
 
 Author
 : Aki Vehtari
@@ -555,7 +553,7 @@ Keywords
 : extreme value analysis, generalized Pareto distribution, user defined probability functions
 
 Source Repository
-: [avehtari/BDA_R_demos/demos_rstan/gpareto_functions](https://github.com/avehtari/BDA_R_demos/tree/master/demos_rstan/gpareto_functions)
+: [avehtari/BDA_R_demos/demos_rstan/gpareto_functions](https://github.com/avehtari/BDA_R_demos/tree/master/demos_rstan/gpareto_functions){target="_blank"}
 (GitHub)
 
 R Package Dependencies
@@ -584,7 +582,7 @@ total premium received to write those policies. We treat each
 accounting period as a cohort.
 
 
-[View](case-studies/losscurves_casestudy.html) (HTML)
+[View](case-studies/losscurves_casestudy.html){target="_blank"}(HTML)
 
 Author
 : Mick Cooney
@@ -594,7 +592,7 @@ Keywords
 hierarchical model
 
 Source Repository
-: [kaybenleroll/stancasestudy_losscurves](https://github.com/kaybenleroll/stancasestudy_losscurves)
+: [kaybenleroll/stancasestudy_losscurves](https://github.com/kaybenleroll/stancasestudy_losscurves){target="_blank"}
 (GitHub)
 
 R Package Dependencies
@@ -613,7 +611,7 @@ how they can be implemented in Stan. We also discuss a novel prior
 that alleviates some of the practical challenges of spline models.
 
 
-[View](case-studies/splines_in_stan.html) (HTML)
+[View](case-studies/splines_in_stan.html){target="_blank"}(HTML)
 
 Author
 : Milad Kharratzadeh
@@ -622,7 +620,7 @@ Keywords
 : B-splines, piecewise regression, knots, priors
 
 Source Repository
-: [milkha/Splines_in_Stan](https://github.com/milkha/Splines_in_Stan)
+: [milkha/Splines_in_Stan](https://github.com/milkha/Splines_in_Stan){target="_blank"}
 (GitHub)
 
 R Package Dependencies
@@ -646,7 +644,7 @@ We compare two variants of the BYM model and fit two datasets
 taken from epidemiological studies over 56 and 700 regions, respectively.
 
 
-[View](case-studies/icar_stan.html) (HTML)
+[View](case-studies/icar_stan.html){target="_blank"}(HTML)
 
 Author
 : Mitzi Morris
@@ -655,7 +653,7 @@ Keywords
 : spatial modeling, CAR, ICAR, INLA, OpenBUGS, hierarchical models
 
 Source Repository
-: [stan-dev/example-models](https://github.com/stan-dev/example-models/tree/master/knitr/car-iar-poisson)
+: [stan-dev/example-models](https://github.com/stan-dev/example-models/tree/master/knitr/car-iar-poisson){target="_blank"}
 (GitHub)
 
 R Package Dependencies
@@ -673,7 +671,7 @@ covariates and, consequently, the resulting posterior distribution in
 regression models.
 
 
-[View](case-studies/qr_regression.html) (HTML)
+[View](case-studies/qr_regression.html){target="_blank"}(HTML)
 
 Author
 : Michael Betancourt
@@ -682,7 +680,7 @@ Keywords
 : Markov chain Monte Carlo, regression, RStan
 
 Source Repository
-: [betanalpha/knitr_case_studies/qr_regression](https://github.com/betanalpha/knitr_case_studies/tree/master/qr_regression)
+: [betanalpha/knitr_case_studies/qr_regression](https://github.com/betanalpha/knitr_case_studies/tree/master/qr_regression){target="_blank"}
 (GitHub)
 
 R Package Dependencies
@@ -699,7 +697,7 @@ ensuring robust inferences with the default dynamic Hamiltonian
 Monte Carlo algorithm.
 
 
-[View](case-studies/rstan_workflow.html) (HTML)
+[View](case-studies/rstan_workflow.html){target="_blank"}(HTML)
 
 Author
 : Michael Betancourt
@@ -708,7 +706,7 @@ Keywords
 : Markov chain Monte Carlo, Hamiltonian Monte Carlo, divergences, RStan
 
 Source Repository
-: [betanalpha/knitr_case_studies/rstan_workflow](https://github.com/betanalpha/knitr_case_studies/tree/master/rstan_workflow)
+: [betanalpha/knitr_case_studies/rstan_workflow](https://github.com/betanalpha/knitr_case_studies/tree/master/rstan_workflow){target="_blank"}
 (GitHub)
 
 R Package Dependencies
@@ -725,7 +723,7 @@ ensuring robust inferences with the default dynamic Hamiltonian
 Monte Carlo algorithm.
 
 
-[View](case-studies/pystan_workflow.html) (HTML)
+[View](case-studies/pystan_workflow.html){target="_blank"}(HTML)
 
 Author
 : Michael Betancourt
@@ -734,7 +732,7 @@ Keywords
 : Markov chain Monte Carlo, Hamiltonian Monte Carlo, divergences, PyStan
 
 Source Repository
-: [betanalpha/jupyter_case_studies/pystan_workflow](https://github.com/betanalpha/jupyter_case_studies/tree/master/pystan_workflow)
+: [betanalpha/jupyter_case_studies/pystan_workflow](https://github.com/betanalpha/jupyter_case_studies/tree/master/pystan_workflow){target="_blank"}
 (GitHub)
 
 Python Package Dependencies
@@ -767,7 +765,7 @@ Keywords
 : probability mass, typical sets, concentration of measure, Monte Carlo methods
 
 Source Repository (R)
-: [stan-dev/example-models/knitr/curse-dims](https://github.com/stan-dev/example-models/tree/master/knitr/curse-dims)
+: [stan-dev/example-models/knitr/curse-dims](https://github.com/stan-dev/example-models/tree/master/knitr/curse-dims){target="_blank"}
 (GitHub)
 
 R Package Dependencies
@@ -784,7 +782,7 @@ Author (Python translation)
 : Aravind S (Python translation)
 
 Source Repository (Python)
-: [Aravinds-ds/Stan-Code/python notebooks/curse_dims](https://github.com/Arvinds-ds/Stan-Code/tree/master/python%20notebooks/curse_dims)
+: [Aravinds-ds/Stan-Code/python notebooks/curse_dims](https://github.com/Arvinds-ds/Stan-Code/tree/master/python%20notebooks/curse_dims){target="_blank"}
 (GitHub)
 
 Python Package Dependencies
@@ -800,7 +798,7 @@ This case study discusses the subtleties of accurate Markov chain Monte Carlo
 estimation and how divergences can be used to identify biased estimation in
 practice.
 
-[View](case-studies/divergences_and_bias.html) (HTML)
+[View](case-studies/divergences_and_bias.html){target="_blank"}(HTML)
 
 Author
 : Michael Betancourt
@@ -809,7 +807,7 @@ Keywords
 : Markov chain Monte Carlo, Hamiltonian Monte Carlo, divergences, RStan
 
 Source Repository
-: [betanalpha/knitr_case_studies/divergences_and_bias](https://github.com/betanalpha/knitr_case_studies/tree/master/divergences_and_bias)
+: [betanalpha/knitr_case_studies/divergences_and_bias](https://github.com/betanalpha/knitr_case_studies/tree/master/divergences_and_bias){target="_blank"}
 (GitHub)
 
 R Package Dependencies
@@ -825,7 +823,7 @@ This case study discusses the common pathologies of Bayesian mixture models as
 well as some strategies for identifying and overcoming them.
 
 
-[View](case-studies/identifying_mixture_models.html) (HTML)
+[View](case-studies/identifying_mixture_models.html){target="_blank"}(HTML)
 
 Author
 : Michael Betancourt
@@ -835,7 +833,7 @@ Keywords
 multimodal models, RStan
 
 Source Repository
-: [betanalpha/knitr_case_studies/identifying_mixture_models](https://github.com/betanalpha/knitr_case_studies/tree/master/identifying_mixture_models)
+: [betanalpha/knitr_case_studies/identifying_mixture_models](https://github.com/betanalpha/knitr_case_studies/tree/master/identifying_mixture_models){target="_blank"}
 (GitHub)
 
 R Package Dependencies
@@ -852,7 +850,7 @@ choice of a specific shape of such a prior affects the resulting posterior
 distribution.
 
 
-[View](case-studies/weakly_informative_shapes.html) (HTML)
+[View](case-studies/weakly_informative_shapes.html){target="_blank"}(HTML)
 
 Author
 : Michael Betancourt
@@ -862,7 +860,7 @@ Keywords
 weakly-informative priors, RStan
 
 Source Repository
-: [betanalpha/knitr_case_studies/weakly_informative_shapes](https://github.com/betanalpha/knitr_case_studies/tree/master/weakly_informative_shapes)
+: [betanalpha/knitr_case_studies/weakly_informative_shapes](https://github.com/betanalpha/knitr_case_studies/tree/master/weakly_informative_shapes){target="_blank"}
 (GitHub)
 
 R Package Dependencies
@@ -880,7 +878,7 @@ License
 This document details sparse exact conditional autoregressive (CAR) models in Stan as an extension of previous work on approximate sparse CAR models in Stan. Sparse representations seem to give order of magnitude efficiency gains, scaling better for large spatial data sets.
 
 
-[View](case-studies/mbjoseph-CARStan.html) (HTML)
+[View](case-studies/mbjoseph-CARStan.html){target="_blank"}(HTML)
 
 Author
 : Max Joseph
@@ -889,7 +887,7 @@ Keywords
 : conditional autoregressive (CAR), independent autoregressive (IAR), sparsity, spatial random effects, maps
 
 Source Repository
-: [mbjoseph/CARstan](https://github.com/mbjoseph/CARstan) (GitHub)
+: [mbjoseph/CARstan](https://github.com/mbjoseph/CARstan){target="_blank"}(GitHub)
 
 R Package Dependencies
 : `rstan`, `dplyr`, `ggmcmc`, `knitr`, `maptools`, `rgeos`, `spdep`.
@@ -901,14 +899,14 @@ License
 ### A Primer on Bayesian Multilevel Modeling using PyStan
 
 This case study replicates the analysis of home radon levels using
-hierarchical models of [Lin, Gelman, Price, and Kurtz (1999)](http://www.stat.columbia.edu/~radon/credits.html).
+hierarchical models of [Lin, Gelman, Price, and Kurtz (1999)](http://www.stat.columbia.edu/~radon/credits.html){target="_blank"}.
 It illustrates how to generalize linear regressions to hierarchical models with
 group-level predictors and how to compare predictive inferences and
 evaluate model fits. Along the way it shows how to get data into Stan
 using pandas, how to sample using PyStan, and how to visualize the results
 using Seaborn.
 
-[View](case-studies/radon.html) (HTML)
+[View](case-studies/radon.html){target="_blank"}(HTML)
 
 Author
 : Chris Fonnesbeck
@@ -917,7 +915,7 @@ Keywords
 : hierarchical/multilevel modeling, linear regression, model comparison, predictive inference, radon
 
 Source Repository
-: [fonnesbeck/stan_workshop_2016](https://github.com/fonnesbeck/stan_workshop_2016)
+: [fonnesbeck/stan_workshop_2016](https://github.com/fonnesbeck/stan_workshop_2016){target="_blank"}
 (GitHub)
 
 Python Package Dependencies
@@ -944,7 +942,7 @@ under reparameterization. Along the way, we derive the logistic
 distribution by transforming a uniformly distributed variable.
 
 
-[View](case-studies/mle-params.html) (HTML)
+[View](case-studies/mle-params.html){target="_blank"}(HTML)
 
 Author
 : Bob Carpenter
@@ -953,7 +951,7 @@ Keywords
 : MLE, Bayesian posterior, reparameterization, Jacobian, binomial
 
 Source Repository
-: [example-models/knitr/mle-params](https://github.com/stan-dev/example-models/tree/master/knitr/mle-params)
+: [example-models/knitr/mle-params](https://github.com/stan-dev/example-models/tree/master/knitr/mle-params){target="_blank"}
 (GitHub)
 
 R Package Dependencies
@@ -967,7 +965,7 @@ License
 
 This case study documents a Stan model for the two-parameter logistic model (2PL) with hierarchical priors. A brief simulation indicates that the Stan model successfully recovers the generating parameters. An example using a grade 12 science assessment is provided.
 
-[View](case-studies/hierarchical_2pl.html) (HTML)
+[View](case-studies/hierarchical_2pl.html){target="_blank"}(HTML)
 
 Author
 : Daniel C. Furr
@@ -976,7 +974,7 @@ Keywords
 : education, item response theory, two-parameter logistic model, hierarchical priors
 
 Source Repository
-: [example-models/education/hierarchical_2pl](https://github.com/stan-dev/example-models/tree/master/education/hierarchical_2pl)
+: [example-models/education/hierarchical_2pl](https://github.com/stan-dev/example-models/tree/master/education/hierarchical_2pl){target="_blank"}
 (GitHub)
 
 R Package Dependencies
@@ -990,7 +988,7 @@ License
 
 This case study documents a Stan model for the rating scale model (RSM) and the generalized rating scale model (GRSM) with latent regression. The latent regression portion of the models may be restricted to an intercept only, yielding a standard RSM or GRSM. A brief simulation indicates that the Stan models successfully recover the generating parameters. An example using a survey of public perceptions of science and technology is provided.
 
-[View](case-studies/rsm_and_grsm.html) (HTML)
+[View](case-studies/rsm_and_grsm.html){target="_blank"}(HTML)
 
 Authors
 : Daniel C. Furr
@@ -999,7 +997,7 @@ Keywords
 : education, item response theory, rating scale model, generalized rating scale model
 
 Source Repository
-: [example-models/education/rsm_and_grsm](https://github.com/stan-dev/example-models/tree/master/education/rsm_and_grsm)
+: [example-models/education/rsm_and_grsm](https://github.com/stan-dev/example-models/tree/master/education/rsm_and_grsm){target="_blank"}
 (GitHub)
 
 R Package Dependencies
@@ -1013,7 +1011,7 @@ License
 
 This case study documents a Stan model for the partial credit model (PCM) and the generalized partial credit model (GPCM) with latent regression. The latent regression portion of the models may be restricted to an intercept only, yielding a standard PCM or GPCM. A brief simulation indicates that the Stan models successfully recover the generating parameters. An example using the TIMSS 2011 mathematics assessment is provided
 
-[View](case-studies/pcm_and_gpcm.html) (HTML)
+[View](case-studies/pcm_and_gpcm.html){target="_blank"}(HTML)
 
 Authors
 : Daniel C. Furr
@@ -1022,7 +1020,7 @@ Keywords
 : education, item response theory, partial credit model, generalized partial credit model
 
 Source Repository
-: [example-models/education/pcm_and_gpcm](https://github.com/stan-dev/example-models/tree/master/education/pcm_and_gpcm)
+: [example-models/education/pcm_and_gpcm](https://github.com/stan-dev/example-models/tree/master/education/pcm_and_gpcm){target="_blank"}
 (GitHub)
 
 R Package Dependencies
@@ -1036,7 +1034,7 @@ License
 
 This case study documents Stan models for the Rasch and two-parameter logistic models with latent regression. The latent regression portion of the models may be restricted to an intercept only, yielding standard versions of the models. Simulations indicate that the two models successfully recover generating parameters. An example using a grade 12 science assessment is provided.
 
-[View](case-studies/rasch_and_2pl.html) (HTML)
+[View](case-studies/rasch_and_2pl.html){target="_blank"}(HTML)
 
 Authors
 : Daniel C. Furr
@@ -1045,7 +1043,7 @@ Keywords
 : education, item response theory, rasch model, two-parameter logistic model
 
 Source Repository
-: [example-models/education/rasch_and_2pl.html](https://github.com/stan-dev/example-models/tree/master/education/rasch_and_2pl)
+: [example-models/education/rasch_and_2pl.html](https://github.com/stan-dev/example-models/tree/master/education/rasch_and_2pl){target="_blank"}
 (GitHub)
 
 R Package Dependencies
@@ -1069,7 +1067,7 @@ demonstrated by adding a latent regression and differential item
 functioning to the model. Posterior predictive model checking is also
 demonstrated.
 
-[View](case-studies/tutorial_twopl.html) (HTML)
+[View](case-studies/tutorial_twopl.html){target="_blank"}(HTML)
 
 Author
 : Daniel C. Furr, Seung Yeon Lee, Joon-Ho Lee, and Sophia Rabe-Hesketh
@@ -1078,7 +1076,7 @@ Keywords
 : education, item response theory, two-parameter logistic model
 
 Source Repository
-: [example-models/education/tutorial_twopl](https://github.com/stan-dev/example-models/tree/master/education/tutorial_twopl)
+: [example-models/education/tutorial_twopl](https://github.com/stan-dev/example-models/tree/master/education/tutorial_twopl){target="_blank"}
 (GitHub)
 
 R Package Dependencies
@@ -1091,7 +1089,7 @@ License
 
 This case study documents a Stan model for the DINA model with independent attributes. A Simulation indicates that the Stan model successfully recovers the generating parameters and predicts respondents' attribute mastery. A Stan model with no structure of the attributes is also discussed and applied to the simulated data. An example using a subset of the fraction subtraction data is provided. 
 
-[View](case-studies/dina_independent.html) (HTML)
+[View](case-studies/dina_independent.html){target="_blank"}(HTML)
 
 Author
 : Seung Yeon Lee
@@ -1100,7 +1098,7 @@ Keywords
 : education, cognitive diagnosis model, diagnostic classification model, attribute mastery, DINA
 
 Source Repository
-: [example-models/education/dina_independent](https://github.com/stan-dev/example-models/tree/master/education/dina_independent)
+: [example-models/education/dina_independent](https://github.com/stan-dev/example-models/tree/master/education/dina_independent){target="_blank"}
 (GitHub)
 
 R Package Dependencies
@@ -1130,7 +1128,7 @@ predictions on held-out data, (iv) rank items by chance of success,
 new data for posterior p-values, and (vii) perform graphical posterior
 predictive checks. 
 
-[View](case-studies/pool-binary-trials.html) (HTML)
+[View](case-studies/pool-binary-trials.html){target="_blank"}(HTML)
 
 Author
 : Bob Carpenter
@@ -1139,7 +1137,7 @@ Keywords
 : binary trials, pooling, hierarchical models, baseball, epidemiology, prediction, posterior predictive checks
 
 Source Repository
-: [example-models/knitr/pool-binary-trials](https://github.com/stan-dev/example-models/tree/master/knitr/pool-binary-trials)
+: [example-models/knitr/pool-binary-trials](https://github.com/stan-dev/example-models/tree/master/knitr/pool-binary-trials){target="_blank"}
 (GitHub)
 
 R Package Dependencies
@@ -1156,7 +1154,7 @@ RStanARM interface. Many of the visualizations are also created using RStanARM's
 functions.
 
 
-[View RStanARM version](case-studies/pool-binary-trials-rstanarm.html) (HTML)
+[View RStanARM version](case-studies/pool-binary-trials-rstanarm.html){target="_blank"}(HTML)
 
 Author
 : Bob Carpenter, Jonah Gabry, Ben Goodrich
@@ -1173,7 +1171,7 @@ species abundance of butterflies.  Going beyond the paper, the
 supercommunity assumptions are tested to show they are invariant to
 sizing, and posterior predictive checks are provided.
 
-[View](case-studies/dorazio-royle-occupancy.html) (HTML)
+[View](case-studies/dorazio-royle-occupancy.html){target="_blank"}(HTML)
 
 Author
 : Bob Carpenter
@@ -1183,7 +1181,7 @@ Keywords
 posterior predictive check
 
 Source Repository
-: [example-models/knitr/dorazio-royle-occupancy](https://github.com/stan-dev/example-models/tree/master/knitr/dorazio-royle-occupancy)
+: [example-models/knitr/dorazio-royle-occupancy](https://github.com/stan-dev/example-models/tree/master/knitr/dorazio-royle-occupancy){target="_blank"}
 (GitHub)
 
 License
@@ -1204,7 +1202,7 @@ with unknown initial compartment balance and noisy CO<sub>2</sub>
 measurements.  Results form Sierra and Müller’s (2014) soilR package
 are replicated.
 
-[View](case-studies/soil-knit.html) (HTML)
+[View](case-studies/soil-knit.html){target="_blank"}(HTML)
 
 Author
 : Bob Carpenter
@@ -1214,7 +1212,7 @@ Keywords
 respiration, incubation experiment
 
 Source Repository
-: [soil-metamodel/stan/soil-knit](https://github.com/soil-metamodel/stan/tree/master/soil-incubation)
+: [soil-metamodel/stan/soil-knit](https://github.com/soil-metamodel/stan/tree/master/soil-incubation){target="_blank"}
 (GitHub)
 
 License
@@ -1226,7 +1224,7 @@ R Package Dependencies
 ## Contributing Case Studies
 
 To contribute a case study, please contact us through the
-[Stan Forums](https://discourse.mc-stan.org/).  We require
+[Stan Forums](https://discourse.mc-stan.org/){target="_blank"}.  We require
 
 * a documented, reproducible example with narrative documentation
 (e.g., knitr or Jupyter with software/compiler
