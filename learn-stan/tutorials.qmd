@@ -1,5 +1,5 @@
 ---
-pagetitle: Tutorials
+pagetitle: Introductory Tutorials
 page-layout: full
 toc-location: left
 ---
@@ -8,16 +8,17 @@ toc-location: left
 
 * [Getting Started with Bayesian Statistics using Stan and Python](https://github.com/bob-carpenter/stan-getting-started){target="_blank"} &nbsp;Bob Carpenter
 
-* [StanCon2023/Stan_tutorial.ipynb](https://github.com/charlesm93/stanTutorial/blob/main/StanCon2023/Stan_tutorial.ipynb) &nbsp;Charles Margossian
+* [Fundamentals of Stan](https://github.com/charlesm93/stanTutorial/tree/main/StanCon2023)  &nbsp;Charles Margossian</br>
+StanCon 2023 tutorial, includes slides, models, and a [Google colab notebook](https://github.com/charlesm93/stanTutorial/blob/main/StanCon2023/Stan_tutorial.ipynb) for R users.
 
 
 ## Videos
 
-The official Stan youtube channel is:  [https://www.youtube.com/channel/UCwgN5srGpBH4M-Zc2cAluOA](https://www.youtube.com/channel/UCwgN5srGpBH4M-Zc2cAluOA){target="_blank"}
+The official Stan YouTube channel is:  [https://www.youtube.com/channel/UCwgN5srGpBH4M-Zc2cAluOA](https://www.youtube.com/channel/UCwgN5srGpBH4M-Zc2cAluOA){target="_blank"}
 
 ### Introductory Videos
 
-* [Stan Tutorials](https://www.youtube.com/playlist?list=PLCrWEzJgSUqwL85xIj1wubGdY15C5Gf7H){target="_blank"} &nbsp; Maggie Lieu.
+* [Stan Tutorials](https://www.youtube.com/playlist?list=PLCrWEzJgSUqwL85xIj1wubGdY15C5Gf7H){target="_blank"} &nbsp; Maggie Lieu.</br>
 A series of 8 videos that will get you started using Stan in R and Python.
 
 ### Contributed Videos

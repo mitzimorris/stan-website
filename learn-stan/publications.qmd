@@ -1,10 +1,8 @@
 ---
-pagetitle: Published Articles and Books
+title: Published Articles and Books
 page-layout: full
 toc-location: right
 ---
-
-# Published Articles and Books
 
 ## Stan Language and Algorithms
 

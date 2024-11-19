@@ -1,38 +1,38 @@
 ---
-pagetitle: Field Guides
+title: Domain-Specific Resources
 page-layout: full
 toc-location: right
 ---
 
-# Domain-Specific Resources
-
 ## Field Guides
 
-Topic Guides list tutorials, case studies, and resources for specific fields.
-They provide working examples of Stan implementations of commonly used models for that domain.
+These guides provide applied researchers with 
+curated lists of tutorials, case studies, and resources
+which contain Stan implementations of the most commonly used models in their domain.
 If you would like to contribute one for your field,
 see this announcementas announced:  [Fostering Stan user communities through domain-specific resource pages ](https://discourse.mc-stan.org/t/fostering-stan-user-communities-through-domain-specific-resource-pages/11544)
 
 
 * [Education Research Using Stan](https://education-stan.github.io)
-    + Topics covered:  Item Response Theory, Cognitive Diagnosis Models, Multilevel Modeling
+    + Topics:  Item Response Theory, Cognitive Diagnosis Models, Multilevel Modeling
     + Maintainer: [Sofia Rabe-Hesketh](https://bse.berkeley.edu/sophia-rabe-hesketh)
 
 * [Stan for Ecology](https://stanecology.github.io/)
+    + Topics:  Ecological times series models, population models, preditor-prey dynamics, species site-occupancy models.
     + Maintainer: [Vianey Leos Barajas](https://www.statistics.utoronto.ca/people/directories/all-faculty/vianey-leos-barajas)
 
 * [Stan for Epidemiology](https://epidemiology-stan.github.io/)
-    + Topics covered:  Disease transmission (SIR models), disease mapping (ICAR, BYM models), survival analysis, longitudinal data.
+    + Topics:  Disease transmission (SIR models), disease mapping (ICAR, BYM models), survival analysis, longitudinal data.
     + Maintainer: [Léo Grinsztajn](leo.grinsztajn@inria.fr)
 
   
 * [Stan for Cognitive Science](https://cognitive-science-stan.github.io/)
-    + Provides a well-curated list of CogSci papers using Stan, BRMS, or RStanArm.
+    + CogSci papers which use Stan, BRMS, or RStanArm.
     + Maintainer: [Bruno Nicenboim](https://www.tilburguniversity.edu/staff/b-nicenboim)
 
 
 
-## StanConnect
+## StanConnect Sessions
 
 StanConnect is a virtual miniseries which consists of 3-hour meetings/mini-symposia
 where each meeting is like "session" of an organized conference.
@@ -56,10 +56,18 @@ Organizer
 Details
 : A 2-day event showcasing applications of Stan for ecological analyses
 
-### Biomedical (2021)
+### Biostats (2021)
 
-Organizer
-: Luiz Max Carvalho
+* Date: October 19, 2021
+* GitHub repository of slides and materials: [https://github.com/maxbiostat/StanConnect2021_Biostatistics](https://github.com/maxbiostat/StanConnect2021_Biostatistics)
+* Program: 
+  + [Coding in Stan: the BYM2 model for disconnected graphs](https://github.com/maxbiostat/StanConnect2021_Biostatistics/tree/main/talk_1) &nbsp; Mitzi Morris, Columbia University
+  + [Normalized power prior models in Stan](https://github.com/maxbiostat/StanConnect2021_Biostatistics/blob/main/talk_2/ethan.md) &nbsp; Ethan Alt, North Carolina University (Chapel Hill)
+  + [Summarising enzyme information from online databases using Stan and Arviz](https://github.com/maxbiostat/StanConnect2021_Biostatistics/blob/main/talk_3/slides.pdf), &nbsp; Teddy Groves, Technical University of Denmark
+  + [Automated kinetic modelling in Stan and its application to the methionine cycle](https://github.com/maxbiostat/StanConnect2021_Biostatistics/tree/main/talk_4) &nbsp; Nicholas Cowie, Technical University of Denmark
+  + [Using Hidden Markov Models as a complement/alternative to survival models](https://github.com/maxbiostat/StanConnect2021_Biostatistics/tree/main/talk_5) Martin Modrák, Czech Academy of Sciences
+* Organizer:  Luiz Max Carvalho, PhD - Getúlio Vargas Foundation
+
 
 ### Cognitive Science and Neuroscience (2021)
 

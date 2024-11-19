@@ -1,5 +1,5 @@
 ---
-pagetitle: StanCon Talks
+title: StanCon Talks
 page-layout: full
 toc-location: right
 ---
