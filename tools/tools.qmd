@@ -1,93 +1,187 @@
 ---
-pagetitle: "Stan Toolkit"
+title: "Stan Toolkit"
 page-layout: full
 toc-location: right
 ---
 
-# Stan Toolkit
+## Programming environment Interfaces
+<table style="width: 85%;">
+  <tr style="background-color: var(--stan-highlight);">
+    <th style="width: 25%;">Language</th>
+    <th style="width: 75%;">Write, compile, and run new Stan models</th>
+  </tr>
+  <tr>
+    <td>Julia</td>
+    <td>[Stan.jl](http://stanjulia.github.io/Stan.jl/stable/INTRO/){target="_blank"}</td>
+  </tr>
+  <tr>
+    <td>Mathematica</td>
+    <td>[MathematicaStan](https://github.com/stan-dev/MathematicaStan/blob/master/README.org){target="_blank"}
+    </td>
+  </tr>
+  <tr>
+    <td>MATLAB</td>
+    <td>
+      [MatlabStan](https://github.com/brian-lau/MatlabStan/wiki){target="_blank"}
+    </td>
+  </tr>
+  <tr>
+    <td>Python</td>
+    <td>
+      [CmdStanPy](https://mc-stan.org/cmdstanpy){target="_blank"}*,
+      ([PyStan](https://mc-stan.org/pystan){target="_blank"} - legacy - not maintained)
+    </td>
+  </tr>
+  <tr>
+    <td>R</td>
+    <td>
+      [CmdStanR](https://mc-stan.org/cmdstanr){target="_blank"}*,
+      [RStan](https://mc-stan.org/rstan){target="_blank"}
+    </td>
+  </tr>
+  <tr>
+    <td>shell</td>
+    <td>[CmdStan](https://mc-stan.org/cmdstan){target="_blank"}</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><b>*Note:</b> CmdStanPy and CmdStanR are recommended for new users
+  </tr>
+</table>
 
-A curated collection of tools and interfaces to help you work effectively with Stan across various programming environments and stages of your modeling workflow.
+## High-level Interfaces
+<table style="width: 85%;">
+  <tr style="background-color: var(--stan-highlight);">
+    <th style="width: 25%;">Language</th>
+    <th style="width: 75%;">Stan versions of common models</td>
+  </tr>
+  <tr>
+    <td>R</td>
+    <td>
+      [BRMS](https://paul-buerkner.github.io/brms/){target="_blank"}<br>
+      Specify and fit multivariate and multilevel models in Stan using extended R-formula syntax.
+    </td>
+  </tr>
+  <tr>
+    <td>R</td>
+    <td>
+      [RStanArm](https://mc-stan.org/rstanarm){target="_blank"}<br>
+      Pre-compiled Stan versions of existing R model functions.
+    </td>
+  </tr>
+</table>
 
----
-
-## Language-Specific Stan Interfaces
-
-*Write, compile, and run Stan models directly within your programming environment.*
-
-| **Language** | **Tool** | **Description** |
-|--------------|----------|-----------------|
-| **R**        | [**CmdStanR**](https://mc-stan.org/cmdstanr) | Interface to Stan for R, based on CmdStan. **Recommended interface for R users.** |
-| **Python**   | [**CmdStanPy**](https://mc-stan.org/cmdstanpy) | Interface to Stan for Python, based on CmdStan. **Recommended interface for Python users.** |
-| **Web**      | [**Stan Playground**](https://github.com/flatironinstitute/stan-playground) | Browser-based editor and runtime environment for Stan models. **Highly recommended for new users.** |
-| **Julia**    | [**Stan.jl**](http://stanjulia.github.io/Stan.jl/stable/INTRO/) | Interface to Stan for Julia users. |
-| **MATLAB**   | [**MatlabStan**](https://github.com/brian-lau/MatlabStan/wiki) | Interface to Stan for MATLAB users. |
-| **Shell**    | [**CmdStan**](https://mc-stan.org/cmdstan) | Command-line interface to Stan, usable from any shell environment. |
-| **R**   | [**RStan**](https://mc-stan.org/rstan) | Legacy R interface to Stan. *(For new projects, consider using CmdStanR.)* |
-| **Python**   | [**PyStan**](https://mc-stan.org/pystan) | Legacy Python interface to Stan. *(For new projects, consider using CmdStanPy.)* |
-
----
-
-## High-Level Modeling Interfaces
-
-*Simplify model specification using familiar syntax and frameworks.*
-
-| **Language** | **Tool** | **Description** |
-|--------------|----------|-----------------|
-| **R**        | [**brms**](https://paul-buerkner.github.io/brms/) | Use extended `lme4`-like formula syntax to specify and fit multivariate and multilevel models in Stan. *(Requires CmdStanR and C++ compiler.)* |
-| **R**        | [**rstanarm**](https://mc-stan.org/rstanarm) | Provides stable, efficient Stan versions of R model-fitting packages. *(Stan models are pre-compiled, no C++ compiler needed.)* |
-| **Python**   | [**Bambi**](https://bambinos.github.io/bambi/) | Bayesian models in Python using formula syntax, built on top of Stan and PyMC. |
-
----
-
-## Visualization, Diagnostics, and Validation Tools
-
-*Validate, visualize, and compare fitted models to ensure robust results.*
-
-| **Language** | **Tool** | **Description** |
-|--------------|----------|-----------------|
-| **R**        | [**bayesplot**](https://mc-stan.org/bayesplot/) | Plotting functions for posterior analysis, diagnostics, and model checking. |
-| **R**        | [**loo**](https://mc-stan.org/loo/) | Efficient leave-one-out cross-validation and WAIC for Bayesian models. |
-| **R**        | [**posterior**](https://mc-stan.org/posterior) | Tools for working with posterior distributions. |
-| **R**        | [**projpred**](https://mc-stan.org/projpred) | Projection predictive variable selection for Bayesian models. |
-| **Python**   | [**ArviZ**](https://python.arviz.org/en/stable/) | Exploratory analysis of Bayesian models with extensive visualization capabilities. |
-| **Julia**    | [**ArviZ.jl**](https://julia.arviz.org/ArviZ/stable/) | Julia interface to ArviZ for Bayesian analysis. |
-| **Web**      | [**MCMC Monitor**](https://github.com/flatironinstitute/mcmc-monitor) | Web-based tool for monitoring MCMC diagnostics. |
-
----
+## Visualization and Validation 
+<table style="width: 85%;">
+  <tr style="background-color: var(--stan-highlight);">
+    <th style="width: 25%;">Language</th>
+    <th style="width: 75%;">Validate, visualize, and compare fitted models</th>
+  </tr>
+  <tr>
+    <td>Julia</td>
+    <td>[ArviZ.jl](https://julia.arviz.org/ArviZ/stable/){target="_blank"}</td>
+  </tr>
+  <tr>
+    <td>Python</td>
+    <td>[ArviZ](https://python.arviz.org/en/stable/){target="_blank"}</td>
+  </tr>
+  <tr>
+    <td>R</td>
+    <td>[Bayesplot](https://mc-stan.org/bayesplot/){target="_blank"} - plot model outputs</td>
+  </tr>
+  <tr>
+    <td></td><td>[loo](https://mc-stan.org/loo/){target="_blank"} - leave-one-out cross validation</td>
+  </tr>
+  <tr>
+    <td></td><td>[posterior](https://mc-stan.org/posterior){target="_blank"} - get model estimates</td>
+  </tr>
+  <tr>
+    <td></td><td>[projpred](https://mc-stan.org/projpred){target="_blank"} - check model predictions</td>
+  </tr>
+  <tr>
+    <td>Web browser</td>
+    <td>[MCMC Monitor](https://github.com/flatironinstitute/mcmc-monitor){target="_blank"}</td>
+  </tr>
+</table>
 
 ## Developer Tools and APIs
+<table style="width: 85%;">
+  <tr style="background-color: var(--stan-highlight);">
+    <th style="width: 25%;">Language</th>
+    <th style="width: 75%;">Access Stan APIs</th>
+  </tr>
+  <tr>
+    <td>Julia, Python, R, Rust</td>
+    <td>[BridgeStan](https://roualdes.github.io/bridgestan/latest/){target="_blank"}<br/>
+    Library with bindings to a model's log densities, gradients, Hessians, and constraining and unconstraining transforms. 
+    </td>
+  </tr>
+  <tr>
+    <td>C++</td>
+    <td>[stan-dev/math](https://mc-stan.org/math/){target="_blank"}</td>
+  </tr>
+  <tr>
+    <td>R</td>
+    <td>[rstantools](https://mc-stan.org/rstantools/){target="_blank"}</td>
+  </tr>
+</table>
 
-*Access Stan's computational backend for advanced applications and development.*
-
-| **Language**           | **Tool** | **Description** |
-|------------------------|----------|-----------------|
-| **C++**                | [**Stan Math Library**](https://mc-stan.org/math/) | Automatic differentiation and mathematical functions used by Stan. |
-| **Multiple Languages** | [**BridgeStan**](https://roualdes.github.io/bridgestan/latest/) | Library providing bindings to a model's log densities, gradients, and more for C++, Python, Julia, R, and Rust. |
-| **R**                  | [**rstantools**](https://mc-stan.org/rstantools/) | Tools for developers of R packages interfacing with Stan. |
-
----
-
-## Editor and IDE Support
-
-*Enhance your coding experience with Stan language support in your favorite editor.*
-
-| **Editor/IDE**         | **Tool** | **Description** |
-|------------------------|----------|-----------------|
-| **RStudio**            | **Built-in Support** | RStudio 1.2+ includes Stan syntax highlighting and code snippets. |
-| **Visual Studio Code** | [**Stan VSCode Extension**](https://marketplace.visualstudio.com/items?itemName=stan-dev.stan-vscode) | Stan language support with syntax highlighting, autocompletion, and snippets. |
-| **Emacs**              | [**stan-mode**](https://github.com/stan-dev/stan-mode) | Major mode for Stan with syntax highlighting and indentation. |
-| **Vim**                | [**stan-vim**](https://github.com/eigenfoo/stan-vim) | Syntax highlighting, indentation, and code folding for Stan in Vim. |
-| **Atom**               | [**language-stan**](https://github.com/stan-dev/atom-language-stan) | Stan language support in Atom editor. |
-| **Sublime Text**       | [**SublimeStan**](https://github.com/djsutherland/sublime-stan) | Syntax highlighting for Stan in Sublime Text. |
-| **JupyterLab**         | [**jupyterlab-stan-highlight**](https://www.npmjs.com/package/jupyterlab-stan-highlight) | Syntax highlighting for Stan code blocks in JupyterLab. |
-| **Markdown Editors**   | **Pandoc**, **Pygments** | Stan syntax highlighting in markdown via [Pandoc](https://pandoc.org/) and [Pygments](https://pygments.org/). |
-| **LaTeX**              | [**lstbayes**](https://github.com/jrnold/lstbayes) | LaTeX listings for Stan syntax highlighting. |
-
----
-
-## Additional Notes
-
-- **Recommendation for New Users**: We suggest starting with **CmdStanR** (for R users) or **CmdStanPy** (for Python users) along with high-level interfaces like **brms** or **rstanarm** for ease of use.
-
-
----
+## Syntax Highlighters
+<table style="width: 85%;">
+  <tr style="background-color: var(--stan-highlight);">
+    <th style="width: 25%;">Tool</th>
+    <th style="width: 75%;">Provide Stan language syntax support and syntax coloring</th>
+  </tr>
+  <tr>
+    <td>R Studio</td>
+    <td> [RStudio 1.2 Stan](https://resources.rstudio.com/rstudio-blog/rstudio-1-2-preview-stan){target="_blank"} - [(Source code)](https://github.com/rstudio/rstudio/blob/main/src/gwt/acesupport/acemode/stan_highlight_rules.js){target="_blank"}</td>
+  </tr>
+  <tr>
+    <td>Emacs</td>
+    <td>[Emacs mode for Stan](https://github.com/stan-dev/stan-mode){target="_blank"}</td>
+  </tr>
+  <tr>
+    <td>VIM</td>
+    <td>[stan-vim: syntax highlighting, automatic indentation, code folding and more.](https://github.com/eigenfoo/stan-vim){target="_blank"}</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>[stan.vim: Vim syntax highlighting for Stan](https://github.com/maverickg/stan.vim){target="_blank"}</td>
+  </tr>
+  <tr>
+    <td>Visual Studio</td>
+    <td>[Stan language support for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=wardbrian.vscode-stan-extension){target="_blank"}</td>
+  </tr>
+  <tr>
+    <td>Atom</td>
+    <td>[Stan language support in Atom](https://github.com/stan-dev/atom-language-stan){target="_blank"}</td>
+  </tr>
+  <tr>
+    <td>Sublime Text</td>
+    <td>[Stan Syntax Package for Sublime Text](https://github.com/djsutherland/sublime-stan){target="_blank"}</td>
+  </tr>
+  <tr>
+    <td>Jupyter-lab</td>
+    <td>[Jupyterlab extension to highlight Stan syntax.](https://www.npmjs.com/package/jupyterlab-stan-highlight){target="_blank"}</td>
+  </tr>
+  <tr>
+    <td>Markdown code blocks</td>
+    <td>[Kate: Kate is a Feature-Packed Text Editor.](https://kate-editor.org/){target="_blank"}  This highlighting is also the one used by the [pandoc](https://pandoc.org/){target="_blank"} tool used by RMarkdown.  [(Source code)](https://invent.kde.org/frameworks/syntax-highlighting/-/blob/master/data/syntax/stan.xml){target="_blank"}</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>[Pygments: a generic syntax highlighter](https://pygments.org/){target="_blank"} - [(Source code)](https://github.com/pygments/pygments/blob/master/pygments/lexers/modeling.py){target="_blank"}</td>
+  </tr>
+  <tr>
+    <td>javascript</td>
+    <td>JavaScript [Prism: a lightweight, robust, and elegant syntax highlighting library.](https://prismjs.com/){target="_blank"} - [(Source code)](https://github.com/PrismJS/prism/blob/master/components/prism-stan.js){target="_blank"}</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>[Highlight.js: a syntax highlighter written in JavaScript](https://github.com/highlightjs/highlight.js){target="_blank"} - [(Source code)](https://github.com/highlightjs/highlight.js/blob/main/src/languages/stan.js){target="_blank"}</td>
+  </tr>
+  <tr>
+    <td>latex</td>
+    <td>[lstbayes: LaTeX Listings language drivers for BUGS, JAGS, and Stan](https://github.com/jrnold/lstbayes){target="_blank"}</td>
+  </tr>
+</table>
