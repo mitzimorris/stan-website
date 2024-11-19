@@ -55,13 +55,10 @@ decision-making and communication.
 :::
 ::: {.g-col-8}
 ## Community Resources
-* The Stan [forums](https://discourse.mc-stan.org) provide support for all user levels and topics,
-from installing software, to writing Stan programs, to advanced Bayesian modeling techniques and methodology.
+* The Stan [forums](https://discourse.mc-stan.org) provide support for all user levels and topics, from installing software, to writing Stan programs, to advanced Bayesian modeling techniques and methodology.
 
-* Stan's [documentation](https://mc-stan.org/docs), [tutorials](learn-stan/tutorials.qmd), and [case studies](learn-stan/case-studies.qmd)
-help users learn and use Stan effectively in their own projects.
-The [Prior Choice Recommendations](https://github.com/stan-dev/stan/wiki/Prior-Choice-Recommendations)
-provides guidance on appropriate priors for use with Stan.
+* Stan's [documentation](https://mc-stan.org/docs), [tutorials](learn-stan/tutorials.qmd), and [case studies](learn-stan/case-studies.qmd) help users learn and use Stan effectively in their own projects.
+The [Prior Choice Recommendations](https://github.com/stan-dev/stan/wiki/Prior-Choice-Recommendations) wiki page provides guidance on appropriate priors for use with Stan.
 :::
 :::
 :::

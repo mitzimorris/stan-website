@@ -1,7 +1,7 @@
 ---
 pagetitle: Published Articles and Books
 page-layout: full
-toc-location: left
+toc-location: right
 ---
 
 # Published Articles and Books

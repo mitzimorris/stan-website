@@ -1,7 +1,7 @@
 ---
 pagetitle: Field Guides
 page-layout: full
-toc-location: left
+toc-location: right
 ---
 
 # Domain-Specific Resources
