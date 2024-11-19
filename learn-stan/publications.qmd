@@ -65,6 +65,12 @@ toc-location: right
                        
 ## Books using Stan
 
+* Gelman, A., Hill, J., and Vehtari A. 2020.
+  [Regression and Other Stories](https://avehtari.github.io/ROS-Examples/){target="_blank"}
+
+* Gelman, A. and Vehtari A. 2024.
+  [Active Statistics](https://avehtari.github.io/ActiveStatistics/){target="_blank"}
+
 * Korner-Nievergelt, F., Roth, T., Von Felten, S., Guélat, J., Almasi,
   B. and Korner-Nievergelt, P.  2024. [*Bayesian Data Analysis in
   Ecology Using Linear Models with R and Stan*](https://tobiasroth.github.io/BDAEcology/){target="_blank"}.  Online.

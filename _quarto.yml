@@ -8,7 +8,7 @@ project:
     - "install/*.qmd"
     - "tools/*.qmd"
     - "learn-stan/*.qmd"
-    - "learn-stan/stancon/*.qmd"
+    - "learn-stan/*/*.qmd"
     - "mc-stan-org/*.qmd"
   resources:
     - learn-stan/case-studies/*.html
@@ -42,12 +42,12 @@ website:
             href: learn-stan/tutorials.qmd
           - text: "Case Studies"
             href: learn-stan/case-studies.qmd
-          - text: "Topic Guides"
+          - text: "StanCon Talks"
+            href: learn-stan/stancon-talks.qmd
+          - text: "Domain-specific"
             href: learn-stan/field-guides.qmd
           - text: "Publications"
             href: learn-stan/publications.qmd
-          - text: "StanCon Talks"
-            href: learn-stan/stancon-talks.qmd
       - text: "Tools"
         href: tools/tools.qmd
       - text: "About mc-stan.org"
