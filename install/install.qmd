@@ -1,12 +1,9 @@
 ---
-pagetitle: "Get Stan"
+title: "Getting Started"
 page-layout: full
 toc-location: right
 toc-depth: 3
 ---
-
-# Getting Started
-
 
 To analyze your data with Stan, you can either
 
@@ -288,67 +285,20 @@ See CmdStan Guide section [Troubleshooting the Installation](https://mc-stan.org
 
 | **Language** | **Tool** | **Description** |
 |--------------|----------|-----------------|
-| **R**        | [**BRMS**](https://paul-buerkner.github.io/brms/){target="_blank"} | Use extended `lme4`-like formula syntax to specify and fit multivariate and multilevel models in Stan. *(Requires CmdStanR and C++ compiler.)* |
+| **R**        | [**brms**](https://paul-buerkner.github.io/brms/){target="_blank"} | Use extended `lme4`-like formula syntax to specify and fit multivariate and multilevel models in Stan. *(Requires CmdStanR and C++ compiler.)* |
 | **R**        | [**RStanArm**](https://mc-stan.org/rstanarm){target="_blank"} | Provides stable, efficient Stan versions of R model-fitting packages. *(Stan models are pre-compiled, no C++ compiler needed.)* |
-| **R**        | [**Rethinking**](https://github.com/rmcelreath/rethinking){target="_blank"} | Accompanies the book and course materials for [Statistical Rethinking, 2nd Ed](https://www.taylorfrancis.com/books/mono/10.1201/9780429029608/statistical-rethinking-richard-mcelreath){target="_blank"} by Richard McElreath.|
-| **Python**   | [**Bambi**](https://bambinos.github.io/bambi/){target="_blank"} | Bayesian models in Python using formula syntax, built on top of Stan and PyMC. |
+| **R**        | [**Rethinking**](https://github.com/rmcelreath/rethinking){target="_blank"} | Accompanies the book and course materials for [Statistical Rethinking, 2nd Ed](https://www.taylorfrancis.com/books/mono/10.1201/9780429029608/statistical-rethinking-richard-mcelreath){target="_blank"} by Richard McElreath. *(Requires CmdStanR and C++ compiler.)*|
 : {tbl-colwidths="[10, 15, 75]"}
 
 
-## Introductory Notebooks, Vignettes, and Tutorials
+## Introductory Notebooks,&nbsp; Vignettes,&nbsp; and Tutorials
 
+| **Interface**     | **Title**                                                                                      |
+|--------------------|-----------------------------------------------------------------------------------------------|
+| **CmdStanPy**      | [CmdStanPy "Hello, World!"](https://mc-stan.org/cmdstanpy/users-guide/hello_world.html){target="_blank"}</br>[Getting Started with Bayesian Statistics using Stan and Python](https://github.com/bob-carpenter/stan-getting-started){target="_blank"}</br>[Multilevel regression modeling with CmdStanPy and plotnine](case-studies/radon_cmdstanpy_plotnine.html){target="_blank"} |
+| **CmdStanR**       | [Getting Started with CmdStanR](https://mc-stan.org/cmdstanr/articles/cmdstanr.html){target="_blank"}</br>[StanCon2023/Stan_tutorial.ipynb](https://github.com/charlesm93/stanTutorial/blob/main/StanCon2023/Stan_tutorial.ipynb){target="_blank"} |
+| **Julia**          | [Stan.jl Examples](https://github.com/StanJulia/Stan.jl/tree/master/Examples){target="_blank"}                |
+| **Google Colab**   | [Stan Notebooks in the Cloud](https://mc-stan.org/users/documentation/case-studies/jupyter_colab_notebooks_2020.html){target="_blank"} |
+: {tbl-colwidths="[20, 80]"}
 
-<table>
-  <thead>
-    <tr>
-      <th>Interface</th>
-      <th>Title</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td colspan="2" style="border-bottom: 1px solid #ccc; height: 5px;"></td>
-    </tr>
-    <!-- CmdStanPy Section -->
-    <tr>
-      <td rowspan="3"><strong>CmdStanPy</strong></td>
-      <td><a href="https://mc-stan.org/cmdstanpy/users-guide/hello_world.html" target="_blank">CmdStanPy "Hello, World!"</a></td>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/bob-carpenter/stan-getting-started" target="_blank">Getting Started with Bayesian Statistics using Stan and Python</a></td>
-    </tr>
-    <tr>
-      <td><a href="case-studies/radon_cmdstanpy_plotnine.html" target="_blank">Multilevel regression modeling with CmdStanPy and plotnine</a></td>
-    </tr>
-    <!-- Separator Row -->
-    <tr>
-      <td colspan="2" style="border-bottom: 1px solid #ccc; height: 5px;"></td>
-    </tr>
-    <!-- CmdStanR Section -->
-    <tr>
-      <td rowspan="2"><strong>CmdStanR</strong></td>
-      <td><a href="https://mc-stan.org/cmdstanr/articles/cmdstanr.html" target="_blank">Getting Started with CmdStanR</a></td>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/charlesm93/stanTutorial/blob/main/StanCon2023/Stan_tutorial.ipynb" target="_blank">StanCon2023/Stan_tutorial.ipynb</a></td>
-    </tr>
-    <!-- Separator Row -->
-    <tr>
-      <td colspan="2" style="border-bottom: 1px solid #ccc; height: 5px;"></td>
-    </tr>
-    <!-- Julia Section -->
-    <tr>
-      <td><strong>Julia</strong></td>
-      <td><a href="https://github.com/StanJulia/Stan.jl/tree/master/Examples" target="_blank">Stan.jl Examples</a></td>
-    </tr>
-    <!-- Separator Row -->
-    <tr>
-      <td colspan="2" style="border-bottom: 1px solid #ccc; height: 5px;"></td>
-    </tr>
-    <!-- Google Colab Section -->
-    <tr>
-      <td><strong>Google Colab</strong></td>
-      <td><a href="https://mc-stan.org/users/documentation/case-studies/jupyter_colab_notebooks_2020.html" target="_blank">Stan Notebooks in the Cloud</a></td>
-    </tr>
-  </tbody>
-</table>
+For more learning resources, see the [Tutorials](../learn-stan/tutorials.qmd), [Publications](../learn-stan/publications.qmd) and [Stan Case Studies](../learn-stan/case-studies.qmd) pages.
