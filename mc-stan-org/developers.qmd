@@ -1,9 +1,6 @@
 ---
-pagetitle: "Software Development Lifecycle"
+title: "Stan Project's Software Development Lifecycle"
 ---
-
-# Stan Project's Software Development Lifecycle
-
 
 The development, release, and maintenance of Stan is a collaborative
 process involving the Stan development team.  The team covers multiple
