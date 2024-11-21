@@ -34,8 +34,8 @@ For detailed installation instructions see [Getting Started](../install/install.
 
 | **Language** | **Tool** | **Description** |
 |--------------|----------|-----------------|
-| **R**        | [**brms**](https://paul-buerkner.github.io/brms/){target="_blank"} | Use extended `lme4`-like formula syntax to specify and fit multivariate and multilevel models in Stan. *(Requires CmdStanR and C++ compiler.)* |
-| **R**        | [**rstanarm**](https://mc-stan.org/rstanarm){target="_blank"} | Provides stable, efficient Stan versions of R model-fitting packages.  Installs easily from CRAN, no C++ compiler needed. |
+| **R**        | [**brms**](https://paul-buerkner.github.io/brms/){target="_blank"} | Use extended `lme4`-like formula syntax to specify and fit multivariate and multilevel models in Stan. *Requires CmdStanR or RStan, plus C++ compiler.* |
+| **R**        | [**rstanarm**](https://mc-stan.org/rstanarm){target="_blank"} | Provides robust and efficient pre-compiled Stan versions of R model-fitting packages.  Easily installed from CRAN, no C++ compiler needed. |
 : {tbl-colwidths="[10, 20, 70]"}
 
 ---
