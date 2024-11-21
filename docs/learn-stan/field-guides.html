@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Field Guides</title>
+<title>Domain-Specific Resources – Stan</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../theming/quarto_styles.css">
 </head>
 
-<body class="floating nav-fixed">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -86,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -100,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Getting Started</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-documentation" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-documentation" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Documentation</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-documentation">    
@@ -119,25 +119,29 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-learning-materials" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Learning Materials</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-learning-resources" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Learning Resources</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-learning-materials">    
-        <li>
-    <a class="dropdown-item" href="../learn-stan/case-studies.html">
- <span class="dropdown-text">Case Studies</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../learn-stan/field-guides.html">
- <span class="dropdown-text">Field Guides</span></a>
-  </li>  
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-learning-resources">    
         <li>
     <a class="dropdown-item" href="../learn-stan/tutorials.html">
  <span class="dropdown-text">Tutorials</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../learn-stan/articles.html">
- <span class="dropdown-text">Journal Articles</span></a>
+    <a class="dropdown-item" href="../learn-stan/case-studies.html">
+ <span class="dropdown-text">Case Studies</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../learn-stan/stancon-talks.html">
+ <span class="dropdown-text">StanCon Talks</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../learn-stan/field-guides.html">
+ <span class="dropdown-text">Domain-specific</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../learn-stan/publications.html">
+ <span class="dropdown-text">Publications</span></a>
   </li>  
     </ul>
   </li>
@@ -151,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools tools-wide">
+            <div class="quarto-navbar-tools tools-wide">
     <a href="https://github.com/stan-dev" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
     <a href="https://discourse.mc-stan.org" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-chat-text-fill"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -162,36 +166,175 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#specialized-field-guides" id="toc-specialized-field-guides" class="nav-link active" data-scroll-target="#specialized-field-guides">Specialized Field Guides</a></li>
+  <li><a href="#field-guides" id="toc-field-guides" class="nav-link active" data-scroll-target="#field-guides">Field Guides</a>
+  <ul class="collapse">
+  <li><a href="#education-research-using-stan" id="toc-education-research-using-stan" class="nav-link" data-scroll-target="#education-research-using-stan">Education Research Using Stan</a></li>
+  <li><a href="#stan-for-ecology" id="toc-stan-for-ecology" class="nav-link" data-scroll-target="#stan-for-ecology">Stan for Ecology</a></li>
+  <li><a href="#stan-for-epidemiology" id="toc-stan-for-epidemiology" class="nav-link" data-scroll-target="#stan-for-epidemiology">Stan for Epidemiology</a></li>
+  <li><a href="#stan-for-cognitive-science" id="toc-stan-for-cognitive-science" class="nav-link" data-scroll-target="#stan-for-cognitive-science">Stan for Cognitive Science</a></li>
+  </ul></li>
+  <li><a href="#stanconnect-sessions" id="toc-stanconnect-sessions" class="nav-link" data-scroll-target="#stanconnect-sessions">StanConnect Sessions</a>
+  <ul class="collapse">
+  <li><a href="#stan-through-space-and-time-2022" id="toc-stan-through-space-and-time-2022" class="nav-link" data-scroll-target="#stan-through-space-and-time-2022">Stan Through Space and Time (2022)</a></li>
+  <li><a href="#cognitive-science-and-neuroscience-2021" id="toc-cognitive-science-and-neuroscience-2021" class="nav-link" data-scroll-target="#cognitive-science-and-neuroscience-2021">Cognitive Science and Neuroscience (2021)</a></li>
+  <li><a href="#biostats-2021" id="toc-biostats-2021" class="nav-link" data-scroll-target="#biostats-2021">Biostats (2021)</a></li>
+  <li><a href="#ecology-models-for-biological-survey-data-2021" id="toc-ecology-models-for-biological-survey-data-2021" class="nav-link" data-scroll-target="#ecology-models-for-biological-survey-data-2021">Ecology, models for biological survey data (2021)</a></li>
+  </ul></li>
   </ul>
 </nav>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Domain-Specific Resources</h1>
+</div>
 
 
 
+<div class="quarto-title-meta column-page-left">
 
-<section id="specialized-field-guides" class="level1">
-<h1>Specialized Field Guides</h1>
-<p>Tutorials, case studies, software packages, and publications related to specific fields. These pages are maintained by volunteers from the Stan community. If you would like to contribute one for your field please reach out on the Stan forums.</p>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="field-guides" class="level2">
+<h2 class="anchored" data-anchor-id="field-guides">Field Guides</h2>
+<p>These guides provide applied researchers with curated lists of tutorials, case studies, and resources which contain Stan implementations of the most commonly used models in their domain. If you would like to contribute one for your field, see this Discourse post: <a href="https://discourse.mc-stan.org/t/fostering-stan-user-communities-through-domain-specific-resource-pages/11544" target="_blank">Fostering Stan user communities through domain-specific resource pages</a></p>
+<section id="education-research-using-stan" class="level3">
+<h3 class="anchored" data-anchor-id="education-research-using-stan"><a href="https://education-stan.github.io" target="_blank">Education Research Using Stan</a></h3>
 <ul>
-<li><p><a href="https://education-stan.github.io">Stan for Education Research</a></p></li>
-<li><p><a href="https://stanecology.github.io/">Stan for Ecology</a></p></li>
-<li><p><a href="https://epidemiology-stan.github.io/">Satan for Epidemiolog</a></p></li>
-<li><p><a href="https://cognitive-science-stan.github.io/">Stan for Cognitive Science</a></p></li>
+<li>Topics: Item Response Theory, Cognitive Diagnosis Models, Multilevel Modeling</li>
+<li>Maintainer: <a href="https://bse.berkeley.edu/sophia-rabe-hesketh" target="_blank">Sofia Rabe-Hesketh</a></li>
+</ul>
+</section>
+<section id="stan-for-ecology" class="level3">
+<h3 class="anchored" data-anchor-id="stan-for-ecology"><a href="https://stanecology.github.io/" target="_blank">Stan for Ecology</a></h3>
+<ul>
+<li>Topics: Ecological times series models, population models, predator-prey dynamics, species site-occupancy models.</li>
+<li>Maintainer: <a href="https://www.statistics.utoronto.ca/people/directories/all-faculty/vianey-leos-barajas" target="_blank">Vianey Leos Barajas</a></li>
+</ul>
+</section>
+<section id="stan-for-epidemiology" class="level3">
+<h3 class="anchored" data-anchor-id="stan-for-epidemiology"><a href="https://epidemiology-stan.github.io/" target="_blank">Stan for Epidemiology</a></h3>
+<ul>
+<li>Topics: Disease transmission (SIR models), disease mapping (ICAR, BYM models), survival analysis, longitudinal data.</li>
+<li>Maintainer: <a href="leo.grinsztajn@inria.fr" target="_blank">Léo Grinsztajn</a></li>
+</ul>
+</section>
+<section id="stan-for-cognitive-science" class="level3">
+<h3 class="anchored" data-anchor-id="stan-for-cognitive-science"><a href="https://cognitive-science-stan.github.io/" target="_blank">Stan for Cognitive Science</a></h3>
+<ul>
+<li>Cognitive Science and Neuroscience papers which use Stan, BRMS, or RStanArm.</li>
+<li>Maintainer: <a href="https://www.tilburguniversity.edu/staff/b-nicenboim" target="_blank">Bruno Nicenboim</a></li>
+</ul>
+</section>
+</section>
+<section id="stanconnect-sessions" class="level2">
+<h2 class="anchored" data-anchor-id="stanconnect-sessions">StanConnect Sessions</h2>
+<p>StanConnect is a virtual miniseries which consists of 3-hour meetings/mini-symposia where each meeting is like “session” of an organized conference. This series was started in 2021 and reprised in 2022. Future StanConnect series will be announced on <a href="https://discourse.mc-stan.org/tag/stanconnect">Discourse</a>.</p>
+<section id="stan-through-space-and-time-2022" class="level3">
+<h3 class="anchored" data-anchor-id="stan-through-space-and-time-2022">Stan Through Space and Time (2022)</h3>
+<p>A half-day event showcasing the use of Stan in spatial statistics and for modeling time series data.</p>
+<ul>
+<li>Date: October 31, 2022</li>
+<li>GitHub repository of slides and materials: <a href="https://github.com/stan-dev/connect22-space-time" target="_blank">https://github.com/stan-dev/connect22-space-time</a></li>
+<li>Program:
+<ul>
+<li><em>Time and tide wait for no one: spatio-temporal modelling in river networks</em> - Edgar Santos Fernandez</li>
+<li><em>Spatio-temporal modelling of mosquitoes vector and its environmental drivers in Hong Kong</em> - Stan Yip</li>
+<li><em>Robust non-Gaussian models and how to fit them in Stan</em> - Rafael Cabral</li>
+<li><em>A space-time extension of the Poisson auto-regression to model Covid-19 cases at the England local authorities level</em> - Pierfrancesco Alaimo Di Loro</li>
+<li><em>Fitting spatio-temporal geostatistical models in Stan using the bmstdr R package</em> - Sujit Sahu</li>
+<li><em>tipsae: Tools for Handling Indices and Proportions in Small Area Estimation</em> - Silvia De Nicolo</li>
+<li><em>geostan: An R package for Bayesian spatial analysis</em> - Connor Donegan</li>
+<li><em>Structure induced by a multiple membership transformation on the conditional autoregressive model</em> - Marco Gramatica</li>
+<li><em>A Bayesian hierarchical model for disease mapping that accounts for scaling and heavy-tailed latent effects</em> - Victoire Michal</li>
+<li><em>Bayesian latent spatial autoregressive growth modeling</em> - Zachary Roman</li>
+</ul></li>
+<li><a href="../learn-stan/stancon/StanConnect2022_space_time.html" target="_blank">Abstracts</a></li>
+<li>Organizer: James Hogg</li>
+</ul>
+</section>
+<section id="cognitive-science-and-neuroscience-2021" class="level3">
+<h3 class="anchored" data-anchor-id="cognitive-science-and-neuroscience-2021">Cognitive Science and Neuroscience (2021)</h3>
+<ul>
+<li>Date: November 19, 2021</li>
+<li>Recorded Talks: <a href="https://youtu.be/rsY3dVAP9gQ?si=jfQKc7sQvfyPCuQB" target="_blank">YouTube</a></li>
+<li>Program:
+<ul>
+<li><em>Resolving the multiple testing issue in neuroimaging through Bayesian multilevel modeling</em> - Gang Chen<br>
+</li>
+<li><em>Implementation of the Diffusion Decision Model with Across-Trial Variability in the Drift Rate</em> - Kendal Foster and Henrik Singmann<br>
+</li>
+<li><em>It’s complicated: Some observations on the nuanced constraints of the multivariate normal in high dimensions</em> - Mike Lawrence<br>
+</li>
+<li><em>Using computational modeling parameters to measure working memory processes</em> - Jan Göttmann<br>
+</li>
+</ul></li>
+<li><a href="https://cognitive-science-stan.github.io/stanconnect2021-cogsci/" target="_blank">Abstracts</a></li>
+<li>Organizer: Bruno Nicenboim</li>
+</ul>
+</section>
+<section id="biostats-2021" class="level3">
+<h3 class="anchored" data-anchor-id="biostats-2021">Biostats (2021)</h3>
+<ul>
+<li>Date: October 19, 2021</li>
+<li>Recorded Talks: <a href="https://youtu.be/cq5r0sSTPIg?si=t1VBM5zCMRILzbvk" target="_blank">YouTube</a></li>
+<li>GitHub repository of slides and materials: <a href="https://github.com/maxbiostat/StanConnect2021_Biostatistics" target="_blank">https://github.com/maxbiostat/StanConnect2021_Biostatistics</a></li>
+<li>Program:
+<ul>
+<li><a href="https://github.com/maxbiostat/StanConnect2021_Biostatistics/tree/main/talk_1" target="_blank">Coding in Stan: the BYM2 model for disconnected graphs</a>&nbsp; Mitzi Morris</li>
+<li><a href="https://github.com/maxbiostat/StanConnect2021_Biostatistics/blob/main/talk_2/ethan.md" target="_blank">Normalized power prior models in Stan</a>&nbsp; Ethan Alt</li>
+<li><a href="https://github.com/maxbiostat/StanConnect2021_Biostatistics/blob/main/talk_3/slides.pdf">Summarising enzyme information from online databases using Stan and Arviz</a>, &nbsp; Teddy Groves</li>
+<li><a href="https://github.com/maxbiostat/StanConnect2021_Biostatistics/tree/main/talk_4" target="_blank">Automated kinetic modelling in Stan and its application to the methionine cycle</a>&nbsp; Nicholas Cowie</li>
+<li><a href="https://github.com/maxbiostat/StanConnect2021_Biostatistics/tree/main/talk_5" target="_blank">Using Hidden Markov Models as a complement/alternative to survival models</a>Martin Modrák</li>
+</ul></li>
+<li>Organizer: Luiz Max Carvalho, PhD - Getúlio Vargas Foundation</li>
+</ul>
+</section>
+<section id="ecology-models-for-biological-survey-data-2021" class="level3">
+<h3 class="anchored" data-anchor-id="ecology-models-for-biological-survey-data-2021">Ecology, models for biological survey data (2021)</h3>
+<p>A 2-day event showcasing applications of Stan for ecological analyses</p>
+<ul>
+<li>Day 1: September 30, 2021</li>
+<li>Day 1 Recorded Talks: <a href="https://youtu.be/yn7jIHzvqXU?si=MypOndaKmKOvLDo9" target="_blank">YouTube</a></li>
+<li>Program Day 1:
+<ul>
+<li><em>Using Stan to build better community</em> - Ara Winter</li>
+<li><em>Using Stan to diagnose and fit high-dimensional multispecies abundance models</em> - Harold Eyster</li>
+<li><em>250000 parameters: the story of an occupancy model for Colombia’s birdlife in Stan</em> - Jacob Socolar</li>
+<li><em>MLOps in a Bayesian workflow: tracking experiments with MLFlow</em> - Maxwell Joseph</li>
+</ul></li>
+<li>Day 2: October 4, 2021</li>
+<li>Program Day 2:</li>
+<li>Day 2 Recorded Talks: <a href="https://youtu.be/Ie0WGa6vAws?si=KmJsUtQrv_k7Xed-" target="_blank">YouTube</a>
+<ul>
+<li><em>Evolution of habitat use and coexistence under intraguild predation: a principled Bayesian approach</em> - Josh Goldberg</li>
+<li><em>Drift algae controls the consumption of kelp: using data from in-situ subtidal experimentation and ordinary differential equations to mechanistically model the sea urchin behavioral switch</em> - Zach Randell</li>
+<li><em>Linking the SPDE method with Stan</em> - Joaquin Cavieres</li>
+<li><em>Using Stan to characterize large-scale morphological change in North American birds</em> - Casey Youngflesh</li>
+<li><em>Fitting hidden Markov models to ecological time series data in Stan</em> - Vianey Leos Barajas</li>
+</ul></li>
+<li>Organizer: Jacob B. Socolar, Cornell Lab of Ornithology</li>
+<li>Panelist Day 1: Vianey Leos Barajas: Assistant Professor, University of Toronto, Department of Statistical Sciences</li>
 </ul>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -374,18 +517,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -417,7 +549,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -425,7 +579,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

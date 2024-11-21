@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Stan - Stan Interfaces and Tools</title>
+<title>Stan Toolkit – Stan</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../theming/quarto_styles.css">
 </head>
 
-<body class="floating nav-fixed">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -86,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -100,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Getting Started</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-documentation" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-documentation" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Documentation</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-documentation">    
@@ -119,25 +119,29 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-learning-materials" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Learning Materials</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-learning-resources" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Learning Resources</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-learning-materials">    
-        <li>
-    <a class="dropdown-item" href="../learn-stan/case-studies.html">
- <span class="dropdown-text">Case Studies</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../learn-stan/field-guides.html">
- <span class="dropdown-text">Field Guides</span></a>
-  </li>  
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-learning-resources">    
         <li>
     <a class="dropdown-item" href="../learn-stan/tutorials.html">
  <span class="dropdown-text">Tutorials</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../learn-stan/articles.html">
- <span class="dropdown-text">Journal Articles</span></a>
+    <a class="dropdown-item" href="../learn-stan/case-studies.html">
+ <span class="dropdown-text">Case Studies</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../learn-stan/stancon-talks.html">
+ <span class="dropdown-text">StanCon Talks</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../learn-stan/field-guides.html">
+ <span class="dropdown-text">Domain-specific</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../learn-stan/publications.html">
+ <span class="dropdown-text">Publications</span></a>
   </li>  
     </ul>
   </li>
@@ -151,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools tools-wide">
+            <div class="quarto-navbar-tools tools-wide">
     <a href="https://github.com/stan-dev" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
     <a href="https://discourse.mc-stan.org" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-chat-text-fill"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -162,22 +166,31 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#language-specific-stan-interfaces" id="toc-language-specific-stan-interfaces" class="nav-link active" data-scroll-target="#language-specific-stan-interfaces">Language-Specific Stan Interfaces</a></li>
+  <li><a href="#high-level-modeling-interfaces" id="toc-high-level-modeling-interfaces" class="nav-link" data-scroll-target="#high-level-modeling-interfaces">High-Level Modeling Interfaces</a></li>
+  <li><a href="#visualization-diagnostics-and-validation-tools" id="toc-visualization-diagnostics-and-validation-tools" class="nav-link" data-scroll-target="#visualization-diagnostics-and-validation-tools">Visualization, Diagnostics, and Validation Tools</a></li>
+  <li><a href="#developer-tools-and-apis" id="toc-developer-tools-and-apis" class="nav-link" data-scroll-target="#developer-tools-and-apis">Developer Tools and APIs</a></li>
+  <li><a href="#editor-and-ide-support" id="toc-editor-and-ide-support" class="nav-link" data-scroll-target="#editor-and-ide-support">Editor and IDE Support</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Stan Interfaces and Tools</h1>
+<h1 class="title">Stan Toolkit</h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -189,213 +202,266 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<style>
-  th:nth-child(2), td:nth-child(2) {
-     background-color: var(--stan-bg);
-  }
-</style>
-<table>
-<tbody><tr>
-<th style="width: 20%;">
-</th>
-<th style="width: 15%;">
-Language
-</th>
-<th style="width: 65%;">
-</th>
+<p>A curated collection of tools and interfaces to help you work effectively with Stan across various programming environments and stages of your modeling workflow.</p>
+<hr>
+<section id="language-specific-stan-interfaces" class="level2">
+<h2 class="anchored" data-anchor-id="language-specific-stan-interfaces">Language-Specific Stan Interfaces</h2>
+<p><em>Write, compile, and run Stan models directly within your programming environment.</em></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 20%">
+<col style="width: 70%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Language</strong></th>
+<th><strong>Tool</strong></th>
+<th><strong>Description</strong></th>
 </tr>
-<tr style="background-color: var(--stan-highlight);">
-<td>
-<b>Stan Interfaces</b>
-</td>
-<td style="background-color: var(--stan-highlight);">
-</td>
-<td>
-Write, compile, and run new Stan models
-</td>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>R</strong></td>
+<td><a href="https://mc-stan.org/cmdstanr" target="_blank"><strong>CmdStanR</strong></a></td>
+<td>Interface to Stan for R, based on CmdStan. <strong>Recommended interface for R users.</strong></td>
 </tr>
-<tr>
-<td>
-</td>
-<td>
-Julia
-</td>
-<td>
-<a href="http://stanjulia.github.io/Stan.jl/stable/INTRO/">Stan.jl</a>
-</td>
+<tr class="even">
+<td><strong>Python</strong></td>
+<td><a href="https://mc-stan.org/cmdstanpy" target="_blank"><strong>CmdStanPy</strong></a></td>
+<td>Interface to Stan for Python, based on CmdStan. <strong>Recommended interface for Python users.</strong></td>
 </tr>
-<tr>
-<td>
-</td>
-<td>
-Python
-</td>
-<td>
-<a href="https://mc-stan.org/cmdstanpy">CmdStanPy</a>*, <a href="https://mc-stan.org/pystan">PyStan</a>
-</td>
+<tr class="odd">
+<td><strong>Web</strong></td>
+<td><a href="https://github.com/flatironinstitute/stan-playground" target="_blank"><strong>Stan Playground</strong></a></td>
+<td>Browser-based editor and runtime environment for Stan models. <strong>Highly recommended for new users.</strong></td>
 </tr>
-<tr>
-<td>
-</td>
-<td>
-R
-</td>
-<td>
-<a href="https://mc-stan.org/cmdstanr">CmdStanR</a>*, <a href="https://mc-stan.org/rstan">RStan</a>
-</td>
+<tr class="even">
+<td><strong>Julia</strong></td>
+<td><a href="http://stanjulia.github.io/Stan.jl/stable/INTRO/" target="_blank"><strong>Stan.jl</strong></a></td>
+<td>Interface to Stan for Julia users.</td>
 </tr>
-<tr>
-<td>
-</td>
-<td>
-</td>
-<td>
-<b>*Note:</b> CmdStanPy and CmdStanR are recommended for new users;<br>PyStan and RStan continue to be supported.
-</td>
+<tr class="odd">
+<td><strong>MATLAB</strong></td>
+<td><a href="https://github.com/brian-lau/MatlabStan/wiki" target="_blank"><strong>MatlabStan</strong></a></td>
+<td>Interface to Stan for MATLAB users.</td>
 </tr>
-<tr>
-<td>
-</td>
-<td>
-shell
-</td>
-<td>
-<a href="https://mc-stan.org/cmdstan">CmdStan</a>
-</td>
+<tr class="even">
+<td><strong>Shell</strong></td>
+<td><a href="https://mc-stan.org/cmdstan" target="_blank"><strong>CmdStan</strong></a></td>
+<td>Command-line interface to Stan, usable from any shell environment.</td>
 </tr>
-<tr style="background-color: var(--stan-highlight);">
-<td>
-<b>High-level Interfaces</b>
-</td>
-<td style="background-color: var(--stan-highlight);">
-</td>
-<td>
-Use existing Stan models
-</td>
+<tr class="odd">
+<td><strong>R</strong></td>
+<td><a href="https://mc-stan.org/rstan" target="_blank"><strong>RStan</strong></a></td>
+<td>Legacy R interface to Stan. <em>(For new projects, consider using CmdStanR.)</em></td>
 </tr>
-<tr>
-<td>
-</td>
-<td>
-R
-</td>
-<td>
-<a href="https://paul-buerkner.github.io/brms/">BRMS</a><br> Specify and fit multivariate and multilevel models in Stan using extended R-formula syntax.
-</td>
+<tr class="even">
+<td><strong>Python</strong></td>
+<td><a href="https://mc-stan.org/pystan" target="_blank"><strong>PyStan</strong></a></td>
+<td>Legacy Python interface to Stan. <em>(For new projects, consider using CmdStanPy.)</em></td>
 </tr>
-<tr>
-<td>
-</td>
-<td>
-R
-</td>
-<td>
-<a href="https://mc-stan.org/rstanarm">RStanArm</a><br> Pre-compiled Stan versions of existing R model functions.
-</td>
+</tbody>
+</table>
+<p>For detailed installation instructions see <a href="../install/install.html">Getting Started</a>.</p>
+<hr>
+</section>
+<section id="high-level-modeling-interfaces" class="level2">
+<h2 class="anchored" data-anchor-id="high-level-modeling-interfaces">High-Level Modeling Interfaces</h2>
+<p><em>Simplify model specification in R.</em></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 20%">
+<col style="width: 70%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Language</strong></th>
+<th><strong>Tool</strong></th>
+<th><strong>Description</strong></th>
 </tr>
-<tr style="background-color: var(--stan-highlight);">
-<td>
-<b>Posterior Analysis Tools</b>
-</td>
-<td style="background-color: var(--stan-highlight);">
-</td>
-<td>
-Validate, visualize, and compare fitted models
-</td>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>R</strong></td>
+<td><a href="https://paul-buerkner.github.io/brms/" target="_blank"><strong>brms</strong></a></td>
+<td>Use extended <code>lme4</code>-like formula syntax to specify and fit multivariate and multilevel models in Stan. <em>(Requires CmdStanR and C++ compiler.)</em></td>
 </tr>
-<tr>
-<td>
-</td>
-<td>
-Julia
-</td>
-<td>
-<a href="https://julia.arviz.org/ArviZ/stable/">ArviZ.jl</a>
-</td>
+<tr class="even">
+<td><strong>R</strong></td>
+<td><a href="https://mc-stan.org/rstanarm" target="_blank"><strong>rstanarm</strong></a></td>
+<td>Provides stable, efficient Stan versions of R model-fitting packages. Installs easily from CRAN, no C++ compiler needed.</td>
 </tr>
-<tr>
-<td>
-</td>
-<td>
-Python
-</td>
-<td>
-<a href="https://python.arviz.org/en/stable/">ArviZ</a>
-</td>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="visualization-diagnostics-and-validation-tools" class="level2">
+<h2 class="anchored" data-anchor-id="visualization-diagnostics-and-validation-tools">Visualization, Diagnostics, and Validation Tools</h2>
+<p><em>Validate, visualize, and compare fitted models to ensure robust results.</em></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 20%">
+<col style="width: 70%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Language</strong></th>
+<th><strong>Tool</strong></th>
+<th><strong>Description</strong></th>
 </tr>
-<tr>
-<td>
-</td>
-<td>
-R
-</td>
-<td>
-<a href="https://mc-stan.org/bayesplot/">Bayesplot</a> - plot model outputs, <a href="https://mc-stan.org/loo/">loo</a> - leave-one-out cross validation<br> <a href="https://mc-stan.org/posterior">posterior</a> - get model estimates, <a href="https://mc-stan.org/projpred">projpred</a> - check model predictions
-</td>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>R</strong></td>
+<td><a href="https://mc-stan.org/bayesplot/" target="_blank"><strong>bayesplot</strong></a></td>
+<td>Plotting functions for posterior analysis, diagnostics, and model checking.</td>
 </tr>
-<tr>
-<td>
-</td>
-<td>
-Web browser
-</td>
-<td>
-<a href="https://github.com/flatironinstitute/mcmc-monitor">MCMC Monitor</a>
-</td>
+<tr class="even">
+<td><strong>R</strong></td>
+<td><a href="https://mc-stan.org/loo/" target="_blank"><strong>loo</strong></a></td>
+<td>Efficient leave-one-out cross-validation and WAIC for Bayesian models.</td>
 </tr>
-<tr style="background-color: var(--stan-highlight);">
-<td>
-<b>For Algorithm Developers</b>
-</td>
-<td style="background-color: var(--stan-highlight);">
-</td>
-<td>
-Access Stan model methods from higher-level languages
-</td>
+<tr class="odd">
+<td><strong>R</strong></td>
+<td><a href="https://mc-stan.org/posterior" target="_blank"><strong>posterior</strong></a></td>
+<td>Tools for working with posterior distributions.</td>
 </tr>
-<tr>
-<td>
-</td>
-<td>
-Julia, Python, R, Rust
-</td>
-<td>
-<a href="https://roualdes.github.io/bridgestan/latest/">BridgeStan</a><br> Library with bindings to a model’s log densities, gradients, Hessians, and constraining and unconstraining transforms.
-</td>
+<tr class="even">
+<td><strong>R</strong></td>
+<td><a href="https://mc-stan.org/projpred" target="_blank"><strong>projpred</strong></a></td>
+<td>Projection predictive variable selection for Bayesian models.</td>
 </tr>
-<tr style="background-color: var(--stan-highlight);">
-<td>
-<b>For Package Developers</b>
-</td>
-<td style="background-color: var(--stan-highlight);">
-</td>
-<td>
-Build tools that use Stan
-</td>
+<tr class="odd">
+<td><strong>Python</strong></td>
+<td><a href="https://python.arviz.org/en/stable/" target="_blank"><strong>ArviZ</strong></a></td>
+<td>Exploratory analysis of Bayesian models with extensive visualization capabilities.</td>
 </tr>
-<tr>
-<td>
-</td>
-<td>
-C++
-</td>
-<td>
-<a href="https://mc-stan.org/math/">stan-dev/math</a>
-</td>
+<tr class="even">
+<td><strong>Julia</strong></td>
+<td><a href="https://julia.arviz.org/ArviZ/stable/" target="_blank"><strong>ArviZ.jl</strong></a></td>
+<td>Julia interface to ArviZ for Bayesian analysis.</td>
 </tr>
-<tr>
-<td>
-</td>
-<td>
-R
-</td>
-<td>
-<a href="https://mc-stan.org/rstantools/">rstantools</a>
-</td>
+<tr class="odd">
+<td><strong>Web</strong></td>
+<td><a href="https://github.com/flatironinstitute/mcmc-monitor" target="_blank"><strong>MCMC Monitor</strong></a></td>
+<td>Web-based tool for monitoring MCMC diagnostics.</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="developer-tools-and-apis" class="level2">
+<h2 class="anchored" data-anchor-id="developer-tools-and-apis">Developer Tools and APIs</h2>
+<p><em>Access Stan’s computational backend for advanced applications and development.</em></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 20%">
+<col style="width: 70%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Language</strong></th>
+<th><strong>Tool</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>C++</strong></td>
+<td><a href="https://mc-stan.org/math/" target="_blank"><strong>Stan Math Library</strong></a></td>
+<td>Automatic differentiation and mathematical functions used by Stan.</td>
+</tr>
+<tr class="even">
+<td><strong>Multiple Languages</strong></td>
+<td><a href="https://roualdes.github.io/bridgestan/latest/" target="_blank"><strong>BridgeStan</strong></a></td>
+<td>Library providing bindings to a model’s log densities, gradients, and more for C++, Python, Julia, R, and Rust.</td>
+</tr>
+<tr class="odd">
+<td><strong>R</strong></td>
+<td><a href="https://mc-stan.org/rstantools/" target="_blank"><strong>rstantools</strong></a></td>
+<td>Tools for developers of R packages interfacing with Stan.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="editor-and-ide-support" class="level2">
+<h2 class="anchored" data-anchor-id="editor-and-ide-support">Editor and IDE Support</h2>
+<p><em>Enhance your coding experience with Stan language support in your favorite editor.</em></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 25%">
+<col style="width: 60%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Editor/IDE</strong></th>
+<th><strong>Tool</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>RStudio</strong></td>
+<td><strong>Built-in Support</strong></td>
+<td>RStudio 1.2+ includes Stan syntax highlighting and code snippets. <a href="https://github.com/rstudio/rstudio/blob/main/src/gwt/acesupport/acemode/stan_highlight_rules.js" target="_blank">(Source code)</a></td>
+</tr>
+<tr class="even">
+<td><strong>Visual Studio Code</strong></td>
+<td><a href="https://marketplace.visualstudio.com/items?itemName=stan-dev.stan-vscode" target="_blank"><strong>Stan VSCode Extension</strong></a></td>
+<td>Stan language support with syntax highlighting, autocompletion, and snippets.</td>
+</tr>
+<tr class="odd">
+<td><strong>Emacs</strong></td>
+<td><a href="https://github.com/stan-dev/stan-mode" target="_blank"><strong>stan-mode</strong></a></td>
+<td>Major mode for Stan with syntax highlighting and indentation.</td>
+</tr>
+<tr class="even">
+<td><strong>Vim</strong></td>
+<td><a href="https://github.com/eigenfoo/stan-vim" target="_blank"><strong>stan-vim</strong></a></td>
+<td>Syntax highlighting, indentation, and code folding for Stan in Vim.</td>
+</tr>
+<tr class="odd">
+<td><strong>Atom</strong></td>
+<td><a href="https://github.com/stan-dev/atom-language-stan" target="_blank"><strong>language-stan</strong></a></td>
+<td>Stan language support in Atom editor.</td>
+</tr>
+<tr class="even">
+<td><strong>Sublime Text</strong></td>
+<td><a href="https://github.com/djsutherland/sublime-stan" target="_blank"><strong>SublimeStan</strong></a></td>
+<td>Syntax highlighting for Stan in Sublime Text.</td>
+</tr>
+<tr class="odd">
+<td><strong>JupyterLab</strong></td>
+<td><a href="https://www.npmjs.com/package/jupyterlab-stan-highlight" target="_blank"><strong>jupyterlab-stan-highlight</strong></a></td>
+<td>Syntax highlighting for Stan code blocks in JupyterLab.</td>
+</tr>
+<tr class="even">
+<td><strong>Javascript</strong></td>
+<td><a href="https://prismjs.com/" target="_blank"><strong>Prism</strong></a> <br> <a href="https://github.com/highlightjs/highlight.js" target="_blank"><strong>Highlight.js</strong></a></td>
+<td>Lightweight syntax highlighting library - <a href="https://github.com/PrismJS/prism/blob/master/components/prism-stan.js" target="_blank">(Source code)</a>. <br> Syntax highlighter written in javascript - <a href="https://github.com/highlightjs/highlight.js/blob/main/src/languages/stan.js" target="_blank">(Source code)</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Markdown Editors</strong></td>
+<td><a href="https://pandoc.org/" target="_blank"><strong>Pandoc</strong></a> <br> <a href="https://pygments.org/" target="_blank"><strong>Pygments</strong></a></td>
+<td>Stan syntax highlighting for document formats. <a href="https://invent.kde.org/frameworks/syntax-highlighting/-/blob/master/data/syntax/stan.xml">(Source code)</a><br>Python highlighter for Stan code blocks <a href="https://github.com/pygments/pygments/blob/master/pygments/lexers/modeling.py" target="_blank">(Source code)</a></td>
+</tr>
+<tr class="even">
+<td><strong>LaTeX</strong></td>
+<td><a href="https://github.com/jrnold/lstbayes" target="_blank"><strong>lstbayes</strong></a></td>
+<td>LaTeX listings for Stan syntax highlighting.</td>
+</tr>
+</tbody>
+</table>
+<hr>
 
 
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -577,18 +643,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -620,7 +675,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -628,7 +705,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
