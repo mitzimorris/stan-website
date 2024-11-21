@@ -285,7 +285,7 @@ See CmdStan Guide section [Troubleshooting the Installation](https://mc-stan.org
 
 | **Language** | **Tool** | **Description** |
 |--------------|----------|-----------------|
-| **R**        | [**brms**](https://paul-buerkner.github.io/brms/){target="_blank"} | Use extended `lme4`-like formula syntax to specify and fit multivariate and multilevel models in Stan. *(Requires CmdStanR and C++ compiler.)* |
+| **R**        | [**brms**](https://paul-buerkner.github.io/brms/){target="_blank"} | Use extended `lme4`-like formula syntax to specify and fit multivariate and multilevel models in Stan. *(Requires CmdStanR or RStan and C++ compiler.)* |
 | **R**        | [**RStanArm**](https://mc-stan.org/rstanarm){target="_blank"} | Provides stable, efficient Stan versions of R model-fitting packages. *(Stan models are pre-compiled, no C++ compiler needed.)* |
 | **R**        | [**Rethinking**](https://github.com/rmcelreath/rethinking){target="_blank"} | Accompanies the book and course materials for [Statistical Rethinking, 2nd Ed](https://www.taylorfrancis.com/books/mono/10.1201/9780429029608/statistical-rethinking-richard-mcelreath){target="_blank"} by Richard McElreath. *(Requires CmdStanR and C++ compiler.)*|
 : {tbl-colwidths="[10, 15, 75]"}
