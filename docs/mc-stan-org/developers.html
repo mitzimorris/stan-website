@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Software Development Lifecycle – Stan</title>
+<title>Stan Project’s Software Development Lifecycle – Stan</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -172,9 +172,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#stan-projects-software-development-lifecycle" id="toc-stan-projects-software-development-lifecycle" class="nav-link active" data-scroll-target="#stan-projects-software-development-lifecycle">Stan Project’s Software Development Lifecycle</a>
-  <ul class="collapse">
-  <li><a href="#communication" id="toc-communication" class="nav-link" data-scroll-target="#communication">Communication</a></li>
+  <li><a href="#communication" id="toc-communication" class="nav-link active" data-scroll-target="#communication">Communication</a></li>
   <li><a href="#licensing" id="toc-licensing" class="nav-link" data-scroll-target="#licensing">Licensing</a></li>
   <li><a href="#community-size" id="toc-community-size" class="nav-link" data-scroll-target="#community-size">Community size</a></li>
   <li><a href="#source-code-management" id="toc-source-code-management" class="nav-link" data-scroll-target="#source-code-management">Source code management</a></li>
@@ -191,7 +189,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#minor-version-and-forward-compatibility" id="toc-minor-version-and-forward-compatibility" class="nav-link" data-scroll-target="#minor-version-and-forward-compatibility">Minor version and forward compatibility</a></li>
   <li><a href="#bug-fixes-and-patch-releases" id="toc-bug-fixes-and-patch-releases" class="nav-link" data-scroll-target="#bug-fixes-and-patch-releases">Bug fixes and patch releases</a></li>
   </ul></li>
-  </ul></li>
   <li><a href="#deprecating-and-removing-features" id="toc-deprecating-and-removing-features" class="nav-link" data-scroll-target="#deprecating-and-removing-features">Deprecating and Removing Features</a>
   <ul class="collapse">
   <li><a href="#availability-of-current-and-historical-archive-versions" id="toc-availability-of-current-and-historical-archive-versions" class="nav-link" data-scroll-target="#availability-of-current-and-historical-archive-versions">Availability of current and historical archive versions</a></li>
@@ -206,11 +203,25 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Stan Project’s Software Development Lifecycle</h1>
+</div>
 
 
 
-<section id="stan-projects-software-development-lifecycle" class="level1">
-<h1>Stan Project’s Software Development Lifecycle</h1>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
 <p>The development, release, and maintenance of Stan is a collaborative process involving the Stan development team. The team covers multiple statistical and computational disciplines and its members work in academia, industry, or both. The Stan project employs standard software development, code review, and testing methodologies.</p>
 <p>This document describes the software development lifecycle (SDLC) for projects managed by the Stan project and hosted by Stan’s GitHub organization <a href="https://github.com/stan-dev">stan-dev</a>. Projects covered include the math library, core C++ algorithms, parser and code generator, and all of the interface and visualization packages.</p>
 <p>The layout and content of this document very closely follows the <a href="https://www.r-project.org/doc/R-FDA.pdf">R regulatory compliance and validation document</a>.</p>
@@ -299,7 +310,6 @@ ul.task-list li input[type="checkbox"] {
 <section id="bug-fixes-and-patch-releases" class="level3">
 <h3 class="anchored" data-anchor-id="bug-fixes-and-patch-releases">Bug fixes and patch releases</h3>
 <p>If a release does not add new functionality or break backward compatibility, only its patch version is incremented. Patch releases of Stan are made when an important bug is fixed before any new work is done. Because Stan keeps its development branch clean, pending patches are easily rolled into minor releases.</p>
-</section>
 </section>
 </section>
 <section id="deprecating-and-removing-features" class="level1">
