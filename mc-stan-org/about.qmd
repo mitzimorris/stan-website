@@ -38,7 +38,7 @@ improved Stan's usability and reliability.
 for questions, discussion, and announcements related to Stan for
 both users and developers.  
 
-* Stan slack - developer discussions
+* [Stan slack](https://join.slack.com/t/mc-stan/shared_invite/zt-1le4ebi4m-UMtiOkJb4gcS16qz2wIYCw) - developer discussions
 
 * GitHub issues - report bugs
 
