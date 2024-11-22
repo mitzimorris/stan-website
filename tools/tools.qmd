@@ -16,7 +16,7 @@ A curated collection of tools and interfaces to help you work effectively with S
 |--------------|----------|-----------------|
 | **R**        | [**CmdStanR**](https://mc-stan.org/cmdstanr){target="_blank"} | Interface to Stan for R, based on CmdStan. **Recommended interface for R users.** |
 | **Python**   | [**CmdStanPy**](https://mc-stan.org/cmdstanpy){target="_blank"} | Interface to Stan for Python, based on CmdStan. **Recommended interface for Python users.** |
-| **Web**      | [**Stan Playground**](https://github.com/flatironinstitute/stan-playground){target="_blank"} | Browser-based editor and runtime environment for Stan models. **Highly recommended for new users.** |
+| **Web**      | [**Stan Playground**](https://stan-playground.flatironinstitute.org/){target="_blank"} | Browser-based editor and runtime environment for Stan models. **Highly recommended for new users.** |
 | **Julia**    | [**Stan.jl**](http://stanjulia.github.io/Stan.jl/stable/INTRO/){target="_blank"} | Interface to Stan for Julia users. |
 | **MATLAB**   | [**MatlabStan**](https://github.com/brian-lau/MatlabStan/wiki){target="_blank"} | Interface to Stan for MATLAB users. |
 | **Shell**    | [**CmdStan**](https://mc-stan.org/cmdstan){target="_blank"} | Command-line interface to Stan, usable from any shell environment. |
