@@ -244,8 +244,7 @@ This directory contains one or more versions of CmdStan.
 Both CmdStanPy and CmdStanR provide the following functions:
 
 * `rebuild_cmdstan` - rebuild the specified release.  On Mac, often required after an Xcode update.
-* `show_versions` - shows all installed CmdStan versions
-* `cmdstan_path` - shows which version of CmdStan is being used
+* `cmdstan_path` - displays the path to the local install of CmdStan; path name includes version number.
 * `set_cmdstan_path` - specify which version of CmdStan to use.
 
 ## Troubleshooting the Install
