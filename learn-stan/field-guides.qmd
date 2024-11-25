@@ -32,9 +32,13 @@ see this Discourse post:  [Fostering Stan user communities through domain-specif
   
 ### [Stan for Cognitive Science](https://cognitive-science-stan.github.io/){target="_blank"}
 
-* Cognitive Science and Neuroscience papers which use Stan, BRMS, or RStanArm.
+* Cognitive Science and Neuroscience papers which use Stan, brms, or RStanArm.
 * Maintainer: [Bruno Nicenboim](https://www.tilburguniversity.edu/staff/b-nicenboim){target="_blank"}
 
+### [Applied Modelling in Drug Development](https://opensource.nibr.com/bamdd/)
+
+* Case studies using brms which address clinical questions for drug development.
+* Editor: [Stebastian Weber](mailto:sebastian.weber@novartis.com)
 
 
 ## StanConnect Sessions
