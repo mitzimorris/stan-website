@@ -12,8 +12,24 @@ is associated with NumFOCUS, a 501(c)(3) nonprofit supporting open code
 and reproducible science, through which you can [help support
 Stan](support.html#contribute-money).
 
+## Stan Development Team
 
-### Acknowledgements
+The project is a team effort comprised of full time and volunteer developers from around the world.
+
+* [Development Team Members and Collaborators](https://github.com/orgs/stan-dev/people)
+
+## Stan Community Forums
+
+* [Stan forums](https://discourse.mc-stan.org) -  message board
+for questions, discussion, and announcements related to Stan for
+both users and developers.  
+
+* [Stan slack](https://join.slack.com/t/mc-stan/shared_invite/zt-1le4ebi4m-UMtiOkJb4gcS16qz2wIYCw) - developer discussions
+
+* [GitHub issues](https://github.com/stan-dev/) - report bugs
+
+
+## Acknowledgements
 
 Stan has grown from a small research project started in 2011 at Columbia University
 to a global community of developers, researchers, and users.
@@ -37,24 +53,8 @@ the U.S. Office of Naval Research,
 the U.S. National Institutes of Health,
 the Alfred P. Sloan Foundation,
 and the Chan Zuckerberg Foundation,
-and by gifts from Google, and Facebook.
+and by gifts from Novartis, Google, and Facebook.
 Hosting and support for Stan's continuous integration testing is generously provided by the Simons Foundation.
-
-## Stan Development Team
-
-The project is a team effort comprised of full time and volunteer developers from around the world.
-
-* [Development Team Members and Collaborators](https://github.com/orgs/stan-dev/people)
-
-## Stan Community Forums
-
-* [Stan forums](https://discourse.mc-stan.org) -  message board
-for questions, discussion, and announcements related to Stan for
-both users and developers.  
-
-* [Stan slack](https://join.slack.com/t/mc-stan/shared_invite/zt-1le4ebi4m-UMtiOkJb4gcS16qz2wIYCw) - developer discussions
-
-* [GitHub issues](https://github.com/stan-dev/) - report bugs
 
 
 ## Licensing

@@ -50,7 +50,7 @@ website:
             href: learn-stan/publications.qmd
       - text: "Tools"
         href: tools/tools.qmd
-      - text: "About mc-stan.org"
+      - text: "About"
         href: mc-stan-org/about.qmd
     tools:
       - icon: github
