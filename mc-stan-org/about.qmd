@@ -21,15 +21,29 @@ The Stan project owes its success to the contributions from hundreds of
 developers, researchers, active users, and funders.
 Individual contributions to the software and documentation can be tracked through GitHub.
 
+We are grateful to all the users who have taken the time to file bug reports and
+feature requests via the GitHub and the Stan forums; this feedback has greatly
+improved Stan's usability and reliability.
+
 Stan has been funded through grants for Stan and its developers,
 through in-kind donations in the form of companies contributing
 developer time to Stan and individuals contributing their own time to
 Stan, and through donations to the open-source scientific software
-non-profit NumFOCUS.
+non-profit NumFOCUS.   Stan development has been funded by grants from
+the U.S. Department of Energy,
+the U.S. Department of Education,
+the U.S. National Science Foundation,
+the U.S. Office of Naval Research,
+the U.S. National Institutes of Health,
+the Alfred P. Sloan Foundation,
+and the Chan Zuckerberg Foundation,
+and by gifts from Google, and Facebook.
 
-We are grateful to all the users who have taken the time to file bug reports and
-feature requests via the GitHub and the Stan forums; this feedback has greatly
-improved Stan's usability and reliability.
+## Stan Development Team
+
+The project is a team effort comprised of full time and volunteer developers from around the world.
+
+* [Development Team Members and Collaborators](https://github.com/orgs/stan-dev/people)
 
 ## Stan Community Forums
 
@@ -40,12 +54,6 @@ both users and developers.
 * [Stan slack](https://join.slack.com/t/mc-stan/shared_invite/zt-1le4ebi4m-UMtiOkJb4gcS16qz2wIYCw) - developer discussions
 
 * [GitHub issues](https://github.com/stan-dev/) - report bugs
-
-## Stan Development Team
-
-The project is a team effort comprised of full time and volunteer developers from around the world.
-
-* [Development Team Members and Collaborators](https://github.com/orgs/stan-dev/people)
 
 
 ## Licensing
