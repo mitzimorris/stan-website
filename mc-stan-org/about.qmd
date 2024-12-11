@@ -10,7 +10,7 @@ Stan is freedom-respecting, open-source software <span
 class="note">(new BSD core, some interfaces GPLv3)</span>.&nbsp; Stan
 is associated with NumFOCUS, a 501(c)(3) nonprofit supporting open code
 and reproducible science, through which you can [help support
-Stan](support.html#contribute-money).
+Stan](#support-stan).
 
 ## Stan Development Team
 

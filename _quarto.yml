@@ -29,13 +29,7 @@ website:
       - text: "Getting Started"
         href: install/install.qmd
       - text: "Documentation"
-        menu:
-          - text: "Stan Users Guide"
-            url: https://mc-stan.org/docs/stan-users-guide/index.html
-          - text: "Reference Manual"
-            url: https://mc-stan.org/docs/reference-manual/index.html
-          - text: "Functions Reference"
-            url: https://mc-stan.org/docs/functions-reference/overview.html
+        href: "https://mc-stan.org/docs"
       - text: "Learning Resources"
         menu:
           - text: "Tutorials"
