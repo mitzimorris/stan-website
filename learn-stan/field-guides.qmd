@@ -38,7 +38,7 @@ see this Discourse post:  [Fostering Stan user communities through domain-specif
 ### [Applied Modelling in Drug Development](https://opensource.nibr.com/bamdd/)
 
 * Case studies using brms which address clinical questions for drug development.
-* Editor: [Stebastian Weber](mailto:sebastian.weber@novartis.com)
+* Editor: [Sebastian Weber](mailto:sebastian.weber@novartis.com) and colleagues.
 
 
 ## StanConnect Sessions
