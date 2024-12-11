@@ -20,8 +20,8 @@ A curated collection of tools and interfaces to help you work effectively with S
 | **Julia**    | [**Stan.jl**](http://stanjulia.github.io/Stan.jl/stable/INTRO/){target="_blank"} | Interface to Stan for Julia users. |
 | **MATLAB**   | [**MatlabStan**](https://github.com/brian-lau/MatlabStan/wiki){target="_blank"} | Interface to Stan for MATLAB users. |
 | **Shell**    | [**CmdStan**](https://mc-stan.org/cmdstan){target="_blank"} | Command-line interface to Stan, usable from any shell environment. |
-| **R**   | [**RStan**](https://mc-stan.org/rstan){target="_blank"} | Legacy R interface to Stan. *(For new projects, consider using CmdStanR.)* |
-| **Python**   | [**PyStan**](https://mc-stan.org/pystan){target="_blank"} | Legacy Python interface to Stan. *(For new projects, consider using CmdStanPy.)* |
+| **R**   | [**RStan**](https://mc-stan.org/rstan){target="_blank"} | R interface to Stan. |
+| **Python**   | [**PyStan**](https://mc-stan.org/pystan){target="_blank"} | Legacy Python interface to Stan. |
 : {tbl-colwidths="[10, 20, 70]"}
 
 For detailed installation instructions see [Getting Started](../install/install.qmd).
@@ -34,8 +34,8 @@ For detailed installation instructions see [Getting Started](../install/install.
 
 | **Language** | **Tool** | **Description** |
 |--------------|----------|-----------------|
-| **R**        | [**brms**](https://paul-buerkner.github.io/brms/){target="_blank"} | Use extended `lme4`-like formula syntax to specify and fit multivariate and multilevel models in Stan. *(Requires CmdStanR and C++ compiler.)* |
-| **R**        | [**rstanarm**](https://mc-stan.org/rstanarm){target="_blank"} | Provides stable, efficient Stan versions of R model-fitting packages.  Installs easily from CRAN, no C++ compiler needed. |
+| **R**        | [**brms**](https://paul-buerkner.github.io/brms/){target="_blank"} | Use extended `lme4`-like formula syntax to specify and fit multivariate and multilevel models in Stan. *Requires CmdStanR or RStan, plus C++ compiler.* |
+| **R**        | [**rstanarm**](https://mc-stan.org/rstanarm){target="_blank"} | Provides robust and efficient pre-compiled Stan versions of R model-fitting packages.  Easily installed from CRAN, no C++ compiler needed. |
 : {tbl-colwidths="[10, 20, 70]"}
 
 ---
