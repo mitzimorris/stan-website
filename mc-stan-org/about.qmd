@@ -38,6 +38,7 @@ the U.S. National Institutes of Health,
 the Alfred P. Sloan Foundation,
 and the Chan Zuckerberg Foundation,
 and by gifts from Google, and Facebook.
+Hosting and support for Stan's continuous integration testing is generously provided by the Simons Foundation.
 
 ## Stan Development Team
 
