@@ -14,7 +14,7 @@ description: |
 ::: {.g-col-1}
 :::
 ::: {.g-col-8}
-# Stan: Software for Bayesian Data Analysis
+# Stan: Software&nbsp;for&nbsp;Bayesian&nbsp;Data&nbsp;Analysis
 :::
 :::
 :::
