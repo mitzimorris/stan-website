@@ -19,12 +19,12 @@ A curated collection of tools and interfaces to help you work effectively with S
 | **Web**      | [**Stan Playground**](https://stan-playground.flatironinstitute.org/){target="_blank"} | Browser-based editor and runtime environment for Stan models. **Highly recommended for new users.** |
 | **Julia**    | [**Stan.jl**](http://stanjulia.github.io/Stan.jl/stable/INTRO/){target="_blank"} | Interface to Stan for Julia users. |
 | **MATLAB**   | [**MatlabStan**](https://github.com/brian-lau/MatlabStan/wiki){target="_blank"} | Interface to Stan for MATLAB users. |
-| **Shell**    | [**CmdStan**](https://mc-stan.org/cmdstan){target="_blank"} | Command-line interface to Stan, usable from any shell environment. |
+| **Shell**    | [**CmdStan**](https://mc-stan.org/docs/cmdstan-guide){target="_blank"} | Command-line interface to Stan, usable from any shell environment. |
 | **R**   | [**RStan**](https://mc-stan.org/rstan){target="_blank"} | R interface to Stan. |
-| **Python**   | [**PyStan**](https://mc-stan.org/pystan){target="_blank"} | Legacy Python interface to Stan. |
+| **Python**   | [**PyStan**](https://pystan.readthedocs.io/en/latest/){target="_blank"} | Legacy Python interface to Stan. |
 : {tbl-colwidths="[10, 20, 70]"}
 
-For detailed installation instructions see [Getting Started](../install/install.qmd).
+For detailed installation instructions see [Getting Started](../install/).
 
 ---
 
@@ -77,7 +77,7 @@ For detailed installation instructions see [Getting Started](../install/install.
 | **Editor/IDE**         | **Tool** | **Description** |
 |------------------------|----------|-----------------|
 | **RStudio**            | **Built-in Support** | RStudio 1.2+ includes Stan syntax highlighting and code snippets.  [(Source code)](https://github.com/rstudio/rstudio/blob/main/src/gwt/acesupport/acemode/stan_highlight_rules.js){target="_blank"} |
-| **Visual Studio Code** | [**Stan VSCode Extension**](https://marketplace.visualstudio.com/items?itemName=stan-dev.stan-vscode){target="_blank"} | Stan language support with syntax highlighting, autocompletion, and snippets. |
+| **Visual Studio Code** | [**Stan VSCode Extension**](https://marketplace.visualstudio.com/items?itemName=ivan-bocharov.stan-vscode){target="_blank"} | Stan language support with syntax highlighting, autocompletion, and snippets. |
 | **Emacs**              | [**stan-mode**](https://github.com/stan-dev/stan-mode){target="_blank"} | Major mode for Stan with syntax highlighting and indentation. |
 | **Vim**                | [**stan-vim**](https://github.com/eigenfoo/stan-vim){target="_blank"} | Syntax highlighting, indentation, and code folding for Stan in Vim. |
 | **Atom**               | [**language-stan**](https://github.com/stan-dev/atom-language-stan){target="_blank"} | Stan language support in Atom editor. |
@@ -89,3 +89,14 @@ For detailed installation instructions see [Getting Started](../install/install.
 : {tbl-colwidths="[15, 25, 60]"}
 
 ---
+
+## Software Packages built on Stan
+
+| **Language**           | **Tool** | **Description** |
+|------------------------|----------|-----------------|
+| **Python**, **R**      | [**PROPHET**](https://facebook.github.io/prophet/){target="_blank"} | Forecasting at scale for time series data. |
+| **R**                  | [**blavaan**](https://ecmerkle.github.io/blavaan){target="_blank"} | R package for Bayesian latent variable analysis. |
+| **R**                  | [**rethinking**](https://github.com/rmcelreath/rethinking/){target="_blank"} | Software for book *Statistical Rethinking* |
+: {tbl-colwidths="[10, 20, 70]"}
+
+Additional R packages on CRAN which are built on Stan can be found in the reverse links from the packages [rstan](https://cran.r-project.org/web/packages/rstan/index.html){target="_blank"} and [rstanarm](https://cran.r-project.org/web/packages/rstanarm/index.html){target="_blank"}.

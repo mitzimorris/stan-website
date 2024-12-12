@@ -5,13 +5,16 @@ project:
   render:
     - "index.qmd"
     - "404.qmd"
+    - "about/*.qmd"
     - "install/*.qmd"
-    - "tools/*.qmd"
     - "learn-stan/*.qmd"
     - "learn-stan/*/*.qmd"
-    - "mc-stan-org/*.qmd"
+    - "tools/*.qmd"
   resources:
-    - learn-stan/case-studies/*.html
+    - "learn-stan/case-studies/*.html"
+    - "learn-stan/case-studies/planetary_motion/*.html"
+    - "learn-stan/case-studies/planetary_motion/*/*.*"
+    - "learn-stan/case-studies/planetary_motion/*/*/*.*"
 
 website:
   favicon: img/logo_tm.png
@@ -27,7 +30,7 @@ website:
       - text: "Stan"
         href: index.qmd
       - text: "Getting Started"
-        href: install/install.qmd
+        href: install/
       - text: "Documentation"
         href: "https://mc-stan.org/docs"
       - text: "Learning Resources"
@@ -43,9 +46,9 @@ website:
           - text: "Publications"
             href: learn-stan/publications.qmd
       - text: "Tools"
-        href: tools/tools.qmd
+        href: tools/
       - text: "About"
-        href: mc-stan-org/about.qmd
+        href: about/
     tools:
       - icon: github
         url: https://github.com/stan-dev

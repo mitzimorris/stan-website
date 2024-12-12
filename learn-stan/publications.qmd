@@ -55,7 +55,7 @@ toc-location: right
    *Statistics and Computing*. doi:10.1007/s11222-016-9696-4.
 
 * Jonah Gabry, Daniel Simpson, Aki Vehtari, Michael Betancourt, Andrew Gelman. 2019
-  [Visualization in Bayesian workflow.](https://doi.org/10.1111/rssa.12378){target="_blank"}
+  [Visualization in Bayesian workflow.](https://arxiv.org/pdf/1709.01449){target="_blank"}
   *Journal of the Royal Statistical Society Series A: Statistics in Society* 182(2):389–402.
 
 * Robert L. Grant, Daniel C. Furr, Bob Carpenter, and Andrew
@@ -83,8 +83,7 @@ toc-location: right
 * Johnson, A.A., M. Q. Ott, M. Dogucu. 2021. [*Bayes Rules! An Introduction to Applied Bayesian Modeling*](https://www.bayesrulesbook.com){target="_blank"} CRC Press.
 
 * Holmes, E. E., M. D. Scheuerell, and E. J. Ward.  2019.
-  [*Applied Time Series Analysis for Fisheries and Environmental Sciences*](
-  https://nwfsc-timeseries.github.io/atsa-labs/){target="_blank"}. NOAA Fisheries,
+  [*Applied Time Series Analysis for Fisheries and Environmental Sciences*](https://atsa-es.github.io/atsa-labs/){target="_blank"}. NOAA Fisheries,
   Northwest Fisheries Science Center.
 
 * Hilbe, J. M., R.S. de Souza, and E. E. O. Ishida.  2017. [*Bayesian

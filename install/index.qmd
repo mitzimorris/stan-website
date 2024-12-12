@@ -7,7 +7,7 @@ toc-depth: 3
 
 To analyze your data with Stan, you can either
 
-- [Use Stan directly from within your preferred programming environment](#sec-install).
+- Use Stan directly from within your preferred programming environment.
 This option lets you write custom models using the Stan language and then fit them to data.
 
 - Use a Stan based-modeling package - skip to [High-level Stan Interfaces](#high-level-stan-interfaces).
@@ -15,7 +15,7 @@ This option lets you specify your model using formula-based syntax, as in R pack
 eliminating the need to learn how to write Stan programs.
 
 
-## Download and Install Stan {#sec-install}
+## Download and Install Stan
 
 To compile and run Stan models directly from within R, Python, or Julia, 
 select your OS, programming language interface, and preferred installation method in the grid below.
@@ -294,7 +294,7 @@ See CmdStan Guide section [Troubleshooting the Installation](https://mc-stan.org
 
 | **Interface**     | **Title**                                                                                      |
 |--------------------|-----------------------------------------------------------------------------------------------|
-| **CmdStanPy**      | [CmdStanPy "Hello, World!"](https://mc-stan.org/cmdstanpy/users-guide/hello_world.html){target="_blank"}</br>[Getting Started with Bayesian Statistics using Stan and Python](https://github.com/bob-carpenter/stan-getting-started){target="_blank"}</br>[Multilevel regression modeling with CmdStanPy and plotnine](case-studies/radon_cmdstanpy_plotnine.html){target="_blank"} |
+| **CmdStanPy**      | [CmdStanPy "Hello, World!"](https://mc-stan.org/cmdstanpy/users-guide/hello_world.html){target="_blank"}</br>[Getting Started with Bayesian Statistics using Stan and Python](https://github.com/bob-carpenter/stan-getting-started){target="_blank"}</br>[Multilevel regression modeling with CmdStanPy and plotnine](../learn-stan/case-studies/radon_cmdstanpy_plotnine.html){target="_blank"} |
 | **CmdStanR**       | [Getting Started with CmdStanR](https://mc-stan.org/cmdstanr/articles/cmdstanr.html){target="_blank"}</br>[StanCon2023/Stan_tutorial.ipynb](https://github.com/charlesm93/stanTutorial/blob/main/StanCon2023/Stan_tutorial.ipynb){target="_blank"} |
 | **Julia**          | [Stan.jl Examples](https://github.com/StanJulia/Stan.jl/tree/master/Examples){target="_blank"}                |
 | **Google Colab**   | [Stan Notebooks in the Cloud](https://mc-stan.org/users/documentation/case-studies/jupyter_colab_notebooks_2020.html){target="_blank"} |
