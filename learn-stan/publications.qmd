@@ -30,7 +30,7 @@ toc-location: right
   *Journal of Machine Learning Research*. 15(47):1593−1623.
 
 * Cole C. Monnahan, James T. Thorson, and Trevor A. Branch. 2017.
-  [Faster estimation of Bayesian models in ecology using Hamiltonian Monte Carlo](https://doi.org/10.1111/2041-210X.12681){target="_blank}.
+  Faster estimation of Bayesian models in ecology using Hamiltonian Monte Carlo
   *Methods in Ecology and Evolution*.  8(3):339-348.
 
 * Radford Neal. 2011. MCMC Using Hamiltonian Dynamics.  In *Handbook of Markov Chain Monte
