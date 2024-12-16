@@ -96,28 +96,13 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Stan</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../install/install.html"> 
+    <a class="nav-link" href="../install/"> 
 <span class="menu-text">Getting Started</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-documentation" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Documentation</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-documentation">    
-        <li>
-    <a class="dropdown-item" href="https://mc-stan.org/docs/stan-users-guide/index.html">
- <span class="dropdown-text">Stan Users Guide</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="https://mc-stan.org/docs"> 
+<span class="menu-text">Documentation</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="https://mc-stan.org/docs/reference-manual/index.html">
- <span class="dropdown-text">Reference Manual</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="https://mc-stan.org/docs/functions-reference/overview.html">
- <span class="dropdown-text">Functions Reference</span></a>
-  </li>  
-    </ul>
-  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-learning-resources" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Learning Resources</span>
@@ -146,12 +131,12 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../tools/tools.html"> 
+    <a class="nav-link" href="../tools/"> 
 <span class="menu-text">Tools</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../mc-stan-org/about.html"> 
-<span class="menu-text">About mc-stan.org</span></a>
+    <a class="nav-link" href="../about/"> 
+<span class="menu-text">About</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -191,7 +176,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#bayesian-model-of-planetary-motion-exploring-ideas-for-a-modeling-workflow-when-dealing-with-ordinary-differential-equations-and-multimodality" id="toc-bayesian-model-of-planetary-motion-exploring-ideas-for-a-modeling-workflow-when-dealing-with-ordinary-differential-equations-and-multimodality" class="nav-link" data-scroll-target="#bayesian-model-of-planetary-motion-exploring-ideas-for-a-modeling-workflow-when-dealing-with-ordinary-differential-equations-and-multimodality">Bayesian model of planetary motion: exploring ideas for a modeling workflow when dealing with ordinary differential equations and multimodality</a></li>
   <li><a href="#hmm-interface-example" id="toc-hmm-interface-example" class="nav-link" data-scroll-target="#hmm-interface-example">HMM Interface Example</a></li>
   <li><a href="#spatial-models-for-plant-neighborhood-dynamics-in-stan" id="toc-spatial-models-for-plant-neighborhood-dynamics-in-stan" class="nav-link" data-scroll-target="#spatial-models-for-plant-neighborhood-dynamics-in-stan">Spatial models for plant neighborhood dynamics in Stan</a></li>
-  <li><a href="#predicting-engine-failure-with-hierarchical-gaussian-process" id="toc-predicting-engine-failure-with-hierarchical-gaussian-process" class="nav-link" data-scroll-target="#predicting-engine-failure-with-hierarchical-gaussian-process">Predicting Engine Failure with Hierarchical Gaussian Process</a></li>
   <li><a href="#upgrading-to-the-new-ode-interface" id="toc-upgrading-to-the-new-ode-interface" class="nav-link" data-scroll-target="#upgrading-to-the-new-ode-interface">Upgrading to the new ODE interface</a></li>
   <li><a href="#bayesian-workflow-for-disease-transmission-modeling-in-stan" id="toc-bayesian-workflow-for-disease-transmission-modeling-in-stan" class="nav-link" data-scroll-target="#bayesian-workflow-for-disease-transmission-modeling-in-stan">Bayesian Workflow for disease transmission modeling in Stan</a></li>
   <li><a href="#reduce-sum-example-parallelization-of-a-single-chain-across-multiple-cores" id="toc-reduce-sum-example-parallelization-of-a-single-chain-across-multiple-cores" class="nav-link" data-scroll-target="#reduce-sum-example-parallelization-of-a-single-chain-across-multiple-cores">Reduce Sum Example: parallelization of a single chain across multiple cores</a></li>
@@ -421,7 +405,7 @@ BSD (3 clause), CC-BY
 <section id="bayesian-model-of-planetary-motion-exploring-ideas-for-a-modeling-workflow-when-dealing-with-ordinary-differential-equations-and-multimodality" class="level3">
 <h3 class="anchored" data-anchor-id="bayesian-model-of-planetary-motion-exploring-ideas-for-a-modeling-workflow-when-dealing-with-ordinary-differential-equations-and-multimodality">Bayesian model of planetary motion: exploring ideas for a modeling workflow when dealing with ordinary differential equations and multimodality</h3>
 <p>The Bayesian model of planetary motion is a simple but powerful example that illustrates important concepts, as well as gaps, in prescribed modeling workflows. Our focus is on Bayesian inference using Markov chains Monte Carlo for a model based on an ordinary differential equations (ODE). Our example presents unexpected multimodality, causing our inference to be unreliable and what is more, dramatically slowing down our ODE integrators. What do we do when our chains do not mix and do not forget their starting points? Reasoning about the computational statistics at hand and the physics of the modeled phenomenon, we diagnose how the modes arise and how to improve our inference. Our process for fitting the model is iterative, starting with a simplification and building the model back up, and makes extensive use of visualization.</p>
-<p><a href="case-studies/planetary_motion/planetary_motion.html" target="_blank">View</a>(HTML)</p>
+<p><a href="case-studies/planetary_motion.html" target="_blank">View</a>(HTML)</p>
 <dl>
 <dt>Authors</dt>
 <dd>
@@ -496,33 +480,6 @@ plants, neighbor interactions, sparse matrix, segment function
 <dt>License</dt>
 <dd>
 BSD (3 clause), CC BY NC
-</dd>
-</dl>
-</section>
-<section id="predicting-engine-failure-with-hierarchical-gaussian-process" class="level3">
-<h3 class="anchored" data-anchor-id="predicting-engine-failure-with-hierarchical-gaussian-process">Predicting Engine Failure with Hierarchical Gaussian Process</h3>
-<p>This gaussian process case study is an extension of the StanCon <a href="https://www.youtube.com/watch?v=1FJyNntNMH4&amp;feature=youtu.be" target="_blank">talk</a> “Failure prediction in hierarchical equipment system: spline fitting naval ship failure”. Many comparison criteria exist, but in terms of prediction accuracy, the gaussian process model outperformed the spline model. However, this accuracy comes at a cost of a more detailed and iterative checking process. This case study shows how identification and underfitting problems diagnosed from pushforward and predictive checks are addressed through reparameterization and adding variables. Basically, our data is highly unbalanced per category with lots of missing data. Also, due to the hierarchical structure of the system, such as shared engine types, the hierarchical model is applicable. For a detailed explanation of the data and spline model, please refer to <a href="https://github.com/hyunjimoon/reliability_prediction/blob/master/spline/Failure%20prediction%20in%20hierarchical%20equipment%20system.ipynb" target="_blank">this notebook</a>.</p>
-<p><a href="case-studies/gaussian-process.html" target="_blank">View</a>(HTML)</p>
-<dl>
-<dt>Author</dt>
-<dd>
-Hyunji Moon, Jungin Choi
-</dd>
-<dt>Keywords</dt>
-<dd>
-Hierarchical Gaussian process, Bayesian workflow
-</dd>
-<dt>Source Repository</dt>
-<dd>
-<a href="https://github.com/stan-dev/example-models/tree/master/knitr/gaussian-process" target="_blank">example-models/knitr/gaussian-process</a> (GitHub)
-</dd>
-<dt>Dependencies</dt>
-<dd>
-<code>CmdStanR</code>, <code>Rstan</code>
-</dd>
-<dt>License</dt>
-<dd>
-BSD (3 clause), CC-BY
 </dd>
 </dl>
 </section>
@@ -609,7 +566,7 @@ BSD (3 clause), CC-BY
 </section>
 <section id="stan-notebooks-in-the-cloud" class="level3">
 <h3 class="anchored" data-anchor-id="stan-notebooks-in-the-cloud">Stan Notebooks in the Cloud</h3>
-<p>This report shows you how to author a Jupyter Notebook for your Stan model and data so that anyone with a modern web browser and a Google account can run your analysis with Google Colaboratory free cloud servers. It shows you how to quickly set up a Stan installation in the cloud and introduces two lightweight interfaces: <a href="https://mc-stan.org/cmdstanr/articles/cmdstanr.html" target="_blank">CmdStanR</a> and <a href="https://cmdstanpy.readthedocs.io/en/latest/index.html" target="_blank">CmdStanPy</a>.</p>
+<p>This report shows you how to author a Jupyter Notebook for your Stan model and data so that anyone with a modern web browser and a Google account can run your analysis with Google Colaboratory free cloud servers. It shows you how to quickly set up a Stan installation in the cloud and introduces two lightweight interfaces: <a href="https://mc-stan.org/cmdstanr/" target="_blank">CmdStanR</a> and <a href="https://cmdstanpy.readthedocs.io/" target="_blank">CmdStanPy</a>.</p>
 <p><a href="case-studies/jupyter_colab_notebooks_2020.html" target="_blank">View</a>(HTML)</p>
 <dl>
 <dt>Author</dt>
@@ -1181,8 +1138,8 @@ BSD (3 clause), CC-BY
 </section>
 <section id="a-primer-on-bayesian-multilevel-modeling-using-pystan" class="level3">
 <h3 class="anchored" data-anchor-id="a-primer-on-bayesian-multilevel-modeling-using-pystan">A Primer on Bayesian Multilevel Modeling using PyStan</h3>
-<p>This case study replicates the analysis of home radon levels using hierarchical models of <a href="http://www.stat.columbia.edu/~radon/credits.html" target="_blank">Lin, Gelman, Price, and Kurtz (1999)</a>. It illustrates how to generalize linear regressions to hierarchical models with group-level predictors and how to compare predictive inferences and evaluate model fits. Along the way it shows how to get data into Stan using pandas, how to sample using PyStan, and how to visualize the results using Seaborn.</p>
-<p><a href="case-studies/radon.html" target="_blank">View</a>(HTML)</p>
+<p>This case study replicates the analysis of home radon levels using hierarchical models of <a href="http://www.stat.columbia.edu/~gelman/research/published/lin.pdf" target="_blank">Lin, Gelman, Price, and Kurtz (1999)</a>. It illustrates how to generalize linear regressions to hierarchical models with group-level predictors and how to compare predictive inferences and evaluate model fits. Along the way it shows how to get data into Stan using pandas, how to sample using PyStan, and how to visualize the results using Seaborn.</p>
+<p><a href="../learn-stan/case-studies/radon.ipynb" target="_blank">View</a>(HTML)</p>
 <dl>
 <dt>Author</dt>
 <dd>
