@@ -27,7 +27,7 @@ see this Discourse post:  [Fostering Stan user communities through domain-specif
 ### [Stan for Epidemiology](https://epidemiology-stan.github.io/){target="_blank"}
 
 * Topics:  Disease transmission (SIR models), disease mapping (ICAR, BYM models), survival analysis, longitudinal data.
-* Maintainer: [Léo Grinsztajn](leo.grinsztajn@inria.fr){target="_blank"}
+* Maintainer: [Léo Grinsztajn](https://www.isir.upmc.fr/personnel/grinsztajn/){target="_blank"}
 
   
 ### [Stan for Cognitive Science](https://cognitive-science-stan.github.io/){target="_blank"}
