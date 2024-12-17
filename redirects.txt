@@ -10,5 +10,3 @@ https://mc-stan.org/events/stanconnect_SBC/index.html https://mc-stan.org/learn-
 https://mc-stan.org/users/citations/index.html https://mc-stan.org/about/#citing-stan
 https://mc-stan.org/users/issues/index.html  https://mc-stan.org/about/#how-to-report-bugs
 https://mc-stan.org/users/documentation/index.html https://mc-stan.org/docs/
-
-https://mc-stan.org/users/documentation/tutorials.html  https://mc-stan.org/learn-stan/tutorials.html
