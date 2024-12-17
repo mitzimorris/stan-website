@@ -2,6 +2,10 @@
 title: "About the Stan Project"
 page-layout: full
 toc-location: right
+
+aliases:
+ - ../community/index.html
+ - ../developers/index.html
 ---
 
 ## Open Code &amp; Reproducible Science
@@ -14,24 +18,17 @@ Stan](#support-stan).
 
 ## Licensing
 
+* *Computer code:*  [BSD 3-clause license](https://opensource.org/licenses/BSD-3-Clause), 
+
 * *Text content:*  [CC-BY ND 4.0 license](https://creativecommons.org/licenses/by-nd/4.0/legalcode)
-
-* *Computer code:*  [BSD 3-clause license](https://opensource.org/licenses/BSD-3-Clause)
-
 
 ### Copyright and trademark
 
 * Copyright 2011--2024, Stan Development Team and their assignees.
 
-* The Stan name and logo are registered trademarks of NumFOCUS.
+* The Stan name and logo are registered trademarks of [NumFOCUS](http://numfocus.org/) under the direction of the Stan Governing Body.
 
-
-### Using the Stan Logo
-
-The Stan name and logo are registered trademarks of [NumFOCUS](http://numfocus.org/)
-under the direction of the Stan Governing Body.
-
-Both may be freely used when referencing Stan, for example, in blog posts, lecture notes,
+Both the Stan name and logo may be freely used when referencing Stan, for example, in blog posts, lecture notes,
 or open source software packages, but they may not be used in the branding of commercial entities,
 such as paid software packages or paid courses, without the express license of the Stan Governing Body.
 If you have any questions or would like to inquire about licensing the Stan name
@@ -40,10 +37,8 @@ and/or logo for a commercial venture then please contact NumFOCUS at <mailto:adm
 The Stan name and Stan logo may not be used in ways that suggest the usage
 is endorsed by the Stan project without written permission from the Stan Governing Body.
 
-When using the Stan logo please use one of the following:
-
-* [Stan Logo png](https://github.com/stan-dev/logos/blob/master/logo_tm.png)
-* [Stan Logo svg](https://github.com/stan-dev/logos/blob/master/logo_tm.svg)
+When using the Stan logo please use either the [Stan Logo png](https://github.com/stan-dev/logos/blob/master/logo_tm.png) or the 
+[Stan Logo svg](https://github.com/stan-dev/logos/blob/master/logo_tm.svg).
 
 
 ## Stan Development Team

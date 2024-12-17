@@ -2,6 +2,28 @@
 title: StanCon Talks
 page-layout: full
 toc-location: right
+
+aliases:
+ - ../events/stancon2019Cambridge/index.html
+ - ../events/stancon2019Cambridge/abstracts.html
+ - ../events/stancon-code_of_conduct.html 
+ - ../events/stancon.html
+ - ../events/stancon2024/index.html
+ - ../events/stancon2023/index.html
+ - ../events/stancon2018Helsinki/stancon-code_of_conduct.html
+ - ../events/stancon2018Helsinki/stancon-registration.html
+ - ../events/stancon2018Helsinki/index.html
+ - ../events/stancon2018Helsinki/GpuOptimizedMath.html
+ - ../events/stancon2018Helsinki/stancon-accommodation.html
+ - ../events/stancon2018Helsinki/stancon-travel.html
+ - ../events/stancon2018Helsinki/stancon-submissions.html
+ - ../events/stancon-submissions.html
+ - ../events/stancon2020/index.html
+ - ../events/stancon2018/stancon-code_of_conduct.html
+ - ../events/stancon2018/report.html
+ - ../events/stancon2018/index.html
+ - ../events/stancon2018/stancon-submissions.html
+ - ../events/stancon2017-presenter-bios.html
 ---
 
 ## StanCon 2024 Oxford

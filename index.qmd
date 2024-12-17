@@ -6,6 +6,12 @@ section-divs: false
 hide-description: true
 description: | 
   Stan combines powerful statistical modeling capabilities with user-friendly interfaces, an active community, and a commitment to open-source development.  
+
+aliases:
+ - events/index.html
+ - users/index.html
+
+
 ---
 
 

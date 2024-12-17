@@ -1,0 +1,14 @@
+# format is OLD_LINK <space> NEW_LINK
+https://mc-stan.org/shop/index.html https://mc-stan.org/about/#shop-for-stan-swag
+https://mc-stan.org/about/team/index.html  https://mc-stan.org/about/#stan-development-team
+https://mc-stan.org/support/index.html https://mc-stan.org/about/#support-stan
+https://mc-stan.org/events/stanconnect_Ecology1/index.html https://mc-stan.org/learn-stan/field-guides.html#stanconnect-sessions
+https://mc-stan.org/events/stanconnect_CogNeuro/index.html https://mc-stan.org/learn-stan/field-guides.html#stanconnect-sessions
+https://mc-stan.org/events/stanconnect_Biomedical/index.html https://mc-stan.org/learn-stan/field-guides.html#stanconnect-sessions
+https://mc-stan.org/events/stanconnect_Ecology2/index.html https://mc-stan.org/learn-stan/field-guides.html#stanconnect-sessions
+https://mc-stan.org/events/stanconnect_SBC/index.html https://mc-stan.org/learn-stan/field-guides.html#stanconnect-sessions
+https://mc-stan.org/users/citations/index.html https://mc-stan.org/about/#citing-stan
+https://mc-stan.org/users/issues/index.html  https://mc-stan.org/about/#how-to-report-bugs
+https://mc-stan.org/users/documentation/index.html https://mc-stan.org/docs/
+
+https://mc-stan.org/users/documentation/tutorials.html  https://mc-stan.org/learn-stan/tutorials.html
