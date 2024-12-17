@@ -6,6 +6,7 @@ toc-location: right
 aliases:
  - ../community/index.html
  - ../developers/index.html
+ - ../about/team/index.html
 ---
 
 ## Open Code &amp; Reproducible Science
@@ -18,7 +19,7 @@ Stan](#support-stan).
 
 ## Licensing
 
-* *Computer code:*  [BSD 3-clause license](https://opensource.org/licenses/BSD-3-Clause), 
+* *Computer code:*  [BSD 3-clause license](https://opensource.org/licenses/BSD-3-Clause),
 
 * *Text content:*  [CC-BY ND 4.0 license](https://creativecommons.org/licenses/by-nd/4.0/legalcode)
 
@@ -37,7 +38,7 @@ and/or logo for a commercial venture then please contact NumFOCUS at <mailto:adm
 The Stan name and Stan logo may not be used in ways that suggest the usage
 is endorsed by the Stan project without written permission from the Stan Governing Body.
 
-When using the Stan logo please use either the [Stan Logo png](https://github.com/stan-dev/logos/blob/master/logo_tm.png) or the 
+When using the Stan logo please use either the [Stan Logo png](https://github.com/stan-dev/logos/blob/master/logo_tm.png) or the
 [Stan Logo svg](https://github.com/stan-dev/logos/blob/master/logo_tm.svg).
 
 
@@ -51,7 +52,7 @@ The project is a team effort comprised of full time and volunteer developers fro
 
 * [Stan forums](https://discourse.mc-stan.org) -  message board
 for questions, discussion, and announcements related to Stan for
-both users and developers.  
+both users and developers.
 
 * [Stan slack](https://join.slack.com/t/mc-stan/shared_invite/zt-1le4ebi4m-UMtiOkJb4gcS16qz2wIYCw) - developer discussions
 
@@ -91,14 +92,14 @@ the `@Stan_Development_Team`.
 
 ## How to Cite Stan
 
-We appreciate citations for the Stan software because it lets us find out what 
+We appreciate citations for the Stan software because it lets us find out what
 people have been doing with Stan and motivate further grant funding.
 
 
 We appreciate citations for the Stan software because it lets us find
 out what people have been doing with Stan and motivate further grant
 funding. When citing Stan we recommend citing both Stan itself as well
-as the particular interface used. 
+as the particular interface used.
 
 To cite Stan itself you can cite the Stan Reference Manual or Stan User's Guide
 taking the year and version from the latest release on the Stan Project's Github releases page:
@@ -107,9 +108,9 @@ taking the year and version from the latest release on the Stan Project's Github
 * Stan Development Team. YEAR. Stan Reference Manual, VERSION. https://mc-stan.org
 * Stan Development Team. YEAR. Stan User's Guide, VERSION. https://mc-stan.org
 
-To cite the interface or post-processing package you used we recommend using the citation conventions 
-for the language (R, Python, Julia, etc.) associated with the interface or package. For example, to cite 
-RStan use the standard conventions for citing R packages. 
+To cite the interface or post-processing package you used we recommend using the citation conventions
+for the language (R, Python, Julia, etc.) associated with the interface or package. For example, to cite
+RStan use the standard conventions for citing R packages.
 
 ## Help Fund Stan
 
