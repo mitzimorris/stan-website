@@ -1,0 +1,78 @@
+# format is OLD_LINK <space> NEW_LINK
+
+https://mc-stan.org/shop/index.html https://mc-stan.org/about/#shop-for-stan-swag
+https://mc-stan.org/about/team/index.html  https://mc-stan.org/about/#stan-development-team
+https://mc-stan.org/support/index.html https://mc-stan.org/about/#support-stan
+https://mc-stan.org/community/index.html https://mc-stan.org/about
+https://mc-stan.org/developers/index.html  https://mc-stan.org/about
+
+https://mc-stan.org/events/index.html https://mc-stan.org/index.html
+
+https://mc-stan.org/events/stancon2019Cambridge/index.html https://mc-stan.org/learn-stan/stancon-talks.html
+https://mc-stan.org/events/stancon2019Cambridge/abstracts.html https://mc-stan.org/learn-stan/stancon-talks.html
+https://mc-stan.org/events/stancon-code_of_conduct.html  https://mc-stan.org/learn-stan/stancon-talks.html
+https://mc-stan.org/events/stancon.html https://mc-stan.org/learn-stan/stancon-talks.html
+https://mc-stan.org/events/stancon2024/index.html https://mc-stan.org/learn-stan/stancon-talks.html
+https://mc-stan.org/events/stancon2023/index.html https://mc-stan.org/learn-stan/stancon-talks.html
+https://mc-stan.org/events/stancon2018Helsinki/stancon-code_of_conduct.html https://mc-stan.org/learn-stan/stancon-talks.html
+https://mc-stan.org/events/stancon2018Helsinki/stancon-registration.html https://mc-stan.org/learn-stan/stancon-talks.html
+https://mc-stan.org/events/stancon2018Helsinki/index.html https://mc-stan.org/learn-stan/stancon-talks.html
+https://mc-stan.org/events/stancon2018Helsinki/GpuOptimizedMath.html https://mc-stan.org/learn-stan/stancon-talks.html
+https://mc-stan.org/events/stancon2018Helsinki/stancon-accommodation.html https://mc-stan.org/learn-stan/stancon-talks.html
+https://mc-stan.org/events/stancon2018Helsinki/stancon-travel.html https://mc-stan.org/learn-stan/stancon-talks.html
+https://mc-stan.org/events/stancon2018Helsinki/stancon-submissions.html https://mc-stan.org/learn-stan/stancon-talks.html
+https://mc-stan.org/events/stancon-submissions.html https://mc-stan.org/learn-stan/stancon-talks.html
+https://mc-stan.org/events/stancon2020/index.html https://mc-stan.org/learn-stan/stancon-talks.html
+https://mc-stan.org/events/stancon2018/stancon-code_of_conduct.html https://mc-stan.org/learn-stan/stancon-talks.html
+https://mc-stan.org/events/stancon2018/report.html https://mc-stan.org/learn-stan/stancon-talks.html
+https://mc-stan.org/events/stancon2018/index.html https://mc-stan.org/learn-stan/stancon-talks.html
+https://mc-stan.org/events/stancon2018/stancon-submissions.html https://mc-stan.org/learn-stan/stancon-talks.html
+https://mc-stan.org/events/stancon2017-presenter-bios.html https://mc-stan.org/learn-stan/stancon-talks.html
+
+https://mc-stan.org/events/stanconnect_Ecology1/index.html https://mc-stan.org/learn-stan/field-guides.html#stanconnect-sessions
+https://mc-stan.org/events/stanconnect_CogNeuro/index.html https://mc-stan.org/learn-stan/field-guides.html#stanconnect-sessions
+https://mc-stan.org/events/stanconnect_Biomedical/index.html https://mc-stan.org/learn-stan/field-guides.html#stanconnect-sessions
+https://mc-stan.org/events/stanconnect_Ecology2/index.html https://mc-stan.org/learn-stan/field-guides.html#stanconnect-sessions
+https://mc-stan.org/events/stanconnect_SBC/index.html https://mc-stan.org/learn-stan/field-guides.html#stanconnect-sessions
+
+https://mc-stan.org/interfaces/loo.html https://mc-stan.org/tools
+https://mc-stan.org/interfaces/rstanarm.html https://mc-stan.org/tools
+https://mc-stan.org/interfaces/pystan.html https://mc-stan.org/tools
+https://mc-stan.org/interfaces/mathematica-stan.html https://mc-stan.org/tools
+https://mc-stan.org/interfaces/rstantools.html https://mc-stan.org/tools
+https://mc-stan.org/interfaces/math.html https://mc-stan.org/tools
+https://mc-stan.org/interfaces/stata-stan.html https://mc-stan.org/tools
+https://mc-stan.org/interfaces/bayesplot.html https://mc-stan.org/tools
+https://mc-stan.org/interfaces/index.html https://mc-stan.org/tools
+https://mc-stan.org/interfaces/matlab-stan.html https://mc-stan.org/tools
+https://mc-stan.org/interfaces/rstan.html https://mc-stan.org/tools
+https://mc-stan.org/interfaces/stan.html https://mc-stan.org/tools
+https://mc-stan.org/interfaces/cmdstan.html https://mc-stan.org/tools
+https://mc-stan.org/interfaces/julia-stan.html https://mc-stan.org/tools
+https://mc-stan.org/interfaces/shinystan.html https://mc-stan.org/tools
+
+https://mc-stan.org/users/index.html https://mc-stan.org/index.html
+
+https://mc-stan.org/users/documentation/case-studies.html https://mc-stan.org/learn-stan/case-studies.html
+https://mc-stan.org/users/documentation/external.html https://mc-stan.org/learn-stan/publications.html
+https://mc-stan.org/users/documentation/tutorials.html  https://mc-stan.org/learn-stan/tutorials.html
+https://mc-stan.org/users/documentation/index.html https://mc-stan.org/docs/
+https://mc-stan.org/users/citations/index.html https://mc-stan.org/about/#citing-stan
+https://mc-stan.org/users/issues/index.html  https://mc-stan.org/about/#how-to-report-bugs
+
+https://mc-stan.org/users/interfaces/loo.html https://mc-stan.org/tools
+https://mc-stan.org/users/interfaces/rstanarm.html https://mc-stan.org/tools
+https://mc-stan.org/users/interfaces/pystan.html https://mc-stan.org/tools
+https://mc-stan.org/users/interfaces/mathematica-stan.html  https://mc-stan.org/tools
+https://mc-stan.org/users/interfaces/rstantools.html https://mc-stan.org/tools
+https://mc-stan.org/users/interfaces/math.html https://mc-stan.org/tools
+https://mc-stan.org/users/interfaces/brms.html https://mc-stan.org/tools
+https://mc-stan.org/users/interfaces/stata-stan.html https://mc-stan.org/tools
+https://mc-stan.org/users/interfaces/bayesplot.html https://mc-stan.org/tools
+https://mc-stan.org/users/interfaces/index.html https://mc-stan.org/tools
+https://mc-stan.org/users/interfaces/matlab-stan.html https://mc-stan.org/tools
+https://mc-stan.org/users/interfaces/rstan.html https://mc-stan.org/tools
+https://mc-stan.org/users/interfaces/stan.html https://mc-stan.org/tools
+https://mc-stan.org/users/interfaces/cmdstan.html https://mc-stan.org/tools
+https://mc-stan.org/users/interfaces/julia-stan.html https://mc-stan.org/tools
+https://mc-stan.org/users/interfaces/shinystan.html https://mc-stan.org/tools
