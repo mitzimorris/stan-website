@@ -14,7 +14,9 @@ concurrency:
 jobs:
   build-deploy:
     permissions:
-      contents: write
+      contents: read
+      pages: write
+      id-token: write
     environment: production
     runs-on: ubuntu-latest
 
