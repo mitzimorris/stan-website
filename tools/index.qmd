@@ -24,7 +24,6 @@ aliases:
  - ../users/interfaces/pystan.html 
  - ../users/interfaces/mathematica-stan.html  
  - ../users/interfaces/rstantools.html 
- - ../users/interfaces/math.html 
  - ../users/interfaces/brms.html 
  - ../users/interfaces/stata-stan.html 
  - ../users/interfaces/bayesplot.html 
