@@ -5,8 +5,6 @@ toc-location: right
 
 aliases:
  - ../community/index.html
- - ../developers/index.html
- - ../about/team/index.html
 ---
 
 ## Open Code &amp; Reproducible Science
@@ -84,7 +82,7 @@ to discuss what you want to do beforehand.
 
 * Write - If you'd like to contribute [case studies](../learn-stan/case-studies),
 [tutorials](../learn-stan/tutorials) and similar materials, please make a post on the
-[Stan forums publicity category](https://discourse.mc-stan.org/publicity), and tag
+[Stan forums publicity category](https://discourse.mc-stan.org/c/publicity), and tag
 the `@Stan_Development_Team`.
 
 * Host events - If you would like to organize a workshop or hackathon, please reach out to the community at large, via the Stan forums, or contact the Stan Governing Body at `board@mc-stan.org`.
