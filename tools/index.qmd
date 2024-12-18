@@ -9,7 +9,6 @@ aliases:
  - ../interfaces/pystan.html 
  - ../interfaces/mathematica-stan.html 
  - ../interfaces/rstantools.html 
- - ../interfaces/math.html 
  - ../interfaces/stata-stan.html 
  - ../interfaces/bayesplot.html 
  - ../interfaces/index.html 
