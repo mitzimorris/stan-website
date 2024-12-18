@@ -2,6 +2,8 @@
 title: Published Articles and Books
 page-layout: full
 toc-location: right
+aliases:
+  - /users/documentation/external.html
 ---
 
 ## Stan Language and Algorithms

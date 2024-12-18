@@ -2,6 +2,12 @@
 title: StanCon Talks
 page-layout: full
 toc-location: right
+
+aliases:
+ - ../events/stancon-code_of_conduct.html 
+ - ../events/stancon.html
+ - ../events/stancon-submissions.html
+
 ---
 
 ## StanCon 2024 Oxford
