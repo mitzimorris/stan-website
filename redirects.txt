@@ -81,3 +81,4 @@ https://mc-stan.org/events/stancon2017-notebooks/stancon2017-ahn-haines-zhang-hB
 https://mc-stan.org/events/stancon2017-notebooks/stancon2017-auerbach-trangucci-twelve-cities.pdf https://mc-stan.org/learn-stan/stancon-talks.html#stancon-2017-new-york-city
 https://mc-stan.org/events/stancon2017-presenter-bios.md https://mc-stan.org/learn-stan/stancon-talks.html#stancon-2017-new-york-city
 https://mc-stan.org/intefaces/math.html https://mc-stan.org/tools/#developer-tools-and-apis
+https://mc-stan.org/users/intefaces/math.html https://mc-stan.org/tools/#developer-tools-and-apis
