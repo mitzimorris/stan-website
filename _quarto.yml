@@ -45,6 +45,8 @@ website:
             href: learn-stan/field-guides.qmd
           - text: "Publications"
             href: learn-stan/publications.qmd
+          - text: "Diagnostics and Warnings"
+            href: learn-stan/diagnostics-warnings.qmd
       - text: "Tools"
         href: tools/
       - text: "About"
