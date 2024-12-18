@@ -128,6 +128,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../learn-stan/publications.html">
  <span class="dropdown-text">Publications</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../learn-stan/diagnostics-warnings.html">
+ <span class="dropdown-text">Diagnostics and Warnings</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -158,21 +162,18 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#open-code-reproducible-science" id="toc-open-code-reproducible-science" class="nav-link active" data-scroll-target="#open-code-reproducible-science">Open Code &amp; Reproducible Science</a></li>
-  <li><a href="#stan-development-team" id="toc-stan-development-team" class="nav-link" data-scroll-target="#stan-development-team">Stan Development Team</a></li>
-  <li><a href="#stan-community-forums" id="toc-stan-community-forums" class="nav-link" data-scroll-target="#stan-community-forums">Stan Community Forums</a></li>
-  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
   <li><a href="#licensing" id="toc-licensing" class="nav-link" data-scroll-target="#licensing">Licensing</a>
   <ul class="collapse">
   <li><a href="#copyright-and-trademark" id="toc-copyright-and-trademark" class="nav-link" data-scroll-target="#copyright-and-trademark">Copyright and trademark</a></li>
-  <li><a href="#using-the-stan-logo" id="toc-using-the-stan-logo" class="nav-link" data-scroll-target="#using-the-stan-logo">Using the Stan Logo</a></li>
   </ul></li>
-  <li><a href="#citing-stan" id="toc-citing-stan" class="nav-link" data-scroll-target="#citing-stan">Citing Stan</a></li>
-  <li><a href="#support-stan" id="toc-support-stan" class="nav-link" data-scroll-target="#support-stan">Support Stan</a>
-  <ul class="collapse">
-  <li><a href="#contribute-money" id="toc-contribute-money" class="nav-link" data-scroll-target="#contribute-money">Contribute Money</a></li>
-  <li><a href="#contribute-expertise" id="toc-contribute-expertise" class="nav-link" data-scroll-target="#contribute-expertise">Contribute Expertise</a></li>
-  </ul></li>
+  <li><a href="#stan-development-team" id="toc-stan-development-team" class="nav-link" data-scroll-target="#stan-development-team">Stan Development Team</a></li>
+  <li><a href="#stan-community-forums" id="toc-stan-community-forums" class="nav-link" data-scroll-target="#stan-community-forums">Stan Community Forums</a></li>
+  <li><a href="#how-to-report-bugs" id="toc-how-to-report-bugs" class="nav-link" data-scroll-target="#how-to-report-bugs">How to Report Bugs</a></li>
+  <li><a href="#how-to-contribute-to-stan" id="toc-how-to-contribute-to-stan" class="nav-link" data-scroll-target="#how-to-contribute-to-stan">How to Contribute to Stan</a></li>
+  <li><a href="#how-to-cite-stan" id="toc-how-to-cite-stan" class="nav-link" data-scroll-target="#how-to-cite-stan">How to Cite Stan</a></li>
+  <li><a href="#help-fund-stan" id="toc-help-fund-stan" class="nav-link" data-scroll-target="#help-fund-stan">Help Fund Stan</a></li>
   <li><a href="#shop-for-stan-swag" id="toc-shop-for-stan-swag" class="nav-link" data-scroll-target="#shop-for-stan-swag">Shop for Stan Swag</a></li>
+  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
   </ul>
 </nav>
     </div>
@@ -202,6 +203,23 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="open-code-reproducible-science">Open Code &amp; Reproducible Science</h2>
 <p>Stan is freedom-respecting, open-source software <span class="note">(new BSD core, some interfaces GPLv3)</span>.&nbsp; Stan is associated with NumFOCUS, a 501(c)(3) nonprofit supporting open code and reproducible science, through which you can <a href="#support-stan">help support Stan</a>.</p>
 </section>
+<section id="licensing" class="level2">
+<h2 class="anchored" data-anchor-id="licensing">Licensing</h2>
+<ul>
+<li><p><em>Computer code:</em> <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-clause license</a>,</p></li>
+<li><p><em>Text content:</em> <a href="https://creativecommons.org/licenses/by-nd/4.0/legalcode">CC-BY ND 4.0 license</a></p></li>
+</ul>
+<section id="copyright-and-trademark" class="level3">
+<h3 class="anchored" data-anchor-id="copyright-and-trademark">Copyright and trademark</h3>
+<ul>
+<li><p>Copyright 2011–2024, Stan Development Team and their assignees.</p></li>
+<li><p>The Stan name and logo are registered trademarks of <a href="http://numfocus.org/">NumFOCUS</a> under the direction of the Stan Governing Body.</p></li>
+</ul>
+<p>Both the Stan name and logo may be freely used when referencing Stan, for example, in blog posts, lecture notes, or open source software packages, but they may not be used in the branding of commercial entities, such as paid software packages or paid courses, without the express license of the Stan Governing Body. If you have any questions or would like to inquire about licensing the Stan name and/or logo for a commercial venture then please contact NumFOCUS at <a href="mailto:admin@numfocus.org" class="uri">mailto:admin@numfocus.org</a>.</p>
+<p>The Stan name and Stan logo may not be used in ways that suggest the usage is endorsed by the Stan project without written permission from the Stan Governing Body.</p>
+<p>When using the Stan logo please use either the <a href="https://github.com/stan-dev/logos/blob/master/logo_tm.png">Stan Logo png</a> or the <a href="https://github.com/stan-dev/logos/blob/master/logo_tm.svg">Stan Logo svg</a>.</p>
+</section>
+</section>
 <section id="stan-development-team" class="level2">
 <h2 class="anchored" data-anchor-id="stan-development-team">Stan Development Team</h2>
 <p>The project is a team effort comprised of full time and volunteer developers from around the world.</p>
@@ -214,42 +232,31 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><p><a href="https://discourse.mc-stan.org">Stan forums</a> - message board for questions, discussion, and announcements related to Stan for both users and developers.</p></li>
 <li><p><a href="https://join.slack.com/t/mc-stan/shared_invite/zt-1le4ebi4m-UMtiOkJb4gcS16qz2wIYCw">Stan slack</a> - developer discussions</p></li>
-<li><p><a href="https://github.com/stan-dev/">GitHub issues</a> - report bugs</p></li>
+<li><p><a href="https://github.com/stan-dev/">GitHub issues</a> - report bugs or suggest new features or enhancements.</p></li>
 </ul>
 </section>
-<section id="acknowledgements" class="level2">
-<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
-<p>Stan has grown from a small research project started in 2011 at Columbia University to a global community of developers, researchers, and users. The Stan project owes its success to the contributions from hundreds of developers, researchers, active users, and funders. Individual contributions to the software and documentation can be tracked through GitHub.</p>
-<p>We are grateful to all the users who have taken the time to file bug reports and feature requests via the GitHub and the Stan forums; this feedback has greatly improved Stan’s usability and reliability.</p>
-<p>Stan has been funded through grants for Stan and its developers, through in-kind donations in the form of companies contributing developer time to Stan and individuals contributing their own time to Stan, and through donations to the open-source scientific software non-profit NumFOCUS. Stan development has been funded by grants from the U.S. Department of Energy, the U.S. Department of Education, the U.S. National Science Foundation, the U.S. Office of Naval Research, the U.S. National Institutes of Health, the Alfred P. Sloan Foundation, and the Chan Zuckerberg Foundation, and by gifts from Novartis, Google, and Facebook. Hosting and support for Stan’s continuous integration testing is generously provided by the Simons Foundation.</p>
-</section>
-<section id="licensing" class="level2">
-<h2 class="anchored" data-anchor-id="licensing">Licensing</h2>
+<section id="how-to-report-bugs" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-report-bugs">How to Report Bugs</h2>
+<p>The key to a successful bug report is to <em>provide as much context as possible</em>, ideally in the form of a small reproducible example. Useful information includes:</p>
 <ul>
-<li><p><em>Text content:</em> <a href="https://creativecommons.org/licenses/by-nd/4.0/legalcode">CC-BY ND 4.0 license</a></p></li>
-<li><p><em>Computer code:</em> <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-clause license</a></p></li>
+<li>A description of what you were trying to do</li>
+<li>The specific call to Stan that caused the bug</li>
+<li>The complete error message. If the error message includes references a specific program line, then please include the Stan program.</li>
+<li>Stan version information, ideally including the core Stan version, and version of the Stan interface.</li>
+<li>Your compute environment: operating system and C++ compiler.</li>
 </ul>
-<section id="copyright-and-trademark" class="level3">
-<h3 class="anchored" data-anchor-id="copyright-and-trademark">Copyright and trademark</h3>
+</section>
+<section id="how-to-contribute-to-stan" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-contribute-to-stan">How to Contribute to Stan</h2>
+<p>We welcome new Stan contributors!</p>
 <ul>
-<li><p>Copyright 2011–2024, Stan Development Team and their assignees.</p></li>
-<li><p>The Stan name and logo are registered trademarks of NumFOCUS.</p></li>
+<li><p>Code - If you’d like to contribute code, please consult the <a href="https://github.com/stan-dev/stan/wiki/Developer-process-overview">Developer Process Wiki</a> or check out the GitHub issues on the Stan repositories for the tool that you’d like to contribute to and look for issues tagged “good first issue” or “help wanted”. The GitHub issues as well as the Stan Forums and Stan slack channel are all good places to discuss what you want to do beforehand.</p></li>
+<li><p>Write - If you’d like to contribute <a href="../learn-stan/case-studies">case studies</a>, <a href="../learn-stan/tutorials">tutorials</a> and similar materials, please make a post on the <a href="https://discourse.mc-stan.org/publicity">Stan forums publicity category</a>, and tag the <code>@Stan_Development_Team</code>.</p></li>
+<li><p>Host events - If you would like to organize a workshop or hackathon, please reach out to the community at large, via the Stan forums, or contact the Stan Governing Body at <code>board@mc-stan.org</code>.</p></li>
 </ul>
 </section>
-<section id="using-the-stan-logo" class="level3">
-<h3 class="anchored" data-anchor-id="using-the-stan-logo">Using the Stan Logo</h3>
-<p>The Stan name and logo are registered trademarks of <a href="http://numfocus.org/">NumFOCUS</a> under the direction of the Stan Governing Body.</p>
-<p>Both may be freely used when referencing Stan, for example, in blog posts, lecture notes, or open source software packages, but they may not be used in the branding of commercial entities, such as paid software packages or paid courses, without the express license of the Stan Governing Body. If you have any questions or would like to inquire about licensing the Stan name and/or logo for a commercial venture then please contact NumFOCUS at <a href="mailto:admin@numfocus.org" class="uri">mailto:admin@numfocus.org</a>.</p>
-<p>The Stan name and Stan logo may not be used in ways that suggest the usage is endorsed by the Stan project without written permission from the Stan Governing Body.</p>
-<p>When using the Stan logo please use one of the following:</p>
-<ul>
-<li><a href="https://github.com/stan-dev/logos/blob/master/logo_tm.png">Stan Logo png</a></li>
-<li><a href="https://github.com/stan-dev/logos/blob/master/logo_tm.svg">Stan Logo svg</a></li>
-</ul>
-</section>
-</section>
-<section id="citing-stan" class="level2">
-<h2 class="anchored" data-anchor-id="citing-stan">Citing Stan</h2>
+<section id="how-to-cite-stan" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-cite-stan">How to Cite Stan</h2>
 <p>We appreciate citations for the Stan software because it lets us find out what people have been doing with Stan and motivate further grant funding.</p>
 <p>We appreciate citations for the Stan software because it lets us find out what people have been doing with Stan and motivate further grant funding. When citing Stan we recommend citing both Stan itself as well as the particular interface used.</p>
 <p>To cite Stan itself you can cite the Stan Reference Manual or Stan User’s Guide taking the year and version from the latest release on the Stan Project’s Github releases page: <a href="https://github.com/stan-dev/stan/releases">https://github.com/stan-dev/stan/releases</a>.</p>
@@ -259,25 +266,13 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>To cite the interface or post-processing package you used we recommend using the citation conventions for the language (R, Python, Julia, etc.) associated with the interface or package. For example, to cite RStan use the standard conventions for citing R packages.</p>
 </section>
-<section id="support-stan" class="level2">
-<h2 class="anchored" data-anchor-id="support-stan">Support Stan</h2>
-<section id="contribute-money" class="level3">
-<h3 class="anchored" data-anchor-id="contribute-money">Contribute Money</h3>
+<section id="help-fund-stan" class="level2">
+<h2 class="anchored" data-anchor-id="help-fund-stan">Help Fund Stan</h2>
 <p>Stan operates through <a href="https://numfocus.org/">NumFOCUS</a>, a U.S. 501(c)(3) nonprofit organization that serves open-source software projects including NumPy, Julia, Jupyter, ScikitLearn, and many more.</p>
 <ul>
 <li><p><a href="https://numfocus.salsalabs.org/donate-to-stan">Contribute to Stan via NumFOCUS</a> &nbsp;&nbsp; (Salsa Labs payment processing)</p></li>
 <li><p><a href="https://github.com/sponsors/stan-dev">Sponsor Stan via GitHub</a></p></li>
 </ul>
-</section>
-<section id="contribute-expertise" class="level3">
-<h3 class="anchored" data-anchor-id="contribute-expertise">Contribute Expertise</h3>
-<p>We welcome new Stan contributors!</p>
-<ul>
-<li><p>Code</p></li>
-<li><p>Write</p></li>
-<li><p>Host events</p></li>
-</ul>
-</section>
 </section>
 <section id="shop-for-stan-swag" class="level2">
 <h2 class="anchored" data-anchor-id="shop-for-stan-swag">Shop for Stan Swag</h2>
@@ -286,6 +281,12 @@ ul.task-list li input[type="checkbox"] {
 <li><p><a href="https://shop.spreadshirt.com/mc-stan/">Stan Shop [US]</a> &nbsp; <span class="note">(Spreadshirt US)</span></p></li>
 <li><p><a href="https://shop.spreadshirt.co.uk/mc-stan/">Stan Shop [UK]</a> &nbsp; <span class="note">(Spreadshirt UK)</span></p></li>
 </ul>
+</section>
+<section id="acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<p>Stan has grown from a small research project started in 2011 at Columbia University to a global community of developers, researchers, and users. The Stan project owes its success to the contributions from hundreds of developers, researchers, active users, and funders. Individual contributions to the software and documentation can be tracked through GitHub.</p>
+<p>We are grateful to all the users who have taken the time to file bug reports and feature requests via the GitHub and the Stan forums; this feedback has greatly improved Stan’s usability and reliability.</p>
+<p>Stan has been funded through grants for Stan and its developers, through in-kind donations in the form of companies contributing developer time to Stan and individuals contributing their own time to Stan, and through donations to the open-source scientific software non-profit NumFOCUS. Stan development has been funded by grants from the U.S. Department of Energy, the U.S. Department of Education, the U.S. National Science Foundation, the U.S. Office of Naval Research, the U.S. National Institutes of Health, the Alfred P. Sloan Foundation, and the Chan Zuckerberg Foundation, and by gifts from Novartis, Google, and Facebook. Hosting and support for Stan’s continuous integration testing is generously provided by the Simons Foundation.</p>
 
 
 </section>

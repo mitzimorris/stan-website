@@ -12,9 +12,6 @@ project:
     - "tools/*.qmd"
   resources:
     - "learn-stan/case-studies/*.html"
-    - "learn-stan/case-studies/planetary_motion/*.html"
-    - "learn-stan/case-studies/planetary_motion/*/*.*"
-    - "learn-stan/case-studies/planetary_motion/*/*/*.*"
 
 website:
   favicon: img/logo_tm.png
